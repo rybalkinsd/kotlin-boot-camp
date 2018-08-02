@@ -28,7 +28,8 @@ We expect you know or able to know:
 1. How to install JDK and setup IDE
 1. Build tools basics (Maven / Gradle / Ant / ...)
 1. OOP basics (class, interface, polymorphism)
-1. What is Http and how it works.
+1. What is Http and how it works
+1. How git works (clone, pull, fetch, push, rebase)
 
 # Created by:
 todo
@@ -44,5 +45,43 @@ Language:
 Hardware Req: laptop
 
 # Syllabus
-1.
-1.
+1. Kotlin introduction #1
+    - Language overview
+    - Basic syntax
+    - Hello world application
+  
+1. Kotlin introduction #2
+    - Extension functions
+    - FP in kotlin, high order functions
+    - interaction with Java
+    - Kotlin bytecode
+    
+1. OOP in kotlin
+    - hierarchy
+    - object midifier and singletones
+    - introduction to spring
+    
+1. Generics and Collections
+    - Generics basics
+    - Functiona API
+    - sequence
+    - introduction to spring #2
+    
+1. Http & Spring MVC
+    - related spring topics
+    - okhttp
+    - spring mvc with kotlin
+    - flux
+    
+1. Hackaton/Workshop
+    - Making application based on previously covered topics
+    
+1. Advance Kotlin #1
+    - operators
+    - contracts
+    
+1. Storage
+    - PostgreSql basics
+    - Spring-data
+    - kotlin exposed
+
