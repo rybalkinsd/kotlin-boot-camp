@@ -31,7 +31,7 @@ We expect you know or able to know:
 1. What is Http and how it works
 1. How git works (clone, pull, fetch, push, rebase)
 
-# Created by:
+# Created by
 todo
 
 # General info
