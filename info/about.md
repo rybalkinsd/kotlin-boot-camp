@@ -56,16 +56,20 @@ Hardware Req: laptop
     - interaction with Java
     - Kotlin bytecode
     
-1. OOP in kotlin
-    - hierarchy
-    - object midifier and singletones
-    - introduction to spring
+1. Kotlin introduction #3
+    - OOP in kotlin
+        - class hierarchy
+        - object midifier and singletones
+    - type system
+    - spring
+        - introduction #1
     
 1. Generics and Collections
     - Generics basics
     - Functiona API
-    - sequence
-    - introduction to spring #2
+    - Collcetions
+    - spring 
+        - introduction #2
     
 1. Http & Spring MVC
     - related spring topics
@@ -76,12 +80,35 @@ Hardware Req: laptop
 1. Hackaton/Workshop
     - Making application based on previously covered topics
     
-1. Advance Kotlin #1
+1. Advanced Kotlin #1
     - operators
     - contracts
+    - etc
     
+1. Introduction to course Project
+
 1. Storage
     - PostgreSql basics
     - Spring-data
     - kotlin exposed
+    
+1. Hackaton/Workshop    
+    - Making application based on previously covered topics
+    
+1. Advanced Kotlin #2    
+    - Kotlin DSL
+    - Gradle Kotlin DSL overview
+    
+1. Practical Concurrency
+    - Common porblems
+    - Memory model
+    - Kotlin-specific features
+    - Coroutines
 
+1. Additional topics
+    - ecosystem
+    - frameworks
+    - 
+    
+1. Exam
+    - Demonstration and review of The Project
