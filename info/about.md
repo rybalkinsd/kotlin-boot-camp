@@ -147,6 +147,11 @@ Hardware Req:
     - Spring-data
     - Kotlin exposed
     
+1. Infrastructure
+    - Docker
+    - Shipment / Deployment
+    - Routing / Load Balancing
+    
 1. Hackaton/Workshop    
     - Making application based on previously covered topics
     
