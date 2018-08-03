@@ -6,10 +6,10 @@ for modern multiplatform applications
 >
 > -- [*kotlinlang.org*](https://kotlinlang.org)
 
-Kotlin is a concise a safe language that helps to avoid lots of well know problems of software development.
+Kotlin is a concise and safe language that helps to avoid lots of common problems in software development.
 Being interoperable with Java allows Kotlin to use all the experience and benefits of Java platform and ecosystem. 
 
-In this course we will understand how to use Kotlin and it's ecosystem for **backend** development.
+In this course we will learn how to use Kotlin and it's ecosystem for **backend** development.
 
 We will
  - give you a kickstart into the Kotlin world
@@ -50,7 +50,7 @@ We expect you to spend **10+** hours a week on coding/reading/learning.
 - java test
     - problem solving skill
     - collections(list, map, set, complexity)
-    - OOP (class, interface, abstract, final, ...)
+    - OOP
 - git test
     - clone
     - pull / push / commit
@@ -77,7 +77,7 @@ For curious there will be a possibility to create kotlin-js project for your bom
     - author of [Java development course](https://github.com/rybalkinsd/atom)
     
 1. Sasha Pomosov
-    - todo
+    - 7 years development experience in Java
 
 # General info
 Level: Intermediate
@@ -160,7 +160,7 @@ Hardware Req:
     - Gradle Kotlin DSL overview
     
 1. Practical Concurrency
-    - Common porblems
+    - Common problems
     - Memory model
     - Kotlin-specific features
     - Coroutines
