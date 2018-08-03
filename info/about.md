@@ -22,7 +22,7 @@ You will
  - create a final project in small teams
 
 # Tech stack
-- Language: Kotlin, Java
+- Lang: Kotlin, Java
 - Frameworks: Spring(boot, data, mvc)
 - Build: Gradle (Kotlin DSL)
 - Transport: Http, Websocket, mq(?)
@@ -45,6 +45,18 @@ We expect you to spend **10+** hours a week on coding/reading/learning.
 
 # In this class you will not
 - learn anything about Android
+
+# How to enter (Technosphere only)
+- java test
+    - problem solving skill
+    - collections(list, map, set, complexity)
+    - OOP (class, interface, abstract, final, ...)
+- git test
+    - clone
+    - pull / push / commit
+    - rebase  
+- general test
+    - todo
 
 # Final project
 Working in a small groups (2-3 devs)
@@ -70,11 +82,18 @@ For curious there will be a possibility to create kotlin-js project for your bom
 # General info
 Level: Intermediate
 
+Format:
+- Lectures: offline (no recording)
+- Slides: online
+- Code (examples, assignments): online
+- All other materials: online
+
 Language:
 - Lectures: Russian
 - Slides: English
 
-Hardware Req: laptop
+Hardware Req: 
+- laptop
 
 # Syllabus
 1. Kotlin introduction #1
@@ -103,11 +122,15 @@ Hardware Req: laptop
     - spring 
         - introduction #2
     
-1. Http & Spring MVC
-    - related spring topics
-    - okhttp
-    - spring mvc with Kotlin
-    - flux
+1. Web #1
+    - spring
+        - web
+        - mvc
+        - flux
+    - http
+        - client
+        - server
+        - okhttp
     
 1. Hackaton/Workshop
     - Making application based on previously covered topics
@@ -115,7 +138,7 @@ Hardware Req: laptop
 1. Advanced Kotlin #1
     - operators
     - contracts
-    - etc
+    - web #2
     
 1. Introduction to course Project
 
