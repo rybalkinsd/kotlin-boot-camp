@@ -1,7 +1,7 @@
 # kotlin-boot-camp
 kotlin course materials
 
-[![](http://icons.iconarchive.com/icons/alecive/flatwoken/32/Apps-Telegram-icon.png) Join chat](https://t.me/joinchat/AAISfEF63F8ntU5UtUZOyw) - feel free to contact us 
+[![](http://icons.iconarchive.com/icons/alecive/flatwoken/32/Apps-Telegram-icon.png) Join chat](https://t.me/joinchat/AAISfEea7uAktmNMqKiJmw) - feel free to contact us 
 
 ## Content
 1. [About this course](https://github.com/rybalkinsd/kotlin-boot-camp/blob/master/info/about.md)
