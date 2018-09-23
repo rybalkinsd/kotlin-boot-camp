@@ -14,10 +14,11 @@ For off-line students
 ---
 @title[About me] 
 
-@snap[north-west thumbnail]
----?image=lecture01/slides/assets/images/me.jpeg&size=50% 50%
+@snap[west]
+---?image=lecture01/slides/assets/images/me.jpeg&size=30% 30%
 @snapend
 
+@snap[east]
 - Principal Engineer @ Alibaba Group
 - Former Yandex, Mail.Ru Group 
 - [https://github.com/rybalkinsd](https://github.com/rybalkinsd)
@@ -25,7 +26,7 @@ For off-line students
 - Java ~ 9 years
 
 **I like successful builds**
-
+@snapend
 
 ---
 @title[Course target]
