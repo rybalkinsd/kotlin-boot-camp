@@ -14,11 +14,12 @@ For off-line students
 ---
 @title[About me] 
 
+@snap[west]
 ![](lecture01/slides/assets/images/me.jpeg)
-
-# @snap[west]
-@css[tiny]()
 @snapend
+
+@css[tiny]()
+
 
 @snap[east]
 - Principal Engineer @ Alibaba Group
