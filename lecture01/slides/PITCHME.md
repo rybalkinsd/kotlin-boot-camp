@@ -15,7 +15,9 @@ For off-line students
 @title[About me] 
 
 @snap[west]
----?image=lecture01/slides/assets/images/me.jpeg&size=30% 30%
+@css[tiny](
+    ![](assets/images/me.jpeg)
+)
 @snapend
 
 @snap[east]
