@@ -14,7 +14,7 @@ For off-line students
 ---
 @title[About me] 
 
-![](assets/images/me.jpeg)
+![](lecture01/slides/assets/images/me.jpeg)
 
 # @snap[west]
 @css[tiny]()
