@@ -15,7 +15,7 @@ For off-line students
 @title[About me] 
 
 @snap[north-west thumbnail]
----?image=assets/images/me.jpeg&size=50% 50%
+---?image=lecture01/slides/assets/images/me.jpeg&size=50% 50%
 @snapend
 
 - Principal Engineer @ Alibaba Group
