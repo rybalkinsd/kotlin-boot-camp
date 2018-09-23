@@ -15,9 +15,7 @@ For off-line students
 @title[About me] 
 
 @snap[west]
-    @css[tiny](
-        ![](lecture01/slides/assets/images/me.jpeg)
-    )
+    @css[tiny](![](lecture01/slides/assets/images/me.jpeg))
 @snapend
 
 
