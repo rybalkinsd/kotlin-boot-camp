@@ -1,4 +1,4 @@
-theme-override : lecture01/presentation/assets/css/PITCHME.css
+theme-override : lecture01/slides/assets/css/PITCHME.css
 
 logo : lecture01/slides/assets/images/sphere.png
 footnote : "Kotlin boot camp - Lecture 1 - @rybalkinsd"
