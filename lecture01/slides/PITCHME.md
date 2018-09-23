@@ -15,18 +15,18 @@ For off-line students
 @title[About me] 
 
 @snap[west]
-    ![](lecture01/slides/assets/images/me.jpeg)
+![](lecture01/slides/assets/images/me.jpeg)
 @snapend
 
 
 
 
 @snap[east]
-- Principal Engineer @ Alibaba Group
-- Former Yandex, Mail.Ru Group 
-- [https://github.com/rybalkinsd](https://github.com/rybalkinsd)
-- Kotlin ~ 2 years
-- Java ~ 9 years
+    - Principal Engineer @ Alibaba Group
+    - Former Yandex, Mail.Ru Group 
+    - [https://github.com/rybalkinsd](https://github.com/rybalkinsd)
+    - Kotlin ~ 2 years
+    - Java ~ 9 years
 
 **I like successful builds**
 @snapend
