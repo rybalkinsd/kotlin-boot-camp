@@ -17,15 +17,11 @@ Please **(Sign in)[https://sphere.mail.ru/]**
 @title[About me]
 <div>
 <img src="lecture01/slides/assets/images/me.jpeg" alt="me" class="small" align="left"/> <ul> 
-<li> 1 </li> 
-<li> 2 </li></ul> 
-<ul>
-<li> Principal Engineer @ Alibaba Group </li>
+<li> Principal Engineer @ Alibaba Group </li> 
 <li> Former Yandex, Mail.Ru Group </li>
 <li> [https://github.com/rybalkinsd](https://github.com/rybalkinsd) </li>
 <li> Kotlin ~ 2 years </li>
-<li> Java ~ 9 years </li>
-</ul>
+<li> Java ~ 9 years </li></ul> 
 </div>
 **I like successful builds**
 
