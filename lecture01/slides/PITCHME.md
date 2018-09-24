@@ -12,7 +12,7 @@ For off-line students
 
 
 ---?title=About me
-<img src="lecture01/slides/assets/images/me.jpeg" alt="me" class="small-image" />
+<img src="lecture01/slides/assets/images/me.jpeg" alt="me" />
 
 - Principal Engineer @ Alibaba Group
 - Former Yandex, Mail.Ru Group 
