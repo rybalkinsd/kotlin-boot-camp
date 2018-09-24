@@ -17,7 +17,7 @@ Please **(Sign in)[https://sphere.mail.ru/]**
 @title[About me]
 <div>
 <img src="lecture01/slides/assets/images/me.jpeg" alt="me" class="small" align="left"/> <ul> 
-<li> Principal Engineer @ Alibaba Group </li> 
+<li> PrincipalEngineer@AlibabaGroup</li> 
 <li> Former Yandex, Mail.Ru Group </li></ul> 
 <ul>
 <li> Principal Engineer @ Alibaba Group </li>
