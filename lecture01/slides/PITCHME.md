@@ -1,6 +1,6 @@
 ---
 @title[Kotlin]
-<h4>Kotlin</h4>
+
 #### Lecture 1
 ##### Introduction
 
@@ -8,14 +8,14 @@
 ---
 @title[Sign in]
 
-### Sign in
-## (Sign in)[https://atom.mail.ru/] 
-For off-line students
+Please **(Sign in)[https://sphere.mail.ru/]**
+ 
+*For off-line students*
 
 
----?title=About me
-<img src="lecture01/slides/assets/images/me.jpeg" alt="me" />
-
+---
+@title[About me]
+<img src="lecture01/slides/assets/images/me.jpeg" alt="me" class="small" align="left"/>
 - Principal Engineer @ Alibaba Group
 - Former Yandex, Mail.Ru Group 
 - [https://github.com/rybalkinsd](https://github.com/rybalkinsd)
