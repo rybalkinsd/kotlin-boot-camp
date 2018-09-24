@@ -1,4 +1,3 @@
-
 .reveal section img {
     border: 0;
     box-shadow: none;
@@ -6,4 +5,8 @@
 
 .reveal p span.menu-title {
     display: block !important;
+}
+
+.img small{
+    width: 200px;
 }
