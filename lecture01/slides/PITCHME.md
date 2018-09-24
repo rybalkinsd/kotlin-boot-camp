@@ -18,12 +18,15 @@ Please **(Sign in)[https://sphere.mail.ru/]**
 <div>
 <img src="lecture01/slides/assets/images/me.jpeg" alt="me" class="small" align="left"/> <ul> 
 <li> Principal Engineer @ Alibaba Group </li> 
+<li> Former Yandex, Mail.Ru Group </li></ul> 
+<ul>
+<li> Principal Engineer @ Alibaba Group </li>
 <li> Former Yandex, Mail.Ru Group </li>
-<li> <a href="https://github.com/rybalkinsd" target="_blank">https://github.com/rybalkinsd</a> </li>
+<li> [https://github.com/rybalkinsd](https://github.com/rybalkinsd) </li>
 <li> Kotlin ~ 2 years </li>
-<li> Java ~ 9 years </li></ul> 
+<li> Java ~ 9 years </li>
+</ul>
 </div>
-
 **I like successful builds**
 
 ---
