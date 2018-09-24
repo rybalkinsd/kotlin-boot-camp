@@ -13,7 +13,7 @@ For off-line students
 
 ---
 @title[About me] 
-<img src="lecture01/slides/assets/images/me.jpeg" alt="me" class="tiny" />
+<img src="lecture01/slides/assets/images/me.jpeg" alt="me" class="small-image" />
 
 - Principal Engineer @ Alibaba Group
 - Former Yandex, Mail.Ru Group 
@@ -22,7 +22,6 @@ For off-line students
 - Java ~ 9 years
 
 **I like successful builds**
-@snapend
 
 ---
 @title[Course target]
