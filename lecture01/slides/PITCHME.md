@@ -16,7 +16,8 @@ Please **(Sign in)[https://sphere.mail.ru/]**
 ---
 @title[About me]
 <div>
-<img src="lecture01/slides/assets/images/me.jpeg" alt="me" class="small" align="left"/> <ul> 
+<img src="lecture01/slides/assets/images/me.jpeg" alt="me" class="small" align="left"/>  
+<ul>
 <li> PrincipalEngineer@AlibabaGroup</li> 
 <li> Former Yandex, Mail.Ru Group </li></ul> 
 <ul>
@@ -27,6 +28,8 @@ Please **(Sign in)[https://sphere.mail.ru/]**
 <li> Java ~ 9 years </li>
 </ul>
 </div>
+- a
+- b
 **I like successful builds**
 
 ---
