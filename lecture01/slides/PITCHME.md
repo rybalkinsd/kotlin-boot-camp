@@ -14,9 +14,7 @@ For off-line students
 ---
 @title[About me] 
 
-@snap[west]
-![](lecture01/slides/assets/images/me.jpeg)
-@snapend
+<img src="assets/images/me.jpeg" alt="me" style="width: 200px;"/>
 
 @snap[east]
 @ul
