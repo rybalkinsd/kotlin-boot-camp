@@ -17,6 +17,12 @@ Please **(Sign in)[https://sphere.mail.ru/]**
 @title[About me]
 
 <img src="lecture01/slides/assets/images/me.jpeg" alt="me" class="small" align="left"/>
+<ul>
+<li>1></li>
+<li>2></li>
+</ul>
+
+
 - Principal Engineer @ Alibaba Group
 - Former Yandex, Mail.Ru Group 
 - [https://github.com/rybalkinsd](https://github.com/rybalkinsd)
