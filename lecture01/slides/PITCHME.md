@@ -16,16 +16,13 @@ Please **(Sign in)[https://sphere.mail.ru/]**
 ---
 @title[About me]
 
-<img src="lecture01/slides/assets/images/me.jpeg" alt="me" class="small" align="left"/> <div>
- 
-- Principal Engineer @ Alibaba Group
-- Former Yandex, Mail.Ru Group 
-- [https://github.com/rybalkinsd](https://github.com/rybalkinsd)
-- Kotlin ~ 2 years
-- Java ~ 9 years
-</div>
-
-
+<img src="lecture01/slides/assets/images/me.jpeg" alt="me" class="small" align="left"/> <ul>
+<li> Principal Engineer @ Alibaba Group </li>
+<li> Former Yandex, Mail.Ru Group </li>
+<li> [https://github.com/rybalkinsd](https://github.com/rybalkinsd) </li>
+<li> Kotlin ~ 2 years </li>
+<li> Java ~ 9 years </li>
+</ul>
 **I like successful builds**
 
 ---
