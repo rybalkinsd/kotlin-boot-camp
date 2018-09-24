@@ -13,18 +13,13 @@ For off-line students
 
 ---
 @title[About me] 
-@css[tiny](
-    <img src="lecture01/slides/assets/images/me.jpeg" alt="me" style="width: 200px;"/>
-)
+<img src="lecture01/slides/assets/images/me.jpeg" alt="me" class="tiny" />
 
-@snap[east]
-@ul
 - Principal Engineer @ Alibaba Group
 - Former Yandex, Mail.Ru Group 
 - [https://github.com/rybalkinsd](https://github.com/rybalkinsd)
 - Kotlin ~ 2 years
 - Java ~ 9 years
-@ulend
 
 **I like successful builds**
 @snapend
