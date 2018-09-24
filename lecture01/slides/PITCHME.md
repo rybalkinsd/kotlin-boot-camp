@@ -19,11 +19,13 @@ For off-line students
 @snapend
 
 @snap[east]
+@ul
 - Principal Engineer @ Alibaba Group
 - Former Yandex, Mail.Ru Group 
 - [https://github.com/rybalkinsd](https://github.com/rybalkinsd)
 - Kotlin ~ 2 years
 - Java ~ 9 years
+@ulend
 
 **I like successful builds**
 @snapend
