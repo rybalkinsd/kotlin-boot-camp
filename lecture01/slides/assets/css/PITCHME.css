@@ -1,52 +1,9 @@
 
-/*.reveal section img {*/
-    /*border: 0;*/
-    /*box-shadow: none;*/
-/*}*/
-
-span.byline, span.aside {
-    color: #bbb;
-}
-
-span.byline {
-    font-size: 80%;
-}
-
-span.aside {
-    font-size: 0.7em;
-    font-style: italic;
-}
-
 .reveal section img {
     border: 0;
     box-shadow: none;
-    background: none;
 }
 
-.reveal section a {
-    color: #e49436;
-    text-decoration: underline;
-}
-
-.reveal section a:hover {
-    color: #e7ad52;
-}
-
-.fa-pad-left {
-    margin-left: 10px;
-}
-
-
-.reveal p span.slide-title {
-    color: #e49436;
-    font-size: 1.55em;
-    margin: 0 0 60px 0;
-    font-family: "Montserrat", Impact, sans-serif;
-    font-weight: normal;
-    line-height: 1.2;
-    letter-spacing: -0.03em;
-    text-transform: none;
-    text-shadow: none;
-    word-wrap: break-word;
+.reveal p span.menu-title {
     display: block;
 }
