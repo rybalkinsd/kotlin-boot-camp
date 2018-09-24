@@ -7,6 +7,6 @@
     display: block !important;
 }
 
-.img small{
+img.small {
     width: 200px;
 }
