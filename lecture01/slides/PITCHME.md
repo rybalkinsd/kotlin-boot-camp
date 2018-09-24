@@ -11,7 +11,7 @@
 For off-line students
 
 
----title=About me
+---
 @title[About me] 
 <img src="lecture01/slides/assets/images/me.jpeg" alt="me" class="small-image" />
 
