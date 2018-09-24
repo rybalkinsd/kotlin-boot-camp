@@ -13,8 +13,9 @@ For off-line students
 
 ---
 @title[About me] 
-
-<img src="assets/images/me.jpeg" alt="me" style="width: 200px;"/>
+@css[tiny](
+    <img src="lecture01/slides/assets/images/me.jpeg" alt="me" style="width: 200px;"/>
+)
 
 @snap[east]
 @ul
