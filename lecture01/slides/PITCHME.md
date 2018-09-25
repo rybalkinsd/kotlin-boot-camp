@@ -30,6 +30,7 @@ Please [**sign in**](https://sphere.mail.ru/)
 1. @css[highlight](About this course)
 1. Introduction to Kotlin
 1. Introduction to Git
+1. Introduction to Gradle
 1. Introduction to Travis-CI
 1. Homework
 
@@ -70,33 +71,34 @@ In this course you will learn how to use Kotlin and it's ecosystem for @css[high
 
 ---
 @title[Technology stack. Tooling]
-- Gradle 
+- Gradle
     - Kotlin DSL
-- Docker
+- Docker @fa[docker]
 - CI/tooling 
-    - Travis-Ci
+    - Travis-CI
     - codecov
     - codacy
-- Git
-
+- Git @fa[git-square]
+ 
 
 ---
 @title[Course links]
 
-[**Course web page**](https://github.com/rybalkinsd/kotlin-boot-camp)
+@fa[link] [**Course web page**](https://github.com/rybalkinsd/kotlin-boot-camp)
 
-@fa[telegram-plane] [**Kotlin boot camp**](https://t.me/joinchat/AAISfEea7uAktmNMqKiJmw)
+@fa[link] [**Kotlin official site**](https://kotlinlang.org/)
 
-@fa[telegram-plane] [**atom java** - our java group](https://t.me/joinchat/AAISfEF63F8ntU5UtUZOyw)
+@fa[telegram] [**Kotlin boot camp**](https://t.me/joinchat/AAISfEea7uAktmNMqKiJmw)
 
-[**Kotlin official site**](https://kotlinlang.org/)
+@fa[telegram] [**atom java** - our java group](https://t.me/joinchat/AAISfEF63F8ntU5UtUZOyw)
 
 
 ---
 @title[Agenda]
 1. About this course
-1. Introduction to Kotlin
+1. @css[highlight](Introduction to Kotlin)
 1. Introduction to Git
+1. Introduction to Gradle
 1. Introduction to Travis-CI
 1. Homework
 
