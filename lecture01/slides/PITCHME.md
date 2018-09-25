@@ -117,6 +117,6 @@ for Kotlin and it's present backend environment.
 ---?code=lecture01/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/main.kt&title=HW
 <!-- .slide: class="center" -->
 
-@[3,5](function *main* is an entry point of application)
+@[3,5](function `main` is an entry point of application)
 
-@[4](*println* Prints the given message and newline to the standard output stream)
+@[4](`println` prints the given message and newline to the standard output stream)
