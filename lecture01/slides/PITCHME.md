@@ -114,7 +114,7 @@ for Kotlin and it's present backend environment.
 1. Homework
 
 
----code=src/main/kotlin/io/rybalkinsd/kotlinbootcamp/main.kt
+---?code=src/main/kotlin/io/rybalkinsd/kotlinbootcamp/main.kt
 @title[Hello, World!]
 
 @[3-5](main is an entry point of application)
