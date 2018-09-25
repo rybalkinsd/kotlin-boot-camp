@@ -5,6 +5,7 @@
 
 .reveal p span.menu-title {
     display: block !important;
+    font-weight: bold;
 }
 
 img.small {
