@@ -1,10 +1,12 @@
 ---
+<!-- .slide: class="center" -->
 @title[Kotlin]
 
 ### Lecture 1
 #### Introduction
 
 ---
+<!-- .slide: class="center" -->
 @title[Sign in]
 
 Please **(Sign in)[https://sphere.mail.ru/]**
