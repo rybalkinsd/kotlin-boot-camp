@@ -31,3 +31,8 @@
 img.small {
     width: 200px;
 }
+
+.highlight {
+    color: #e49436;
+    font-weight: bold;
+}
