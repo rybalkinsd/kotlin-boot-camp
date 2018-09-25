@@ -5,9 +5,24 @@
 
 .reveal p span.menu-title {
     display: block !important;
-    font-weight: bold;
 }
 
 img.small {
     width: 200px;
+}
+
+h1 {
+    font-size: 200%;
+}
+
+h2 {
+    font-size: 150%;
+}
+
+h3 {
+    font-size: 125%;
+}
+
+h4 {
+    font-size: 110%;
 }

@@ -1,5 +1,5 @@
 ---
-@title[#Kotlin]
+@title[Kotlin]
 
 ### Lecture 1
 #### Introduction
