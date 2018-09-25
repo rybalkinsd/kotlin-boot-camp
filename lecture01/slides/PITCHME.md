@@ -83,6 +83,15 @@ for Kotlin and it's present backend environment.
 - Git @fa[code-branch]
  
 
+`---
+@title[Syllabus]
+1. Kotlin basics
+1. Kotlin advance topics
+1. Web
+1. Storage
+1. Infrastructure
+1. Course Project
+
 ---
 @title[Course links]
 
@@ -96,16 +105,6 @@ for Kotlin and it's present backend environment.
 
 
 ---
-@title[Syllabus]
-1. Kotlin basics
-1. Kotlin advance topics
-1. Web
-1. Storage
-1. Infrastructure
-1. Course Project
-
-
----
 @title[Agenda]
 1. About this course
 1. @css[highlight](Introduction to Kotlin)
@@ -113,5 +112,3 @@ for Kotlin and it's present backend environment.
 1. Introduction to Gradle
 1. Introduction to Travis-CI
 1. Homework
-
-

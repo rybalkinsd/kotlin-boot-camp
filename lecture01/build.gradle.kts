@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.2.70"
+    kotlin("jvm") version "1.2.71"
 }
 
 group = "io.rybalkinsd"
@@ -21,5 +21,5 @@ repositories {
 }
 
 dependencies {
-    compile(kotlin("stdlib-jdk8", "1.2.70"))
+    compile(kotlin("stdlib-jdk8"))
 }
