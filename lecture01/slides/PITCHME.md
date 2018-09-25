@@ -1,11 +1,8 @@
 ---
-@title[Kotlin]
-# 1
-## 2
+@title[#Kotlin]
+
 ### Lecture 1
 #### Introduction
-##### 5
-###### 6
 
 ---
 @title[Sign in]
