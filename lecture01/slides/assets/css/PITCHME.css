@@ -33,6 +33,6 @@ img.small {
 }
 
 .highlight {
-    color: #e49436;
-    font-weight: bold;
+    color: #e49436 !important;
+    font-weight: bold !important;
 }
