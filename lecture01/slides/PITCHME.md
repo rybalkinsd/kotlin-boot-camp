@@ -21,6 +21,15 @@ Please [**sign in**]()https://sphere.mail.ru/)
 1. Introduction to Travis-CI
 1. Homework
 
+
+---
+@title[Agenda]
+1. @css[highlight](About this course)
+1. Introduction to Kotlin
+1. Introduction to Git
+1. Introduction to Travis-CI
+1. Homework
+
 ---
 @title[About me]
 <img src="lecture01/slides/assets/images/me.jpeg" alt="me" class="small" align="left"/>  
@@ -70,18 +79,4 @@ In this course you will learn how to use Kotlin and it's ecosystem for **backend
 @fa[telegram] [**atom java** - our java group](https://t.me/joinchat/AAISfEF63F8ntU5UtUZOyw)
 
 [**Kotlin official site**](https://kotlinlang.org/)
-
-
----
-@title[Syllabus]
-1. Basics
-    - OOP
-    - extension functions
-    - high order functions
-1. 
-    
-
-
----
-@title[]
 
