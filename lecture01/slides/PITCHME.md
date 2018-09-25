@@ -53,6 +53,8 @@ Please [**sign in**](https://sphere.mail.ru/)
 
 In this course you will learn how to use Kotlin and it's ecosystem for @css[highlight](backend) development.
 
+You should treat course materials as a @css[highlight](practical minimum) 
+for Kotlin and it's present backend environment. 
 
 ---
 @title[Technology stack]
