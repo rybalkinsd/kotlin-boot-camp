@@ -8,8 +8,8 @@
     font-size: 150%;
 }
 
-img.small {
-    width: 200px;
+.reveal {
+    font-size: 32px;
 }
 
 .reveal h1 {
@@ -26,4 +26,8 @@ img.small {
 
 .reveal h4 {
     font-size: 110%;
+}
+
+img.small {
+    width: 200px;
 }

@@ -9,7 +9,7 @@
 
 Please **(Sign in)[https://sphere.mail.ru/]**
  
-*For off-line students*
+*For off-line students only*
 
 
 ---
@@ -21,7 +21,7 @@ Please **(Sign in)[https://sphere.mail.ru/]**
 - Kotlin ~ 2 years
 - Java ~ 9 years @fa[java]
 
-**I like successful builds**
+@fa[bug] **I like successful builds** @fa[bug]
 
 ---
 @title[Course target]
