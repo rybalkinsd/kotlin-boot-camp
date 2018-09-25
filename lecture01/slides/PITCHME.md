@@ -83,7 +83,7 @@ for Kotlin and it's present backend environment.
 - Git @fa[code-branch]
  
 
-`---
+---
 @title[Syllabus]
 1. Kotlin basics
 1. Kotlin advance topics
@@ -123,14 +123,15 @@ get @css[highlight](50+ points) and pass @css[highlight](Final Project)
 
 ---
 @title[Final Project]
-We will develop a replica of @css[highlight](bomberman) game.
+You will develop a replica of @css[highlight](bomberman) game.
+
 We inspired by [bombergirl](http://bombergirl.matousskala.cz/)  
 
 We already built a [JS fronted](https://github.com/rybalkinsd/atom-bomberman-frontend) for you.  
 
 Project should be done in small groups of 2-3 students.  
 
-**No project - No certificate**
+**No project -- No certificate**
 
 
 ---
