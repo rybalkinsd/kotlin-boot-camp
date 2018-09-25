@@ -11,18 +11,18 @@ img.small {
     width: 200px;
 }
 
-h1 {
+.reveal h1 {
     font-size: 200%;
 }
 
-h2 {
+.reveal h2 {
     font-size: 150%;
 }
 
-h3 {
+.reveal h3 {
     font-size: 125%;
 }
 
-h4 {
+.reveal h4 {
     font-size: 110%;
 }
