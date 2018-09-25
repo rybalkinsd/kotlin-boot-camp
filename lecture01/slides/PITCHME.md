@@ -114,7 +114,7 @@ for Kotlin and it's present backend environment.
 1. Homework
 
 
----?code=lecture01/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/main.kt
+---?code=lecture01/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/main.kt&title=HW
 <!-- .slide: class="center" -->
 @title[Hello, World!]
 
