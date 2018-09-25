@@ -64,8 +64,8 @@ In this course you will learn how to use Kotlin and it's ecosystem for @css[high
     - mvc, webflux
     - data
 - Transport 
-    - Http 
-    - Websocket
+    - http 
+    - websocket
 - PostgreSQL
 
 
@@ -76,21 +76,31 @@ In this course you will learn how to use Kotlin and it's ecosystem for @css[high
 - Docker @fa[docker]
 - CI/tooling 
     - Travis-CI
-    - codecov
-    - codacy
-- Git @fa[git-square]
+    - Codecov
+    - Codacy
+- Git @fa[code-branch]
  
 
 ---
 @title[Course links]
 
-@fa[link] [**Course web page**](https://github.com/rybalkinsd/kotlin-boot-camp)
+[**Course web page**](https://github.com/rybalkinsd/kotlin-boot-camp) @fa[link]
 
-@fa[link] [**Kotlin official site**](https://kotlinlang.org/)
+[**Kotlin official site**](https://kotlinlang.org/) @fa[link] 
 
-@fa[telegram] [**Kotlin boot camp**](https://t.me/joinchat/AAISfEea7uAktmNMqKiJmw)
+[**Kotlin boot camp**](https://t.me/joinchat/AAISfEea7uAktmNMqKiJmw) @fa[telegram] 
 
-@fa[telegram] [**atom java** - our java group](https://t.me/joinchat/AAISfEF63F8ntU5UtUZOyw)
+[**atom java** - our java group](https://t.me/joinchat/AAISfEF63F8ntU5UtUZOyw) @fa[telegram] 
+
+
+---
+@title[Syllabus]
+1. Kotlin basics
+1. Kotlin advance topics
+1. Web
+1. Storage
+1. Infrastructure
+1. Course Project
 
 
 ---
