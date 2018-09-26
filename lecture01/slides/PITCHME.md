@@ -205,7 +205,7 @@ Project should be done in small groups of 2-3 students.
 <!-- .slide: class="center" -->
 
 @[3-11](Plain old `for` loop)
-@[13-17](Functionl approach)
+@[13-17](Functional approach)
 @[19-22](`repeat` construction)
 
 ---
