@@ -86,7 +86,7 @@ for Kotlin and it's present backend environment.
 ---
 @title[Syllabus]
 1. Kotlin basics
-1. Kotlin advance topics
+1. Kotlin advanced topics
 1. Web
 1. Storage
 1. Infrastructure
@@ -176,7 +176,7 @@ Project should be done in small groups of 2-3 students.
 | Double        | IEEE 754          |
 
 
----?code=lecture01/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/basics/valvar.kt&title=`val` & `var`
+---?code=lecture01/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/basics/valvar.kt&title=`val` and `var`
 <!-- .slide: class="center" -->
 
 @[3](Assigning a value)
@@ -246,7 +246,7 @@ Project = 1+ tasks (compile class, create jar, generate javadoc)
 ---
 @title[build.gradle]
 
-`build.gradle.kts` - is a build configuration script build with Gradle Kotlin DSL.
+`build.gradle.kts` - is a build configuration script written with Gradle Kotlin DSL.
 
 It is a kotlin script
 - compilable
@@ -257,7 +257,7 @@ It is a kotlin script
 ---?code=lecture01/build.gradle.kts&title=build.gradle.kts
 <!-- .slide: class="center" -->
 
-@[2-3](Standard project versioning)
+@[3-4](Standard project versioning)
 
 @[6-8](Plugin section configures the plugin dependencies for this project)
 
@@ -301,9 +301,9 @@ It tracks all branches and pull requests
 
 [kotlin boot camp on travis](https://travis-ci.org/rybalkinsd/kotlin-boot-camp/pull_requests)
 
-**check your pull requests there!**
+**Check your pull requests there!**
 
-**all tests should pass!**
+**All tests should pass!**
 
 
 ---

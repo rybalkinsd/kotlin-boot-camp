@@ -23,6 +23,6 @@ class ValvarKtTest {
 
     @Test
     fun `check variable modification`() {
-        modifyVariable()
+        assertEquals("after", modifyVariable())
     }
 }

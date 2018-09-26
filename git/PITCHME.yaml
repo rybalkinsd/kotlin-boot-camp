@@ -1,0 +1,9 @@
+layout : center-left
+
+theme-override : git/assets/css/PITCHME.css
+
+footnote : "Kotlin boot camp - Git - @al_p_i"
+
+slide-number: true
+code-line-numbers : true
+vertical-center : false
