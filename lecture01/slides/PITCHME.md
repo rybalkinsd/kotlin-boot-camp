@@ -108,7 +108,7 @@ for Kotlin and it's present backend environment.
 @title[How to get certificate]
 - Intermediate control & Hackathon = 40 
 - Homework = 30  
-- Final Project = 40  
+- Final Project = 30  
 - \+ extra points for several tasks  
 - \+ extra points for course improvements (PR, fixes, etc)
 
@@ -116,9 +116,9 @@ for Kotlin and it's present backend environment.
 get @css[highlight](50+ points) and pass @css[highlight](Final Project) 
 
 **Marks:**  
-**3**: 50-69  
-**4**: 70-90  
-**5**: 90+  
+**3**: 70+  
+**4**: 80+  
+**5**: 95+  
 
 
 ---
@@ -131,7 +131,7 @@ We already built a [JS fronted](https://github.com/rybalkinsd/atom-bomberman-fro
 
 Project should be done in small groups of 2-3 students.  
 
-**No project -- No certificate**
+**No project - No certificate**
 
 
 ---
@@ -153,13 +153,62 @@ Project should be done in small groups of 2-3 students.
 *We will start using kotlin compiler within IDE. In the next lectures we will learn how to build & run code without IDE*  
 
 
----?code=lecture01/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/main.kt&title=HW
+---?code=lecture01/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/main.kt&title=Hello, World!
 <!-- .slide: class="center" -->
 
 @[3,5](function `main` is an entry point of application)
 
 @[4](`println` prints the given message and newline to the standard output stream)
 
+
+---
+@title[Agenda]
+1. About this course
+1. Introduction to Kotlin)
+1. Introduction to Git
+1. @css[highlight](Introduction to Gradle)
+1. Introduction to Travis-CI
+1. Homework
+
+
+---
+@title[Gradle]
+
+[**Gradle**](https://gradle.org/) - build automation system
+
+[User Manual](https://docs.gradle.org/current/userguide/userguide.html)
+
+Our project gradle version: 4.0.1+
+
+You can install and configure gradle or just use *gradle wrapper (gradlew)* from lecture root directory.
+ 
+
+---
+@title[Gradle. Concept]
+
+Everything in Gradle sits on top of two basic concepts: **projects** and **tasks**.
+
+Gradle build = 1+ projects (build, deploy, publish, etc)
+
+Project = 1+ tasks (compile class, create jar, generate javadoc)
+
+[tutorial](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html)
+
+---
+@title[build.gradle]
+
+`build.gradle.kts` - is a build configuration script build with Gradle Kotlin DSL.
+
+It is a kotlin script
+- compilable
+- statically typed
+- good code completion in IDE 
+
+
+---?code=lecture01/build.gradle.kts&title=build.gradle.kts
+<!-- .slide: class="center" -->
+
+@[2-3](Standard project versioning)
 
 
 ---
