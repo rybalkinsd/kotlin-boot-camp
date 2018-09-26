@@ -1,0 +1,38 @@
+.reveal section img {
+    border: 0;
+    box-shadow: none;
+}
+
+.reveal p span.menu-title {
+    display: block !important;
+    font-size: 150%;
+}
+
+.reveal {
+    font-size: 32px;
+}
+
+.reveal h1 {
+    font-size: 200%;
+}
+
+.reveal h2 {
+    font-size: 150%;
+}
+
+.reveal h3 {
+    font-size: 125%;
+}
+
+.reveal h4 {
+    font-size: 110%;
+}
+
+img.small {
+    width: 200px;
+}
+
+.highlight {
+    color: #e49436 !important;
+    font-weight: bold !important;
+}
