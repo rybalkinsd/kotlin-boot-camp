@@ -113,7 +113,7 @@ for Kotlin and it's present backend environment.
 - \+ extra points for course improvements (PR, fixes, etc)
 
 **Certificate:**  
-get @css[highlight](50+ points) and pass @css[highlight](Final Project) 
+get @css[highlight](70+ points) and pass @css[highlight](Final Project) 
 
 **Marks:**  
 **3**: 70+  
