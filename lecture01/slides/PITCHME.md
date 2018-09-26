@@ -86,7 +86,7 @@ for Kotlin and it's present backend environment.
 ---
 @title[Syllabus]
 1. Kotlin basics
-1. Kotlin advance topics
+1. Kotlin advanced topics
 1. Web
 1. Storage
 1. Infrastructure
@@ -176,7 +176,7 @@ Project should be done in small groups of 2-3 students.
 | Double        | IEEE 754          |
 
 
----?code=lecture01/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/basics/valvar.kt&title=`val` & `var`
+---?code=lecture01/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/basics/valvar.kt&title=`val` and `var`
 <!-- .slide: class="center" -->
 
 @[3](Assigning a value)
