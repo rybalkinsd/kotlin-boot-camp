@@ -178,10 +178,18 @@ Project should be done in small groups of 2-3 students.
 
 [User Manual](https://docs.gradle.org/current/userguide/userguide.html)
 
-Our project gradle version: 4.0.1+
+Our project gradle version: `4.0.1+`
 
 You can install and configure gradle or just use *gradle wrapper (gradlew)* from lecture root directory.
  
+
+---
+@title[Gradle. Why?]
+- build/test/package ... your project
+- support custom build stages, configurable with **Kotlin** and Groovy 
+- manage **dependencies** (automatically download)
+- manage project structure  
+
 
 ---
 @title[Gradle. Concept]
@@ -193,6 +201,7 @@ Gradle build = 1+ projects (build, deploy, publish, etc)
 Project = 1+ tasks (compile class, create jar, generate javadoc)
 
 [tutorial](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html)
+
 
 ---
 @title[build.gradle]
@@ -209,6 +218,39 @@ It is a kotlin script
 <!-- .slide: class="center" -->
 
 @[2-3](Standard project versioning)
+
+@[6-8](Plugin section configures the plugin dependencies for this project)
+
+@[10-12](`KotlinCompile` task with target jvm version configured)
+
+@[18-21](Project dependencies)
+
+@[14-16](Dependencies repo configuration)
+
+
+---
+@title[Agenda]
+1. About this course
+1. Introduction to Kotlin)
+1. Introduction to Git
+1. Introduction to Gradle
+1. @css[highlight](Introduction to Travis-CI)
+1. Homework
+
+
+---
+@title[Travis-CI]
+Continuous Integration Tool
+[https://travis-ci.org/](https://travis-ci.org/)
+
+When you push to repository - Travis automatically runs gradle build on server
+It tracks all branches and pull requests
+
+[kotlin boot camp on travis](https://travis-ci.org/rybalkinsd/kotlin-boot-camp/pull_requests)
+
+**check your pull requests there!**
+
+**all tests should pass!**
 
 
 ---
