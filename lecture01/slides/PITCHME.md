@@ -22,7 +22,7 @@ Please [**sign in**](https://sphere.mail.ru/)
 1. Introduction to Git
 1. Introduction to Gradle
 1. Introduction to Travis-CI
-1. Homework
+1. Assignment 1
 
 
 ---
@@ -32,7 +32,7 @@ Please [**sign in**](https://sphere.mail.ru/)
 1. Introduction to Git
 1. Introduction to Gradle
 1. Introduction to Travis-CI
-1. Homework
+1. Assignment 1
 
 
 ---
@@ -141,7 +141,7 @@ Project should be done in small groups of 2-3 students.
 1. Introduction to Git
 1. Introduction to Gradle
 1. Introduction to Travis-CI
-1. Homework
+1. Assignment 1
 
 
 ---
@@ -168,7 +168,7 @@ Project should be done in small groups of 2-3 students.
 1. Introduction to Git
 1. @css[highlight](Introduction to Gradle)
 1. Introduction to Travis-CI
-1. Homework
+1. Assignment 1
 
 
 ---
@@ -235,7 +235,7 @@ It is a kotlin script
 1. Introduction to Git
 1. Introduction to Gradle
 1. @css[highlight](Introduction to Travis-CI)
-1. Homework
+1. Assignment 1
 
 
 ---
@@ -254,9 +254,19 @@ It tracks all branches and pull requests
 
 
 ---
+@title[Agenda]
+1. About this course
+1. Introduction to Kotlin)
+1. Introduction to Git
+1. Introduction to Gradle
+1. Introduction to Travis-CI
+1. @css[highlight](Assignment 1)
+
+
+---
 @title[Assignment 1]
 1. Fix tests in branch **assignment01** and push it to **your fork**  
-[[Github branch]](https://github.com/rybalkinsd/kotlin-boot-camp/tree/homework1)
+[[Github branch]](https://github.com/rybalkinsd/kotlin-boot-camp/tree/assignment01)
 [[Travis build]](https://travis-ci.org/rybalkinsd/kotlin-boot-camp/builds/204177834)
 2. Make pull request to the [**course repository**](https://github.com/rybalkinsd/kotlin-boot-camp)  
 (from your branch **assignment01** to ours **assignment01**)
