@@ -153,7 +153,7 @@ Project should be done in small groups of 2-3 students.
 *We will start using kotlin compiler within IDE. In the next lectures we will learn how to build & run code without IDE*  
 
 
----?code=lecture01/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/main.kt&title=Hello, World!
+---?code=lecture01/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/helloworld.kt&title=Hello, World!
 <!-- .slide: class="center" -->
 
 @[3,5](function `main` is an entry point of application)
@@ -162,9 +162,49 @@ Project should be done in small groups of 2-3 students.
 
 
 ---
+@title[Types]
+
+| Type          | Range             |
+| ------------- | -----------------:|
+| Boolean       | true/false        |
+| Byte          | -128-127          |
+| Char          | \u0000-\uffff     |
+| Short         | -32768 - 32767    |
+| Int           | -2^31 - (2^31)-1  |
+| Long          | -2^63 - (2^63)-1  |
+| Float         | IEEE 754          |
+| Double        | IEEE 754          |
+
+
+---?code=lecture01/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/basics/valvar.kt&title=`val` & `var`
+<!-- .slide: class="center" -->
+
+@[3](Assigning a value)
+@[5](Assigning a list)
+@[7](Assigning an array)
+@[10-14](variable could be modified)
+
+
+---?code=lecture01/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/basics/if.kt&title=`if` expression
+<!-- .slide: class="center" -->
+
+@[3](Assigning a value)
+@[5-8](Plain old useage)
+@[10-13](`if` is an expression in kotlin)
+@[15-17](... and after some simplification)
+
+
+---?code=lecture01/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/basics/when.kt&title=`when` expression
+<!-- .slide: class="center" -->
+
+@[3-9](when conditions)
+@[11-15](... and after some simplification)
+
+
+---
 @title[Agenda]
 1. About this course
-1. Introduction to Kotlin)
+1. Introduction to Kotlin
 1. Introduction to Git
 1. @css[highlight](Introduction to Gradle)
 1. Introduction to Travis-CI
@@ -227,6 +267,19 @@ It is a kotlin script
 
 @[14-16](Dependencies repo configuration)
 
+
+---
+@title[Gradle. Usage]
+
+**Windows:**
+```shell
+gradlew.bat [your-task/s]
+```
+
+**linux/macOS:**
+```shell
+./gradlew [your-task/s]
+```
 
 ---
 @title[Agenda]
