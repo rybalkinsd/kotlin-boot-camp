@@ -107,7 +107,7 @@ for Kotlin and it's present backend environment.
 ---
 @title[How to get certificate]
 - Intermediate control & Hackathon = 40 
-- Homework = 30  
+- Assignments = 30  
 - Final Project = 30  
 - \+ extra points for several tasks  
 - \+ extra points for course improvements (PR, fixes, etc)
@@ -251,6 +251,17 @@ It tracks all branches and pull requests
 **check your pull requests there!**
 
 **all tests should pass!**
+
+
+---
+@title[Assignment 1]
+1. Fix tests in branch **assignment01** and push it to **your fork**  
+[[Github branch]](https://github.com/rybalkinsd/kotlin-boot-camp/tree/homework1)
+[[Travis build]](https://travis-ci.org/rybalkinsd/kotlin-boot-camp/builds/204177834)
+2. Make pull request to the [**course repository**](https://github.com/rybalkinsd/kotlin-boot-camp)  
+(from your branch **assignment01** to ours **assignment01**)
+3. Write your **first name** and **family name** in description of pull request
+4. Make sure **tests** and **checkstyle** are passing in **Travis**  
 
 
 ---
