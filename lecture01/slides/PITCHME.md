@@ -201,6 +201,13 @@ Project should be done in small groups of 2-3 students.
 @[11-15](... and after some simplification)
 
 
+---?code=lecture01/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/basics/loop.kt&title=`for`
+<!-- .slide: class="center" -->
+
+@[3-11](Plain old `for` loop)
+@[13-17](Functionl approach)
+@[19-22](`repeat` construction`)
+
 ---
 @title[Agenda]
 1. About this course
