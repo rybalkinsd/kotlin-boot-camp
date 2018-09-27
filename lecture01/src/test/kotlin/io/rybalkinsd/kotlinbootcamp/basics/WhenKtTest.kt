@@ -22,5 +22,4 @@ class WhenKtTest {
         assertEquals("many digits", countDigits("15546345"))
         assertEquals("many digits", countDigitsSimplified("122233511"))
     }
-
 }

@@ -13,4 +13,3 @@ fun countDigitsSimplified(string: String) = when (string.toInt()) {
     in 10..99 -> "2 digits"
     else -> "many digits"
 }
-
