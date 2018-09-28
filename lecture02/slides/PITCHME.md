@@ -29,7 +29,7 @@ open as new project
 
 ---
 @title[Agenda]
-1. Practice 1. functions
+1. Practice 1. Functions
 1. Classes and Types
 1. OOP related stuff
 1. Practice
@@ -41,6 +41,13 @@ open as new project
 1. @css[highlight](Practice 1. functions)
 1. Classes and Types
 
+
+---?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/practice/basics.kt&title=Practice 1. Functions. Basics
+<!-- .slide: class="center" -->
+
+
+---?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/practice/producer.kt&title=Practice 1. Functions. Producer
+<!-- .slide: class="center" -->
 
 
 ---
