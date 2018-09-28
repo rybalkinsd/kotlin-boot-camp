@@ -6,7 +6,7 @@ jdk:
 env:
 - $PROJECT_DIR=assignments/01
 
-script: cd $PROJECT_DIR && ./gradlew assemble && ./gradlew check
+script: cd $PROJECT_DIR && pwd
 
 after_success:
 - ./gradlew jacocoTestReport
