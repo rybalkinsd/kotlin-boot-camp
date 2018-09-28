@@ -73,7 +73,7 @@ open as new project
 <!-- .slide: class="center" -->
 
 
----?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/extension/pointExt.kt&title=`class` declaration
+---?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/extension/pointExt.kt&title=`extension` declaration
 <!-- .slide: class="center" -->
 
 @[5](isZero extension)
@@ -84,22 +84,53 @@ open as new project
 ---
 @title[Nullability]
 
-class **String** produces two **Types**
-- String - not null string
-- String? - nullable string
+class **String** produces two **Types**:
+- @css[highlight](String) - is a *string*
+- @css[highlight](String?) - is a *string* or *null*
 
 
 ---
 @title[Nullability. Example]
+<!-- .slide: class="center" -->
 
 ```kotlin
 val s: String = "abc" // <-- legal
 s = null // <-- not legal
 
 val ns: String? = null // <-- legal
-
 ```
 
+---
+@title[Nullability. Safe call]
+
+```kotlin
+fun length(s: String?): Int? = s?.length
+```
+
+`s?.length` is 
+`if(s != null) s.length else null`
+ 
+
+@title[Nullability. Safe call]
+
+```kotlin
+val foo: Int?
+
+val bar: Int = foo ?: 42
+```
+
+`foo ?: 42` is 
+`if(foo != null) foo else 42`
+
+@title[Nullability. Safe call]
+
+```kotlin
+val foo: String?
+
+val bar: Int = foo!!.length
+```
+
+`!!` stands for I KNOW WHAT I'M DOING
 
 
 ---
