@@ -327,7 +327,7 @@ It tracks all branches and pull requests
 @title[Assignment 1]
 1. Fix tests in branch **assignment01** and push it to **your fork**  
 [[Github branch]](https://github.com/rybalkinsd/kotlin-boot-camp/tree/assignment01)
-[[Travis build]](https://travis-ci.org/rybalkinsd/kotlin-boot-camp/builds/204177834)
+[[Travis build]](https://travis-ci.org/rybalkinsd/kotlin-boot-camp)
 2. Make pull request to the [**course repository**](https://github.com/rybalkinsd/kotlin-boot-camp)  
 (from your branch **assignment01** to ours **assignment01**)
 3. Write your **first name** and **family name** in description of pull request
