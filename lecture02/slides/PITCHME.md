@@ -75,6 +75,27 @@ open as new project
 
 
 ---
+@title[Nullability]
+
+class **String** produces two **Types**
+- String - not null string
+- String? - nullable string
+
+
+---
+@title[Nullability. Example]
+
+```kotlin
+val s: String = "abc" // <-- legal
+s = null // <-- not legal
+
+val ns: String? = null // <-- legal
+
+```
+
+
+
+---
 @title[Assignment 2]
 1. Fix tests in branch **assignment02** and push it to **your fork**  
 [[Github branch]](https://github.com/rybalkinsd/kotlin-boot-camp/tree/assignment02)
