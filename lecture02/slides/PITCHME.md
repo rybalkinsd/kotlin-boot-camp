@@ -29,7 +29,7 @@ open as new project
 
 ---
 @title[Agenda]
-1. Practice 1. Functions
+1. Practice. Functions
 1. Classes and Types
 1. OOP related stuff
 1. Practice
@@ -38,13 +38,15 @@ open as new project
 
 ---
 @title[Agenda]
-1. @css[highlight](Practice 1. functions)
+1. @css[highlight](Practice. Functions)
 1. Classes and Types
 
 
----?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/practice/basics.kt&title=Practice 1. Functions. Basics
+---?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/practice/basics.kt&title=Practice. Functions
 <!-- .slide: class="center" -->
 
+@[4-14](min)
+@[17-27](concat)
 
 ---?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/practice/producer.kt&title=Practice 1. Functions. Producer
 <!-- .slide: class="center" -->
@@ -101,7 +103,7 @@ val ns: String? = null // <-- legal
 ```
 
 ---
-@title[Nullability. Safe call]
+@title[Nullability. `?.`]
 
 ```kotlin
 fun length(s: String?): Int? = s?.length
@@ -109,9 +111,10 @@ fun length(s: String?): Int? = s?.length
 
 `s?.length` is 
 `if(s != null) s.length else null`
- 
 
-@title[Nullability. Safe call]
+
+---
+@title[Nullability. `?:`]
 
 ```kotlin
 val foo: Int?
@@ -122,7 +125,9 @@ val bar: Int = foo ?: 42
 `foo ?: 42` is 
 `if(foo != null) foo else 42`
 
-@title[Nullability. Safe call]
+
+---
+@title[Nullability. `!!`]
 
 ```kotlin
 val foo: String?
