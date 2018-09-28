@@ -7,8 +7,8 @@
 
 
 ---
-<!-- .slide: class="center" -->
 @title[Sign in]
+<!-- .slide: class="center" -->
 
 Please [**sign in**](https://sphere.mail.ru/)
  
@@ -17,6 +17,7 @@ Please [**sign in**](https://sphere.mail.ru/)
 
 ---
 @title[Get ready]
+<!-- .slide: class="center" -->
 ```bash
 git fetch upstream
 git checkout -b lecture02 upstream/lecture02
@@ -39,19 +40,19 @@ open as new project
 1. Assignment 2
 
 
----?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/Point3.kt&title=`class` declaration
+---?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/point/Point1.kt&title=`class` declaration
 <!-- .slide: class="center" -->
 
 
----?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/Point2.kt&title=`class` declaration
+---?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/point/Point2.kt&title=`class` default constructor and `init` block
 <!-- .slide: class="center" -->
 
 
----?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/Point1.kt&title=`class` declaration
+---?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/point/Point3.kt&title=simplified `class` declaration
 <!-- .slide: class="center" -->
 
 
----?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/Point.kt&title=`data class` declaration
+---?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/point/Point.kt&title=`data class` declaration
 <!-- .slide: class="center" -->
 
 
