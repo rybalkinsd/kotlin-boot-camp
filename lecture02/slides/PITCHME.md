@@ -35,9 +35,24 @@ open as new project
 
 ---
 @title[Agenda]
-1. @css[highlight](Class)
+1. @css[highlight](Classes and Types)
 1. Assignment 2
 
+
+---?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/Point3.kt&title=`class` declaration
+<!-- .slide: class="center" -->
+
+
+---?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/Point2.kt&title=`class` declaration
+<!-- .slide: class="center" -->
+
+
+---?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/Point1.kt&title=`class` declaration
+<!-- .slide: class="center" -->
+
+
+---?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/Point.kt&title=`data class` declaration
+<!-- .slide: class="center" -->
 
 
 
