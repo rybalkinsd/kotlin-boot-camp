@@ -1,5 +1,9 @@
 package io.rybalkinsd.kotlinbootcamp.point
 
+import io.rybalkinsd.kotlinbootcamp.extension.isZero
+import io.rybalkinsd.kotlinbootcamp.extension.symmetrical
+import junit.framework.TestCase.assertFalse
+import junit.framework.TestCase.assertTrue
 import org.junit.Test
 
 class PointsTest {
@@ -26,6 +30,20 @@ class PointsTest {
     fun `point - our best option`() {
         val p = Point(100, 200)
         println(p.toString())
+    }
+
+    @Test
+    fun `point # izZero extension`() {
+        assertTrue(Point(0,0).isZero())
+
+        assertFalse(Point(0,100).isZero())
+    }
+
+    @Test
+    fun `point # symmetrical extension`() {
+        assertTrue(Point(0,0).symmetrical() == Point(0,0))
+
+        assertTrue(Point(0,100).symmetrical() == Point(0, -100))
     }
 
 }
