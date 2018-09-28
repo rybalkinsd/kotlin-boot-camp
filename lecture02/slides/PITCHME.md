@@ -26,8 +26,10 @@ cd lecture02
 
 open as new project
 
+
 ---
 @title[Agenda]
+1. Practice 1. functions
 1. Classes and Types
 1. OOP related stuff
 1. Practice
@@ -36,6 +38,14 @@ open as new project
 
 ---
 @title[Agenda]
+1. @css[highlight](Practice 1. functions)
+1. Classes and Types
+
+
+
+---
+@title[Agenda]
+1. Practice 1. functions
 1. @css[highlight](Classes and Types)
 1. Assignment 2
 
@@ -55,6 +65,13 @@ open as new project
 ---?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/point/Point.kt&title=`data class` declaration
 <!-- .slide: class="center" -->
 
+
+---?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/extension/pointExt.kt&title=`class` declaration
+<!-- .slide: class="center" -->
+
+@[5](isZero extension)
+
+@[7](`copy` method usage)
 
 
 ---
