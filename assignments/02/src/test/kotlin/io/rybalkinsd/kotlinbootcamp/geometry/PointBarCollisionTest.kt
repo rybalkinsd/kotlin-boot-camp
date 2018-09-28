@@ -2,8 +2,10 @@ package io.rybalkinsd.kotlinbootcamp.geometry
 
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
+import org.junit.Ignore
 import org.junit.Test
 
+@Ignore
 class PointBarCollisionTest {
     @Test
     fun `point inside bar`() {
