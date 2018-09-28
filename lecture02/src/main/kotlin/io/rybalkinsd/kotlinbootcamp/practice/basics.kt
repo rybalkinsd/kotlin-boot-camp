@@ -1,6 +1,5 @@
 package io.rybalkinsd.kotlinbootcamp.practice
 
-
 /**
  * @param a - first integer
  * @param b - second integer
@@ -12,7 +11,6 @@ package io.rybalkinsd.kotlinbootcamp.practice
  * min(-16 , -1000) = -1000
  */
 fun min(a: Int, b: Int): Int = TODO()
-
 
 /**
  * Concatenate all strings from
