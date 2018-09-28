@@ -8,5 +8,4 @@ class Point1 {
 
     val x: Int
     val y: Int
-
 }
