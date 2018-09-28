@@ -2,8 +2,7 @@ package io.rybalkinsd.kotlinbootcamp.point
 
 import io.rybalkinsd.kotlinbootcamp.extension.isZero
 import io.rybalkinsd.kotlinbootcamp.extension.symmetrical
-import junit.framework.TestCase.assertFalse
-import junit.framework.TestCase.assertTrue
+import junit.framework.TestCase.*
 import org.junit.Test
 
 class PointsTest {
@@ -37,6 +36,16 @@ class PointsTest {
         assertTrue(Point(0,0).isZero())
 
         assertFalse(Point(0,100).isZero())
+    }
+
+    @Test
+    fun `point # count non-zero points in list`() {
+        assertEquals(
+            2,
+            listOf(Point(1, 2), Point(0, 0), Point(3, 5))
+                .filter { !it.isZero() }
+                .count()
+        )
     }
 
     @Test
