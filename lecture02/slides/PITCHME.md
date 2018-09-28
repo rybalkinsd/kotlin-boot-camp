@@ -29,17 +29,18 @@ open as new project
 
 ---
 @title[Agenda]
+1. Checkstyle
 1. Practice. Functions
 1. Classes and Types
-1. OOP related stuff
-1. Practice
 1. Assignment 2
 
 
 ---
 @title[Agenda]
-1. @css[highlight](Practice. Functions)
+1. @css[highlight](Checkstyle)
+1. Practice. Functions
 1. Classes and Types
+1. Assignment 2
 
 
 ---
@@ -56,11 +57,25 @@ ktlint is checking formatting according to [set of rules](https://ktlint.github.
 @[37-39](Adding check dependencie on ktlint task)
 
 
+---
+@title[Checkstyle. Local config]
+![SAMBA Deployment](lecture02/slides/assets/images/ktlint_config.jpg)
+
+
+---
+@title[Agenda]
+1. Checkstyle
+1. @css[highlight](Practice. Functions)
+1. Classes and Types
+1. Assignment 2
+
+
 ---?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/practice/basics.kt&title=Practice. Functions
 <!-- .slide: class="center" -->
 
 @[4-14](min)
 @[17-27](concat)
+
 
 ---?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/practice/producer.kt&title=Practice 1. Functions. Producer
 <!-- .slide: class="center" -->
@@ -68,7 +83,8 @@ ktlint is checking formatting according to [set of rules](https://ktlint.github.
 
 ---
 @title[Agenda]
-1. Practice 1. functions
+1. Checkstyle
+1. Practice. Functions
 1. @css[highlight](Classes and Types)
 1. Assignment 2
 
@@ -150,6 +166,14 @@ val bar: Int = foo!!.length
 ```
 
 `!!` stands for I KNOW WHAT I'M DOING
+
+
+---
+@title[Agenda]
+1. Checkstyle
+1. Practice. Functions
+1. Classes and Types
+1. @css[highlight](Assignment 2)
 
 
 ---
