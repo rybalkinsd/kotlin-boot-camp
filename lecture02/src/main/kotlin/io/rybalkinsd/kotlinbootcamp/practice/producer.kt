@@ -1,6 +1,5 @@
 package io.rybalkinsd.kotlinbootcamp.practice
 
-
 /**
  * Produces a list of sorted integers
  *
@@ -15,5 +14,3 @@ package io.rybalkinsd.kotlinbootcamp.practice
  *
  */
 fun makeList(from: Int, to: Int): List<Int> = TODO()
-
-

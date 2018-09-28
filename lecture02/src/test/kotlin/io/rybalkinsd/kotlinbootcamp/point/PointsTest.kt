@@ -2,7 +2,10 @@ package io.rybalkinsd.kotlinbootcamp.point
 
 import io.rybalkinsd.kotlinbootcamp.extension.isZero
 import io.rybalkinsd.kotlinbootcamp.extension.symmetrical
-import junit.framework.TestCase.*
+import junit.framework.TestCase.assertEquals
+import junit.framework.TestCase.assertFalse
+import junit.framework.TestCase.assertTrue
+
 import org.junit.Test
 
 class PointsTest {
@@ -33,9 +36,9 @@ class PointsTest {
 
     @Test
     fun `point # izZero extension`() {
-        assertTrue(Point(0,0).isZero())
+        assertTrue(Point(0, 0).isZero())
 
-        assertFalse(Point(0,100).isZero())
+        assertFalse(Point(0, 100).isZero())
     }
 
     @Test
@@ -50,9 +53,7 @@ class PointsTest {
 
     @Test
     fun `point # symmetrical extension`() {
-        assertTrue(Point(0,0).symmetrical() == Point(0,0))
-
-        assertTrue(Point(0,100).symmetrical() == Point(0, -100))
+        assertTrue(Point(0, 0).symmetrical() == Point(0, 0))
+        assertTrue(Point(0, 100).symmetrical() == Point(0, -100))
     }
-
 }
