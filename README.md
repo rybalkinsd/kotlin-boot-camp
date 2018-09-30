@@ -14,4 +14,5 @@ kotlin course materials
     1. [General course info](https://github.com/rybalkinsd/kotlin-boot-camp/blob/master/info/about.md#general-info)
     1. [Syllabus](https://github.com/rybalkinsd/kotlin-boot-camp/blob/master/info/about.md#syllabus)
 1. Slides
-	1. [Lecture 1](https://gitpitch.com/rybalkinsd/kotlin-boot-camp/master?grs=github&t=white&p=lecture01/slides#/). Introduction
+	1. [Lecture 1](https://gitpitch.com/rybalkinsd/kotlin-boot-camp/master?grs=github&t=white&p=lecture01/slides#/). Introduction #1
+	1. [Lecture 2](https://gitpitch.com/rybalkinsd/kotlin-boot-camp/master?grs=github&t=white&p=lecture02/slides#/). Introduction #2
