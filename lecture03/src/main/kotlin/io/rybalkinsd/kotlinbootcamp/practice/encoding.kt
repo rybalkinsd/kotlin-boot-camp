@@ -1,4 +1,4 @@
-package io.rybalkinsd.kotlinbootcamp.collection
+package io.rybalkinsd.kotlinbootcamp.practice
 
 
 /**
@@ -22,7 +22,6 @@ val association: Map<Char, String> = TODO()
  *
  */
 fun String.encode(): String = TODO()
-
 
 /**
  * A reversed mapping for association

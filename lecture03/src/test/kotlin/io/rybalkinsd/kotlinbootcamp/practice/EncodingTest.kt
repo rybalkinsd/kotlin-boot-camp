@@ -1,4 +1,4 @@
-package io.rybalkinsd.kotlinbootcamp.collection
+package io.rybalkinsd.kotlinbootcamp.practice
 
 import junit.framework.TestCase.assertEquals
 import junit.framework.TestCase.assertNull
