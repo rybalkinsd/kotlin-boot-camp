@@ -180,7 +180,7 @@ val bar: Int = foo!!.length
 @title[Assignment 2]
 1. Fix tests in branch **assignment02** and push it to **your fork**  
 [[Github branch]](https://github.com/rybalkinsd/kotlin-boot-camp/tree/assignment02)
-[[Travis build]](https://travis-ci.org/rybalkinsd/kotlin-boot-camp/builds/204177834)
+[[Travis build]](https://travis-ci.org/rybalkinsd/kotlin-boot-camp/)
 2. Make pull request to the [**course repository**](https://github.com/rybalkinsd/kotlin-boot-camp)  
 (from your branch **assignment02** to ours **assignment02**)
 3. Write your **first name** and **family name** in description of pull request
