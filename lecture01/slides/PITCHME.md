@@ -90,7 +90,7 @@ for Kotlin and it's present backend environment.
 1. Web
 1. Storage
 1. Infrastructure
-1. Course Project
+1. Final Project
 
 ---
 @title[Course links]
@@ -166,12 +166,12 @@ Project should be done in small groups of 2-3 students.
 
 | Type          | Range             |
 | ------------- | -----------------:|
-| Boolean       | true/false        |
-| Byte          | -128-127          |
-| Char          | \u0000-\uffff     |
-| Short         | -32768 - 32767    |
-| Int           | -2^31 - (2^31)-1  |
-| Long          | -2^63 - (2^63)-1  |
+| Boolean       | true / false        |
+| Byte          | -128 .. 127          |
+| Char          | \u0000 .. \uffff     |
+| Short         | -32768 .. 32767    |
+| Int           | `-2^31` - `2^31`-1  |
+| Long          | `-2^63` - `2^63`-1  |
 | Float         | IEEE 754          |
 | Double        | IEEE 754          |
 
@@ -182,7 +182,7 @@ Project should be done in small groups of 2-3 students.
 @[3](Assigning a value)
 @[5](Assigning a list)
 @[7](Assigning an array)
-@[10-14](variable could be modified)
+@[9-13](variable could be modified)
 
 
 ---?code=lecture01/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/basics/if.kt&title=`if` expression
@@ -264,15 +264,15 @@ It is a kotlin script
 ---?code=lecture01/build.gradle.kts&title=build.gradle.kts
 <!-- .slide: class="center" -->
 
-@[3-4](Standard project versioning)
+@[4,5](Standard project versioning)
 
-@[6-8](Plugin section configures the plugin dependencies for this project)
+@[7-9](Plugin section configures the plugin dependencies for this project)
 
-@[10-12](`KotlinCompile` task with target jvm version configured)
+@[11-13](`KotlinCompile` task with target jvm version configured)
 
-@[18-21](Project dependencies)
+@[21-23,26](Project dependencies)
 
-@[14-16](Dependencies repo configuration)
+@[15-17](Dependencies repo configuration)
 
 
 ---
