@@ -51,7 +51,7 @@ We will using [ktlint](https://ktlint.github.io/) for our checkstyle.
 ktlint is checking formatting according to [set of rules](https://ktlint.github.io/#rules)
 
 
----?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/build.gradle.kts&title=Checkstyle. Configuration
+---?code=lecture02/build.gradle.kts&title=Checkstyle. Configuration
 @[19, 25](Setting ktlint configuration)
 @[29-35](Creating ktlint task)
 @[37-39](Adding check dependencie on ktlint task)
