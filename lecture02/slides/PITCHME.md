@@ -72,9 +72,9 @@ ktlint is checking formatting according to [set of rules](https://ktlint.github.
 ---
 @title[Practice. Functions]
 <!-- .slide: class="center" -->
-Implement functions in `lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/practice/basics.kt`
+Implement functions in `io.rybalkinsd.kotlinbootcamp.practice.basics.kt`
 
-Fix all tests in `lecture02/src/test/kotlin/io/rybalkinsd/kotlinbootcamp/practice/BasicsTest.kt`
+Fix all tests in `io.rybalkinsd.kotlinbootcamp.practice.BasicsTest.kt`
 
 
 ---?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/practice/basics.kt&title=Practice. Functions
@@ -86,9 +86,9 @@ Fix all tests in `lecture02/src/test/kotlin/io/rybalkinsd/kotlinbootcamp/practic
 ---
 @title[Practice. Functions. Producer]
 <!-- .slide: class="center" -->
-Implement functions in `lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/practice/producer.kt`
+Implement functions in `io.rybalkinsd.kotlinbootcamp.practice.producer.kt`
 
-Fix all tests in `lecture02/src/test/kotlin/io/rybalkinsd/kotlinbootcamp/practice/ProducerTest.kt`
+Fix all tests in `io.rybalkinsd.kotlinbootcamp.practice.ProducerTest.kt`
 
 
 ---?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/practice/producer.kt&title=Practice. Functions. Producer
