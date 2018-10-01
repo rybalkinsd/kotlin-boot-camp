@@ -69,22 +69,31 @@ ktlint is checking formatting according to [set of rules](https://ktlint.github.
 1. Classes and Types
 1. Assignment 2
 
+---
+@title[Practice. Functions]
+<!-- .slide: class="center" -->
+Implement functions in `lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/practice/basics.kt`
+
+Fix all tests in `lecture02/src/test/kotlin/io/rybalkinsd/kotlinbootcamp/practice/BasicsTest.kt`
+
 
 ---?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/practice/basics.kt&title=Practice. Functions
 <!-- .slide: class="center" -->
-
-Implement functions in `lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/practice/basics.kt`
-Fix all tests in `lecture02/src/test/kotlin/io/rybalkinsd/kotlinbootcamp/practice/BasicsTest.kt`
-
 @[3-13](min)
 @[15-25](concat)
+
+
+---
+@title[Practice. Functions. Producer]
+<!-- .slide: class="center" -->
+Implement functions in `lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/practice/producer.kt`
+
+Fix all tests in `lecture02/src/test/kotlin/io/rybalkinsd/kotlinbootcamp/practice/ProducerTest.kt`
 
 
 ---?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/practice/producer.kt&title=Practice. Functions. Producer
 <!-- .slide: class="center" -->
 
-Implement functions in `lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/practice/producer.kt`
-Fix all tests in `lecture02/src/test/kotlin/io/rybalkinsd/kotlinbootcamp/practice/ProducerTest.kt`
 
 
 ---
@@ -95,7 +104,7 @@ Fix all tests in `lecture02/src/test/kotlin/io/rybalkinsd/kotlinbootcamp/practic
 1. Assignment 2
 
 
----?code=lecture02/src/main/java/io/rybalkinsd/kotlinbootcamp/point/PointJ.java&title=`class` in java
+---?code=lecture02/src/main/java/io/rybalkinsd/kotlinbootcamp/point/PointJ.java&title=`class` declaration in java
 <!-- .slide: class="center" -->
 
 
@@ -129,7 +138,7 @@ Fix all tests in `lecture02/src/test/kotlin/io/rybalkinsd/kotlinbootcamp/practic
 ---
 @title[Comparing class declarations]
 
-### See `io.rybalkinsd.kotlinbootcamp.point.PointsTest`
+#### See `io.rybalkinsd.kotlinbootcamp.point.PointsTest`
 
 Run all tests to find out what is the difference among the point declarations.
 
@@ -160,7 +169,10 @@ val ns: String? = null // <-- legal
 fun length(s: String?): Int? = s?.length
 ```
 
-`s?.length` is 
+`s?.length` 
+
+is
+ 
 `if(s != null) s.length else null`
 
 
@@ -173,7 +185,10 @@ val foo: Int?
 val bar: Int = foo ?: 42
 ```
 
-`foo ?: 42` is 
+`foo ?: 42` 
+
+is
+ 
 `if(foo != null) foo else 42`
 
 

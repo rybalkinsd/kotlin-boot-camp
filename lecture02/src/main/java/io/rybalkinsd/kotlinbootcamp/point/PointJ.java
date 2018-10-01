@@ -1,4 +1,4 @@
-package io.rybalkinsd.kotlinbootcamp;
+package io.rybalkinsd.kotlinbootcamp.point;
 
 public class PointJ {
     private final int x;
