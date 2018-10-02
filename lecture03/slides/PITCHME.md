@@ -37,10 +37,11 @@ open as new project
 
 ---
 @title[Varargs]
-
+<!-- .slide: class="center" -->
 ```kotlin
 /**
- * Returns a new read-only list of given elements.  The returned list is serializable (JVM).
+ * Returns a new read-only list of given elements.  
+ * The returned list is serializable (JVM).
  * @sample samples.collections.Collections.Lists.readOnlyList
  */
 fun <T> listOf(vararg elements: T): List<T> = 
@@ -61,7 +62,7 @@ fun main(args: Array<String>) {
 
 ---
 @title[Enum]
-
+<!-- .slide: class="center" -->
 ```kotlin
 enum class Color(
         val r: Int, val g: Int, val b: Int
@@ -77,6 +78,7 @@ enum class Color(
 
 ---
 @title[Enum. When]
+<!-- .slide: class="center" -->
 ```kotlin
 fun isSimple(): Boolean = when(color) {
     RED, GREEN, BLUE -> true
@@ -86,7 +88,7 @@ fun isSimple(): Boolean = when(color) {
 
 
 ---?code=lecture03/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/infix.kt&title=infix function
-@[3](`val result = 16 mutliply 7`)
+@[3](`val result = 16 multiply 7`)
 
 
 ---?code=lecture03/src/test/kotlin/io/rybalkinsd/kotlinbootcamp/InfixTest.kt&title=infix function usage 
@@ -96,16 +98,18 @@ fun isSimple(): Boolean = when(color) {
 
 ---
 @title[Pair]
+<!-- .slide: class="center" -->
 ```kotlin
 val pair: Pair<String, Int > = "key" to 12
 
 val mapping: Pair<Double, Any?> = 7.2 to null
+
 ```
 
 
 ---
 @title[Inheritance & polymorphism]
-
+<!-- .slide: class="center" -->
 ```kotlin
 open class Parent {
     open fun foo() = "parent"  
@@ -116,13 +120,13 @@ class Successor: Parent() {
 } 
 ```
 
-#### Sea also `abstract`, `final` modifiers 
+See also `abstract` & `final` modifiers 
 
 
 ---?code=lecture03/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/companion.kt&title=Companion object
 @[8-10](Companion object declaration)
 @[5,6](Usage inside class scope)
-@[13-15](Usage outside class scope)
+@[13-15](Usage outside of class scope)
 @[6](using value right inside string `$log`)
 
 
@@ -145,7 +149,7 @@ You can use @css[highlight](`===`) for reference comparision
 @[11-13](`fun <T> T.also(block: (T) -> Unit): T`)
 
 
----?code=lecture03/src/src/kotlin/io/rybalkinsd/kotlinbootcamp/anonymous.kt&title=Anonymous class
+---?code=lecture03/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/anonymous.kt&title=Anonymous class
 @[3-8]()
 @[10]()
 @[13-21]()
@@ -177,7 +181,8 @@ Fix all tests in `io.rybalkinsd.kotlinbootcamp.practice.EncodingTest.kt`
 
 
 ---
-@title[Nullability. ?.Extensions]
+@title[Nullability. `?.Extensions`]
+<!-- .slide: class="center" -->
 ```kotlin
 fun String?.isNullOrBlank(): Boolean = 
         this == null || this.isBlank() 
@@ -185,7 +190,7 @@ fun String?.isNullOrBlank(): Boolean =
 
 ---
 @title[Nullability. `let`]
-
+<!-- .slide: class="center" -->
 ```kotlin
 fun T.let(block: (T) -> R): R { ... }
 
@@ -210,7 +215,7 @@ Solve all tasks in `io.rybalkinsd.kotlinbootcamp.practice.DataAnalysis.kt`
 Fix tests and add more in `io.rybalkinsd.kotlinbootcamp.practice.DataAnalysisTest.kt`
 
 
----?code=lecture03/src/src/kotlin/io/rybalkinsd/kotlinbootcamp/practice/RawData.kt&title=Practice. Data analysis
+---?code=lecture03/src/kotlin/io/rybalkinsd/kotlinbootcamp/practice/DataAnalysis.kt&title=Practice. Data analysis
 @[3](we have a lot of raw data)
 @[43-63](here it is)
 @[19-23](Task #1)
