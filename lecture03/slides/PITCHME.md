@@ -3,7 +3,7 @@
 @title[Kotlin]
 
 ### Lecture 3
-#### Collections
+#### OOP & friends
 
 
 ---
@@ -27,10 +27,10 @@ cd lecture03
 open as new project
 
 
-
 ---
 @title[Agenda]
-1. @css[highlight](Practice. Encoding)
+1. @css[highlight](Classes and Types #2)
+1. Practice. Encoding
 
 
 ---
@@ -56,11 +56,6 @@ fun main(args: Array<String>) {
 
 
 ---
-@title[Agenda]
-1. @css[highlight](Classes and Types #2)
-
-
----
 @title[Enum]
 
 ```kotlin
@@ -83,13 +78,7 @@ fun isSimple(): Boolean = when(color) {
 ```
 
 
-
----
-@title[Agenda]
-1. @css[highlight](Collections)
-
-
----?code=lecture03/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/collections/infix.kt&title=infix function
+---?code=lecture03/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/infix.kt&title=infix function
 @[3](`val result = 16 mutliply 7`)
 
 
@@ -101,153 +90,76 @@ val pair: Pair<String, Int > = "key" to 12
 val mapping: Pair<Double, Any?> = 7.2 to null
 ```
 
+
+---
+@title[Inheritance & polymorphism]
+
+```kotlin
+open class Parent {
+    open fun foo() = "parent"  
+}
+
+class Successor: Parent() {
+    override fun foo() = "successor"
+} 
+```
+
+
+---?code=lecture03/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/companion.kt&title=Companion object
+@[8-10](Companion object declaration)
+@[5,6](Usage inside class scope)
+@[13-15](Usage outside class scope)
+
+
+---
+@title[Equality]
+
+@css[highlight](`==`) is the default way to compare two objects: it compares their values by 
+calling @css[highlight](`equals`).
+
+You can use @css[highlight](`===`) for reference comparsion
+
+
+---?code=lecture03/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/comparator.kt&title=Singleton
+@[3-5]()
+@[7-10]()
+
+
+---?code=lecture03/src/test/kotlin/io/rybalkinsd/kotlinbootcamp/ComparatorTest.kt&title=Singleton usage
+@[7-14]()
+
+
+---?code=lecture03/src/test/kotlin/io/rybalkinsd/kotlinbootcamp/anonymous.kt&title=Anonymous class
+@[3-8]()
+@[10]()
+@[13-21]()
+
+
+---
+@title[Agenda]
+1. Classes and Types #2
+1. @css[highlight](Practice. Encoding)
+
+
+---
+@title[Practice. Encoding]
+![](lecture03/slides/assets/images/alpha.png)
+
+Implement functions in `io.rybalkinsd.kotlinbootcamp.practice.encoding.kt`
+
+Fix all tests in `io.rybalkinsd.kotlinbootcamp.practice.EncodingTest.kt`
+
+
+---
+@title[Agenda]
+1. @css[highlight](Collections)
+
+
 ---
 @title[Collections]
 <!-- .slide: class="center" -->
 
 Collections in Kotlin are the same classes as in Java, but with an extended API
-
-
-
-
----
-@title[Checkstyle]
-
-
----?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/build.gradle.kts&title=Checkstyle. Configuration
-@[19, 25](Setting ktlint configuration)
-@[29-35](Creating ktlint task)
-@[37-39](Adding check dependencie on ktlint task)
-
-
----
-@title[Checkstyle. Local config]
-![SAMBA Deployment](lecture02/slides/assets/images/ktlint_config.jpg)
-
-
----
-@title[Agenda]
-1. Checkstyle
-1. @css[highlight](Practice. Functions)
-1. Classes and Types
-1. Assignment 2
-
-
----?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/practice/basics.kt&title=Practice. Functions
-<!-- .slide: class="center" -->
-
-@[4-14](min)
-@[17-27](concat)
-
-
----?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/practice/producer.kt&title=Practice 1. Functions. Producer
-<!-- .slide: class="center" -->
-
-
----
-@title[Agenda]
-1. Checkstyle
-1. Practice. Functions
-1. @css[highlight](Classes and Types)
-1. Assignment 2
-
-
----?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/point/Point1.kt&title=`class` declaration
-<!-- .slide: class="center" -->
-
-
----?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/point/Point2.kt&title=`class` default constructor and `init` block
-<!-- .slide: class="center" -->
-
-
----?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/point/Point3.kt&title=simplified `class` declaration
-<!-- .slide: class="center" -->
-
-
----?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/point/Point.kt&title=`data class` declaration
-<!-- .slide: class="center" -->
-
-
----?code=lecture02/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/extension/pointExt.kt&title=`extension` declaration
-<!-- .slide: class="center" -->
-
-@[5](isZero extension)
-
-@[7](`copy` method usage)
-
-
----
-@title[Nullability]
-
-class **String** produces two **Types**:
-- @css[highlight](String) - is a *string*
-- @css[highlight](String?) - is a *string* or *null*
-
-
----
-@title[Nullability. Example]
-<!-- .slide: class="center" -->
-
-```kotlin
-val s: String = "abc" // <-- legal
-s = null // <-- not legal
-
-val ns: String? = null // <-- legal
-```
-
----
-@title[Nullability. `?.`]
-
-```kotlin
-fun length(s: String?): Int? = s?.length
-```
-
-`s?.length` is 
-`if(s != null) s.length else null`
-
-
----
-@title[Nullability. `?:`]
-
-```kotlin
-val foo: Int?
-
-val bar: Int = foo ?: 42
-```
-
-`foo ?: 42` is 
-`if(foo != null) foo else 42`
-
-
----
-@title[Nullability. `!!`]
-
-```kotlin
-val foo: String?
-
-val bar: Int = foo!!.length
-```
-
-`!!` stands for I KNOW WHAT I'M DOING
-
-
----
-@title[Agenda]
-1. Checkstyle
-1. Practice. Functions
-1. Classes and Types
-1. @css[highlight](Assignment 2)
-
-
----
-@title[Assignment 2]
-1. Fix tests in branch **assignment02** and push it to **your fork**  
-[[Github branch]](https://github.com/rybalkinsd/kotlin-boot-camp/tree/assignment02)
-[[Travis build]](https://travis-ci.org/rybalkinsd/kotlin-boot-camp/)
-2. Make pull request to the [**course repository**](https://github.com/rybalkinsd/kotlin-boot-camp)  
-(from your branch **assignment02** to ours **assignment02**)
-3. Write your **first name** and **family name** in description of pull request
-4. Make sure **tests** and **checkstyle** are passing in **Travis**  
 
 
 ---

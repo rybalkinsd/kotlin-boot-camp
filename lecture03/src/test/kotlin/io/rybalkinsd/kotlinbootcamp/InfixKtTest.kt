@@ -1,5 +1,6 @@
-package io.rybalkinsd.kotlinbootcamp.collections
+package io.rybalkinsd.kotlinbootcamp
 
+import io.rybalkinsd.kotlinbootcamp.multiply
 import junit.framework.TestCase.assertEquals
 import org.junit.Test
 
