@@ -5,9 +5,9 @@ import org.junit.Test
 class CollectionsTest {
     @Test
     fun `how to create collections`() {
-        println(ArrayList<Int>())   //Java way
-        println(listOf(1, 2))        //immutable list
-        println(mutableListOf(5, 6)) //mutable list
+        println(ArrayList<Int>()) // Java way
+        println(listOf(1, 2)) // immutable list
+        println(mutableListOf(5, 6)) // mutable list
         println(arrayListOf(3, 4))
         println(mapOf("one" to 1, "two" to "two"))
     }
@@ -16,8 +16,8 @@ class CollectionsTest {
     fun `immutable collections`() {
         val immutableSet = setOf(1, 2)
         println(immutableSet)
-        //immutableSet.add() //compile error: you can not add to immutable collection
-        //immutableSet.clear() //compile error: you can clear immutable collection
+        // immutableSet.add() // compile error: you can not add to immutable collection
+        // immutableSet.clear() // compile error: you can clear immutable collection
 
         val mutableSet = mutableSetOf(3, 4)
         mutableSet.add(5)
@@ -46,12 +46,12 @@ class CollectionsTest {
 
     @Test
     fun sequences() {
-        //5 map() and filter() operations will be done
+        // 5 map() and filter() operations will be done
         println(listOf(1, 2, 3, 4, 5)
                 .map { n -> n * n }
                 .filter { n -> n < 10 }
                 .first())
-        //only one map() and filter() will be done
+        // only one map() and filter() will be done
         println(listOf(1, 2, 3, 4, 5)
                 .asSequence()
                 .map { n -> n * n }
