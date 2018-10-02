@@ -2,13 +2,13 @@ package io.rybalkinsd.kotlinbootcamp.practice
 
 
 /**
- * Military alphabet
+ * NATO phonetic alphabet
  */
-val alphabet = setOf("alpha", "bravo", "charlie")
+val alphabet = setOf("Alfa", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliett", "Kilo", "Lima", "Mike", "November", "Oscar", "Papa", "Quebec", "Romeo", "Sierra", "Tango", "Uniform", "Victor", "Whiskey", "Xray", "Yankee", "Zulu")
 
 /**
- * A mapping for english characters to military alphabet.
- * [ a -> alpha, b -> bravo, ...]
+ * A mapping for english characters to phonetic alphabet.
+ * [ a -> Alfa, b -> Bravo, ...]
  */
 val association: Map<Char, String> = TODO()
 
@@ -18,7 +18,7 @@ val association: Map<Char, String> = TODO()
  * @return encoded string
  *
  * Example:
- * "abc".encode() == "alphabravocharlie"
+ * "abc".encode() == "AlfaBravoCharlie"
  *
  */
 fun String.encode(): String = TODO()

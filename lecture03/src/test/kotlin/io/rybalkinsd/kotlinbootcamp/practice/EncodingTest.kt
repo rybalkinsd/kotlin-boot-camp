@@ -16,46 +16,46 @@ class EncodingTest {
 
     @Test
     fun `encode # abc`() {
-        assertEquals("alphabravocharlie", "abc".encode())
+        assertEquals("AlfaBravoCharlie", "abc".encode())
     }
 
     @Test
     fun `encode # kotlin`() {
-        assertEquals("todo", "kotlin".encode())
+        assertEquals("KiloOscarTangoLimaIndiaNovember", "kotlin".encode())
     }
 
     @Test
     fun `encode # ab 123c`() {
-        assertEquals("alphabravo 123charlie", "ab 123c".encode())
+        assertEquals("AlfaBravo 123Charlie", "ab 123c".encode())
     }
 
     @Test
     fun `reverse association`() {
-        assertTrue(reversedAssociation.containsKey("alpha"))
-        assertTrue(reversedAssociation.containsKey("bravo"))
-        assertTrue(reversedAssociation.containsKey("charlie"))
+        assertTrue(reversedAssociation.containsKey("Alfa"))
+        assertTrue(reversedAssociation.containsKey("Bravo"))
+        assertTrue(reversedAssociation.containsKey("Charlie"))
     }
 
 
     @Test
     fun `decode # abc`() {
-        assertEquals("abc", "alphabravocharlie".decode())
+        assertEquals("abc", "AlfaBravoCharlie".decode())
     }
 
 
     @Test
-    fun `decode # ab 123c`() {
-        assertEquals("ab 123c", "alphabravo 123charlie".decode())
+    fun `decode # AlfaBravo 123Charlie`() {
+        assertEquals("ab 123c", "AlfaBravo 123Charlie".decode())
     }
 
     @Test
-    fun `decode # charliee`() {
-        assertNull("charliee".decode())
+    fun `decode # Charliee`() {
+        assertNull("Charliee".decode())
     }
 
     @Test
-    fun `decode # charli 1`() {
-        assertNull("charli 1".decode())
+    fun `decode # Charli 1`() {
+        assertNull("Charli 1".decode())
     }
 
 }
