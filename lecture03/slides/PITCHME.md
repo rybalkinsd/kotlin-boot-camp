@@ -217,7 +217,7 @@ Fix tests and add more in `io.rybalkinsd.kotlinbootcamp.practice.DataAnalysisTes
 
 ---?code=lecture03/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/practice/DataAnalysis.kt&title=Practice. Data analysis
 @[3](we have a lot of raw data)
-@[43-63](here it is)
+@[40-55](here it is)
 @[19-23](Task #1)
 @[25-29](Task #2)
 @[32-37](Task #3)
