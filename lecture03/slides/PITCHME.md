@@ -31,6 +31,7 @@ open as new project
 @title[Agenda]
 1. @css[highlight](Classes and Types #2)
 1. Practice. Encoding
+1. Practice. Data analysis
 1. Collections
 
 
@@ -154,6 +155,7 @@ You can use @css[highlight](`===`) for reference comparision
 @title[Agenda]
 1. Classes and Types #2
 1. @css[highlight](Practice. Encoding)
+1. Practice. Data analysis
 1. Collections
 
 
@@ -170,6 +172,57 @@ Fix all tests in `io.rybalkinsd.kotlinbootcamp.practice.EncodingTest.kt`
 @title[Agenda]
 1. Classes and Types #2
 1. Practice. Encoding
+1. @css[highlight](Practice. Data analysis)
+1. Collections
+
+
+---
+@title[Nullability. ?.Extensions]
+```kotlin
+fun String?.isNullOrBlank(): Boolean = 
+        this == null || this.isBlank() 
+```
+
+---
+@title[Nullability. `let`]
+
+```kotlin
+fun T.let(block: (T) -> R): R { ... }
+
+
+val user: User?
+
+
+user?.let {
+    AutorizationUtil.autorize(it)
+}
+```
+
+if `user != null` invoke lambda block
+
+else do nothing
+
+
+---
+@title[Practice. Data analysis]
+Solve all tasks in `io.rybalkinsd.kotlinbootcamp.practice.DataAnalysis.kt`
+
+Fix tests and add more in `io.rybalkinsd.kotlinbootcamp.practice.DataAnalysisTest.kt`
+
+
+---?code=lecture03/src/src/kotlin/io/rybalkinsd/kotlinbootcamp/practice/RawData.kt&title=Practice. Data analysis
+@[3](we have a lot of raw data)
+@[43-63](here it is)
+@[19-23](Task #1)
+@[25-29](Task #2)
+@[32-37](Task #3)
+
+
+---
+@title[Agenda]
+1. Classes and Types #2
+1. Practice. Encoding
+1. Practice. Data analysis
 1. @css[highlight](Collections)
 
 
