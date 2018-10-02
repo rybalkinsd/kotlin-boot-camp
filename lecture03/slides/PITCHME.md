@@ -31,6 +31,7 @@ open as new project
 @title[Agenda]
 1. @css[highlight](Classes and Types #2)
 1. Practice. Encoding
+1. Collections
 
 
 ---
@@ -41,14 +42,16 @@ open as new project
  * Returns a new read-only list of given elements.  The returned list is serializable (JVM).
  * @sample samples.collections.Collections.Lists.readOnlyList
  */
-public fun <T> listOf(vararg elements: T): List<T> = if (elements.size > 0) elements.asList() else emptyList()
-```
+fun <T> listOf(vararg elements: T): List<T> = 
+    if (elements.size > 0) elements.asList() 
+    else emptyList()
 
-```kotlin
+// ...
+
 val list = listOf(1, 2, 3, 4)
-```
 
-```kotlin
+// ...
+
 fun main(args: Array<String>) {
     val list = listOf(*args)
 }
@@ -62,7 +65,10 @@ fun main(args: Array<String>) {
 enum class Color(
         val r: Int, val g: Int, val b: Int
 ) {
-    RED(255, 0, 0), YELLOW(255, 255, 0), GREEN(0, 255, 0), BLUE(0, 0, 255);
+    RED(255, 0, 0), 
+    YELLOW(255, 255, 0), 
+    GREEN(0, 255, 0), 
+    BLUE(0, 0, 255);
 
     fun rgb() = (r * 256 + g) * 256 + b
 }
@@ -80,6 +86,11 @@ fun isSimple(): Boolean = when(color) {
 
 ---?code=lecture03/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/infix.kt&title=infix function
 @[3](`val result = 16 mutliply 7`)
+
+
+---?code=lecture03/src/test/kotlin/io/rybalkinsd/kotlinbootcamp/InfixTest.kt&title=infix function usage 
+@[8-11](old-style call)
+@[13-16](pure infix call)
 
 
 ---
@@ -104,11 +115,14 @@ class Successor: Parent() {
 } 
 ```
 
+#### Sea also `abstract`, `final` modifiers 
+
 
 ---?code=lecture03/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/companion.kt&title=Companion object
 @[8-10](Companion object declaration)
 @[5,6](Usage inside class scope)
 @[13-15](Usage outside class scope)
+@[6](using value right inside string `$log`)
 
 
 ---
@@ -117,7 +131,7 @@ class Successor: Parent() {
 @css[highlight](`==`) is the default way to compare two objects: it compares their values by 
 calling @css[highlight](`equals`).
 
-You can use @css[highlight](`===`) for reference comparsion
+You can use @css[highlight](`===`) for reference comparision
 
 
 ---?code=lecture03/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/comparator.kt&title=Singleton
@@ -127,9 +141,10 @@ You can use @css[highlight](`===`) for reference comparsion
 
 ---?code=lecture03/src/test/kotlin/io/rybalkinsd/kotlinbootcamp/ComparatorTest.kt&title=Singleton usage
 @[7-14]()
+@[11-13](`fun <T> T.also(block: (T) -> Unit): T`)
 
 
----?code=lecture03/src/test/kotlin/io/rybalkinsd/kotlinbootcamp/anonymous.kt&title=Anonymous class
+---?code=lecture03/src/src/kotlin/io/rybalkinsd/kotlinbootcamp/anonymous.kt&title=Anonymous class
 @[3-8]()
 @[10]()
 @[13-21]()
@@ -139,6 +154,7 @@ You can use @css[highlight](`===`) for reference comparsion
 @title[Agenda]
 1. Classes and Types #2
 1. @css[highlight](Practice. Encoding)
+1. Collections
 
 
 ---
@@ -152,6 +168,8 @@ Fix all tests in `io.rybalkinsd.kotlinbootcamp.practice.EncodingTest.kt`
 
 ---
 @title[Agenda]
+1. Classes and Types #2
+1. Practice. Encoding
 1. @css[highlight](Collections)
 
 
