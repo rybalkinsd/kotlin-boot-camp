@@ -110,6 +110,7 @@ val mapping: Pair<Double, Any?> = 7.2 to null
 ---
 @title[Inheritance & polymorphism]
 <!-- .slide: class="center" -->
+
 ```kotlin
 open class Parent {
     open fun foo() = "parent"  
@@ -237,8 +238,308 @@ Fix tests and add more in `io.rybalkinsd.kotlinbootcamp.practice.DataAnalysisTes
 ---
 @title[Collections]
 <!-- .slide: class="center" -->
-
+  
 Collections in Kotlin are the same classes as in Java, but with an extended API
+
+---
+
+@title[Kotlin Collections hierarchy] 
+SEE kotlin.collections.Collections.kt
+![Collections hierarchy](lecture03/slides/assets/images/language-design-tradeoffs-kotlin-and-beyond-by-andrey-breslav-21-638.jpg)
+
+---
+@title[Mutable/Immutable collections]
+Unlike many languages, Kotlin distinguishes between **mutable** and **immutable** collections (lists, sets, maps, etc)  
+You can see how kotlin collections hierarchy differs from java's here  
+  
+Immutable collections is just a compile-time feature. It is delegated to standard mutable Java collections inside.
+
+---
+@title[Collections examples]
+SEE io.rybalkinsd.kotlinbootcamp.practice.CollectionsTest
+
+
+---
+@title[ArrayList]
+Backed by java ArrayList  
+[Read about java ArrayList (RU)](https://habrahabr.ru/post/128269/)
+
+---
+@title[ArrayList. Internals #1]
+
+```kotlin
+val list = ArrayList<Int>()
+```
+![new array](lecture03/slides/assets/images/newarray.png)
+
+
+```kotlin
+list.add("0");
+list.add("1");
+```
+
+![array1](lecture03/slides/assets/images/array1.png)
+
+---
+@title[ArrayList. Internals #2]
+```kotlin
+list.addAll(listOf("2", "3", "4", "5", "6", "7", "8"))
+list.add("9")
+```
+
+![array9](lecture03/slides/assets/images/array9.png)
+
+
+---
+@title[ArrayList. Internals #3]
+```kotlin
+list.add("10")
+```
+Not enough capacity. Need (auto)resize.
+
+![arrayresized](lecture03/slides/assets/images/arrayresized.png)
+![array10](lecture03/slides/assets/images/array10.png)
+
+---
+@title[Quiz]
+#### What is the difference between capacity and size in `ArrayList`?
+
+---
+@title[ArrayList. Complexity]
+
+|  contains  | add   | get   |  set  | remove | 
+|:----------:|:-----:|:-----:|:-----:|:------:|
+| O(n)       | O(1)* |  O(1) |  O(1) | O(n)   |
+
+
+---
+@title[Java Lists]
+JDK contains a lot of List implementations (mutable):
+- ArrayList
+- CopyOnWriteArrayList - thread-safe variant of ArrayList
+- LinkedList
+- Vector - synchronized list
+- ...
+
+---
+@title[LinkedList. Summary #1]
+- Double-linked list implementation of the **List** and **Deque**
+interfaces.
+
+
+---
+@title[LinkedList. Summary #2]
+- Providing interfaces
+    - List
+    - Deque
+    - Queue
+    - Serializable 
+    - Cloneable
+    - Iterable 
+    - Collection
+
+
+---
+@title[LinkedList internals #1]
+```kotlin
+val list = LinkedList<String>()
+```
+![linkednew](lecture03/slides/assets/images/linkednew.png)
+
+
+---
+@title[LinkedList internals #2]
+```kotlin
+list.add("0");
+```
+
+Allocation
+![linked0](lecture03/slides/assets/images/linked0.png)
+
+---
+@title[LinkedList internals #3]
+Linking
+
+![linked0linked](lecture03/slides/assets/images/linked0linked.png)
+
+
+---
+@title[LinkedList internals #4]
+```kotlin
+list.add("1");
+```
+
+Allocation
+
+![linked1](lecture03/slides/assets/images/linked1.png)
+
+---
+@title[LinkedList internals #5]
+Linking
+
+![linked1linked](lecture03/slides/assets/images/linked1linked.png)
+
+
+
+---
+@title[LinkedList. Complexity]
+
+|  contains  | add   | get   |  set  | remove | 
+|:----------:|:-----:|:-----:|:-----:|:------:|
+| O(n)       | O(1)  |  O(n) |  O(n) | O(n)   |
+
+
+
+---
+@title[Interface Set]
+-  A collection that contains no duplicate elements.  More formally, sets
+   contain no pair of elements **e1** and **e2** such that
+    ```kotlin
+       e1 == e2
+    ```
+    
+- Implementations
+    - HashSet 
+    - TreeSet
+    - EnumSet 
+    - ConcurrentSkipListSet 
+    - CopyOnWriteArraySet 
+    - LinkedHashSet
+    - ...
+
+
+---
+@title[HashSet]
+Set interface implementation, backed by a hash table (actually a HashMap instance).
+It makes no guarantees as to the iteration order of the set.
+
+
+---
+@title[HashSet. Internals]
+![hashset](lecture03/slides/assets/images/hashset.png)
+
+
+---
+@title[General contract]
+For objects **a** and **b**:
+(a == b) => a.hashCode() === b.hashCode()
+
+if a.hashCode() == b.hashCode()  
+          not necessary (a == b)
+          
+a.hashcode() is the same during object lifetime
+
+
+---
+@title[HashSet. Complexity]
+
+|  contains  | add   | get   | remove | 
+|:----------:|:-----:|:-----:|:------:|
+| O(1)       | O(1)  |  O(1) |  O(1)  |
+
+
+---
+@title[TreeSet]
+The elements are ordered using their **Comparable** natural 
+ordering, or by **Comparator** provided at set creation time, 
+depending on which constructor is used.
+
+
+---
+@title[TreeSet. Internals]
+![treeset](lecture03/slides/assets/images/treeset.png)
+
+[Read more (RU)](https://habrahabr.ru/post/65617/)
+
+---
+@title[Functional interface Comparable<T>]
+```kotlin
+public operator fun compareTo(other: T): Int
+```
+
+
+---
+@title[compareTo and ==]
+Any type of contract?
+```kotlin
+(a == b) => a.compareTo(b) == 0
+``` 
+
+What about null?
+
+
+---
+@title[HashSet. Complexity]
+
+|  contains  | add   | get   | remove | 
+|:----------:|:-----:|:-----:|:------:|
+| O(log(n))       | O(log(n))  |  O(log(n)) | O(log(n))  |
+
+
+---
+@title[Map]
+
+```kotlin
+interface Map<K, V>
+``` 
+
+An object that maps keys to values.
+Cannot contain duplicate keys.
+Each key map to at most one value.
+
+---
+@title[Why, Map?]
+Why Map is not a Collection?
+
+---
+@title[Why, Map?]
+From official java FAQ:
+> This was by design.
+> We feel that mappings are not collections and collections are not mappings. 
+> If a Map is a Collection, what are the elements? 
+
+
+---
+@title[Map implementations]
+- HashMap
+- TreeMap
+- LinkedHashMap
+- EnumMap
+
+
+---
+@title[Notes]
+1. HashSet is limited version of HashMap
+1. TreeSet is limited version of TreeMap 
+
+
+---
+@title[Complexity]
+HashMap
+
+|  containsKey  | get   | put   | remove | 
+|:----------:|:-----:|:-----:|:------:|
+| O(1)       | O(1)  |  O(1) | O(1)  |
+
+
+TreeMap
+
+|  containsKey  | get   | put   | remove |
+|:----------:|:-----:|:-----:|:------:|
+| O(log(n))       | O(log(n))  |  O(log(n)) | O(log(n))  |
+
+[Read more](http://infotechgems.blogspot.ru/2011/11/java-collections-performance-time.html)
+
+
+---
+@title[HashMap. Internals] 
+![hashmap](lecture03/slides/assets/images/hashmap.png)
+
+---
+@title[Sequence]
+Kotlin collections are **eager**.  
+To make them lazy - use **asSequence()**  
+SEE io.rybalkinsd.kotlinbootcamp.practice.CollectionsTest.sequences
 
 
 ---
