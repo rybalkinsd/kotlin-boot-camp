@@ -7,8 +7,7 @@ class InfixTest {
 
     @Test
     fun `old multiply`() {
-        42.let {  }
-        assertEquals(8, 2.multiply( 2).multiply( 2))
+        assertEquals(8, 2.multiply(2).multiply(2))
     }
 
     @Test
