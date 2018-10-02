@@ -1,10 +1,9 @@
 package io.rybalkinsd.kotlinbootcamp
 
-import io.rybalkinsd.kotlinbootcamp.multiply
 import junit.framework.TestCase.assertEquals
 import org.junit.Test
 
-class InfixKtTest {
+class InfixTest {
 
     @Test
     fun `old multiply`() {
