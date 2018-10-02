@@ -1,30 +1,55 @@
 package io.rybalkinsd.kotlinbootcamp
 
-import org.junit.Ignore
 import org.junit.Test
 
-@Ignore
 class CastingTest {
 
     val value: Any = 42
-    val nValue: Any? = null
+    val nullValue: Any? = null
+    val incompatibleValue: Any = 4.2
 
     @Test
-    fun `cast 1 test`() {
+    fun `cast 1 # general value`() {
         println(cast1(value))
-        println(cast1(nValue))
+    }
+
+    @Test(expected = TypeCastException::class)
+    fun `cast 1 # null value`() {
+        println(cast1(nullValue))
+    }
+
+    @Test(expected = ClassCastException::class)
+    fun `cast 1 # incompatible type`() {
+        println(cast1(incompatibleValue))
     }
 
     @Test
-    fun `cast 2 test`() {
+    fun `cast 2 # general value`() {
         println(cast2(value))
-        println(cast2(nValue))
-
     }
 
     @Test
-    fun `cast 3 test`() {
+    fun `cast 2 # null value`() {
+        println(cast2(nullValue))
+    }
+
+    @Test(expected = ClassCastException::class)
+    fun `cast 2 # incompatible type`() {
+        println(cast2(incompatibleValue))
+    }
+
+    @Test
+    fun `cast 3 # general value`() {
         println(cast3(value))
-        println(cast3(nValue))
+    }
+
+    @Test
+    fun `cast 3 # null value`() {
+        println(cast3(nullValue))
+    }
+
+    @Test
+    fun `cast 3 # incompatible type`() {
+        println(cast3(incompatibleValue))
     }
 }

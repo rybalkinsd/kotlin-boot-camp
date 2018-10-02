@@ -1,6 +1,5 @@
 package io.rybalkinsd.kotlinbootcamp.practice
 
-
 /**
  * NATO phonetic alphabet
  */
@@ -29,19 +28,14 @@ fun String.encode(): String = TODO()
  */
 val reversedAssociation: Map<String, Char> = TODO()
 
-
 /**
  * Extension function for String which decode it according to `reversedAssociation` mapping
  *
  * @return encoded string or null if it is impossible to decode
  *
  * Example:
- * "alphabravocharlie".encode() == "abc"
+ * "alphabravocharlie".decode() == "abc"
  * "charliee".decode() == null
  *
  */
 fun String.decode(): String? = TODO()
-
-
-
-

@@ -2,7 +2,7 @@ package io.rybalkinsd.kotlinbootcamp.practice
 
 class RawProfile(val rawData: String)
 
-enum class DataSource{
+enum class DataSource {
     FACEBOOK,
     VK,
     LINKEDIN
@@ -20,7 +20,7 @@ sealed class Profile(
  * Task #1
  * Declare classes for all data sources
  */
-class FacebookProfile(id: Long): Profile(dataSource = DataSource.FACEBOOK, id = id)
+class FacebookProfile(id: Long) : Profile(dataSource = DataSource.FACEBOOK, id = id)
 
 /**
  * Task #2
@@ -28,14 +28,12 @@ class FacebookProfile(id: Long): Profile(dataSource = DataSource.FACEBOOK, id = 
  */
 val avgAge: Map<DataSource, Double> = TODO()
 
-
 /**
  * Task #3
  * Group all user ids together with all profiles of this user.
  * We can assume users equality by : firstName & lastName & age
  */
 val groupedProfiles: Map<Long, List<Profile>> = TODO()
-
 
 /**
  * Here are Raw profiles to analyse
@@ -95,5 +93,3 @@ val rawProfiles = listOf(
             """.trimIndent()
     )
 )
-
-
