@@ -16,3 +16,4 @@ kotlin course materials
 1. Slides
 	1. [Lecture 1](https://gitpitch.com/rybalkinsd/kotlin-boot-camp/master?grs=github&t=white&p=lecture01/slides#/). Introduction #1
 	1. [Lecture 2](https://gitpitch.com/rybalkinsd/kotlin-boot-camp/master?grs=github&t=white&p=lecture02/slides#/). Introduction #2
+    1. [Lecture 3](https://gitpitch.com/rybalkinsd/kotlin-boot-camp/lecture03?grs=github&t=white&p=lecture03/slides#/). OOP & friends
