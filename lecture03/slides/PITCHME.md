@@ -208,6 +208,9 @@ if `user != null` invoke lambda block
 else do nothing
 
 
+---?code=lecture03/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/casting.kt&title=Casting. `as` and `as?` operators
+
+
 ---
 @title[Practice. Data analysis]
 Solve all tasks in `io.rybalkinsd.kotlinbootcamp.practice.DataAnalysis.kt`
