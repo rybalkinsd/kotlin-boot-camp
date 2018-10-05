@@ -1,7 +1,9 @@
 package io.rybalkinsd.kotlinbootcamp.practice
 
+import org.junit.Ignore
 import org.junit.Test
 
+@Ignore
 class CollectionsTest {
     @Test
     fun `how to create collections`() {
