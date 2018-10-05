@@ -1,7 +1,7 @@
 # kotlin-boot-camp
 kotlin course materials
 
-[![](http://icons.iconarchive.com/icons/alecive/flatwoken/32/Apps-Telegram-icon.png) Join chat]- Coming soon
+![](http://icons.iconarchive.com/icons/alecive/flatwoken/32/Apps-Telegram-icon.png) Join chat- Coming soon
 
 ## Content
 1. [About this course](https://github.com/rybalkinsd/kotlin-boot-camp/blob/master/info/about.md)
