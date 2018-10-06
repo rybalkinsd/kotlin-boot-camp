@@ -21,6 +21,7 @@ val ktlint by configurations.creating
 dependencies {
     compile(kotlin("stdlib-jdk8"))
     compile(kotlin("reflect"))
+    compile("io.github.rybalkinsd", "kohttp", "0.2.0")
     testCompile("junit", "junit", "4.12")
 
     ktlint("com.github.shyiko", "ktlint", "0.28.0")
