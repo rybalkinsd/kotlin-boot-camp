@@ -1,6 +1,8 @@
 package io.rybalkinsd.kotlinbootcamp.practice
 
+import org.junit.Ignore
 import org.junit.Test
+
 
 class BoxTest {
     @Test
@@ -23,6 +25,4 @@ class BoxTest {
             println(it)
         }
     }
-
 }
-

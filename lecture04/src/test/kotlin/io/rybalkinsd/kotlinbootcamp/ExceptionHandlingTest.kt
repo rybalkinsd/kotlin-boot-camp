@@ -1,6 +1,8 @@
 package io.rybalkinsd.kotlinbootcamp
 
+
 import org.junit.Test
+
 
 class ExceptionHandlingTest {
 
@@ -46,7 +48,7 @@ class ExceptionHandlingTest {
         }
     }
 
-    @Test
+    @Test(expected = Exception::class)
     fun `elvis throw`() {
         val number = "404e1".toIntOrNull() ?: throw Exception("Oops")
     }

@@ -1,8 +1,19 @@
 package io.rybalkinsd.kotlinbootcamp.practice
 
+import kotlin.math.sign
+import kotlin.math.sqrt
 
-data class Point(val x: Int, val y: Int) {
+
+open class Point(val x: Int, val y: Int) {
     operator fun plus(other: Point): Point {
         return Point(x + other.x, y + other.y)
     }
+
+}
+
+class Vector(x: Int, y: Int): Point(x, y), Comparable<Vector> {
+    private val abs: Double
+        get() = sqrt((x * x + y * y).toDouble())
+
+    override fun compareTo(other: Vector): Int = sign(abs - other.abs).toInt()
 }

@@ -137,6 +137,11 @@ More content in next lectures
 | a + b       | plus        |
 | a - b       | minus        |
 
+
+---?code=lecture04/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/conventions.kt&title=Point `+` Point
+@[7-11]()
+@[8](operator)
+
 ---
 @title[Conventions. `+=`]
 <!-- .slide: class="center" -->
@@ -147,6 +152,7 @@ operator fun Point.plusAssign(element: Point): Unit {
     ...
 }
 ```
+
 
 ---
 @title[Conventions. Operators. Unary]
@@ -173,6 +179,17 @@ operator fun Point.unaryMinus() = Point(-x, -y)
 <!-- .slide: class="center" -->
 
 `a == b  --->  a?.equals(b) ?: b == null`
+
+
+---
+@title[Conventions. Operators. Ordering]
+<!-- .slide: class="center" -->
+
+`a >= b  --->  a.compareTo(b) >= 0
+
+
+---?code=lecture04/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/conventions.kt&title=Generics. #1
+@[13-18]()
 
 
 ---
