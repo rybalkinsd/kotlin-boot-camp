@@ -109,6 +109,9 @@ Fix all tests in `io.rybalkinsd.kotlinbootcamp.practice.BinaryUtilTest.kt`
 
 
 ---?code=lecture04/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/generics.kt&title=Generics. #1
+@[3-12]()
+@[14-26]()
+@[29-40]()
 
 ---
 @title[Generics. *variance]
