@@ -188,7 +188,7 @@ operator fun Point.unaryMinus() = Point(-x, -y)
 `a >= b  --->  a.compareTo(b) >= 0
 
 
----?code=lecture04/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/conventions.kt&title=Generics. #1
+---?code=lecture04/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/conventions.kt&title=Comparable
 @[13-18]()
 
 
