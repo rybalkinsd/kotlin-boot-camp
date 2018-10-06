@@ -30,6 +30,9 @@ open as new project
 ---
 @title[Agenda]
 1. @css[highlight](Exceptions)
+1. Generics
+1. Conventions
+1. Introduction to web 
 
 
 ---
@@ -86,6 +89,7 @@ All Exceptions in Kotlin are @css[highlight](unchecked)
 
 ---
 @title[Exceptions. Practice]
+<!-- .slide: class="center" -->
 Implement functions in `io.rybalkinsd.kotlinbootcamp.practice.binaryUtil.kt`
 
 Fix all tests in `io.rybalkinsd.kotlinbootcamp.practice.BinaryUtilTest.kt`
@@ -95,8 +99,15 @@ Fix all tests in `io.rybalkinsd.kotlinbootcamp.practice.BinaryUtilTest.kt`
 @[3-9]()
 
 
----?code=lecture04/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/generics.kt&title=Generics. #1
+---
+@title[Agenda]
+1. Exceptions
+1. @css[highlight](Generics #1)
+1. Conventions
+1. Introduction to web 
 
+
+---?code=lecture04/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/generics.kt&title=Generics. #1
 
 ---
 @title[Generics. *variance]
@@ -107,8 +118,59 @@ More content in next lectures
 
 
 ---
-@title[Conventions.]
+@title[Agenda]
+1. Exceptions
+1. Generics #1
+1. @css[highlight](Conventions)
+1. Introduction to web 
 
+
+---
+@title[Conventions. Operators]
+
+| Expression          | Function name             |
+| ------------- | -----------------:|
+| a * b       | times        |
+| a / b       | div        |
+| a % b       | mod        |
+| a + b       | plus        |
+| a - b       | minus        |
+
+@title[Conventions. `+=`]
+<!-- .slide: class="center" -->
+`*Assign`
+
+```kotlin
+operator fun Point.plusAssign(element: Point): Unit {
+    ...
+}
+```
+
+---
+@title[Conventions. Operators. Unary]
+<!-- .slide: class="center" -->
+```kotlin
+operator fun Point.unaryMinus() = Point(-x, -y)
+```
+
+
+---
+@title[Conventions. Operators. Unary]
+
+| Expression          | Function name             |
+| ------------- | -----------------:|
+| +a       | unaryPlus        |
+| -a       | unaryMinus        |
+| !a       | not        |
+| ++a, a++       | inc        |
+| --a, b--       | dec        |
+
+
+---
+@[Conventions. Operators. Comparison]
+<!-- .slide: class="center" -->
+
+`a == b  --->  a?.equals(b) ?: b == null`
 
 
 ---
