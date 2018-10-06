@@ -74,16 +74,17 @@ All Exceptions in Kotlin are @css[highlight](unchecked)
 ---
 @title[Exceptions. Unchecked. Why?]
 <!-- .slide: class="center" -->
-[Java's checked exceptions were a mistake](http://radio-weblogs.com/0122027/stories/2003/04/01/JavasCheckedExceptionsWereAMistake.html) (Rod Waldhoff)
-[The Trouble with Checked Exceptions](https://www.artima.com/intv/handcuffs.html) (Anders Hejlsberg)
+[Java's checked exceptions were a mistake](http://radio-weblogs.com/0122027/stories/2003/04/01/JavasCheckedExceptionsWereAMistake.html) *Rod Waldhoff*
+
+[The Trouble with Checked Exceptions](https://www.artima.com/intv/handcuffs.html) *Anders Hejlsberg*
 
 
 
 ---?code=lecture04/src/test/kotlin/io/rybalkinsd/kotlinbootcamp/ExceptionHandlingTest.kt&title=Exceptions. Handling
 @[9-19](try - catch - finally)
-@[24-37](try - catch - catch)
+@[24-35](try - catch - catch)
 @[40-46](try expression)
-@[40, 41, 45]()
+@[41, 45](return values of different branches)
 @[51](`?: throw`)
 
 
@@ -136,6 +137,7 @@ More content in next lectures
 | a + b       | plus        |
 | a - b       | minus        |
 
+---
 @title[Conventions. `+=`]
 <!-- .slide: class="center" -->
 `*Assign`
@@ -167,7 +169,7 @@ operator fun Point.unaryMinus() = Point(-x, -y)
 
 
 ---
-@[Conventions. Operators. Comparison]
+@title[Conventions. Operators. Comparison]
 <!-- .slide: class="center" -->
 
 `a == b  --->  a?.equals(b) ?: b == null`
