@@ -8,7 +8,6 @@ open class Point(val x: Int, val y: Int) {
     operator fun plus(other: Point): Point {
         return Point(x + other.x, y + other.y)
     }
-
 }
 
 class Vector(x: Int, y: Int): Point(x, y), Comparable<Vector> {
