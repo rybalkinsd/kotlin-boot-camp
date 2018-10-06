@@ -1,6 +1,7 @@
-package io.rybalkinsd.kotlinbootcamp.practice
+package io.rybalkinsd.kotlinbootcamp
 
-import org.junit.Ignore
+import io.rybalkinsd.kotlinbootcamp.practice.Box
+import io.rybalkinsd.kotlinbootcamp.practice.inbox
 import org.junit.Test
 
 

@@ -1,4 +1,4 @@
-package io.rybalkinsd.kotlinbootcamp.practice
+package io.rybalkinsd.kotlinbootcamp
 
 import junit.framework.TestCase.assertTrue
 import org.junit.Ignore

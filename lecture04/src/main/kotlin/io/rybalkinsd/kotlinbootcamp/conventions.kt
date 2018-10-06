@@ -1,4 +1,4 @@
-package io.rybalkinsd.kotlinbootcamp.practice
+package io.rybalkinsd.kotlinbootcamp
 
 import kotlin.math.sign
 import kotlin.math.sqrt

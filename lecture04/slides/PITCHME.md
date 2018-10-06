@@ -81,11 +81,11 @@ All Exceptions in Kotlin are @css[highlight](unchecked)
 
 
 ---?code=lecture04/src/test/kotlin/io/rybalkinsd/kotlinbootcamp/ExceptionHandlingTest.kt&title=Exceptions. Handling
-@[9-19](try - catch - finally)
-@[24-35](try - catch - catch)
-@[40-46](try expression)
-@[41, 45](return values of different branches)
-@[51](`?: throw`)
+@[11-21](try - catch - finally)
+@[26-37](try - catch - catch)
+@[42-48](try expression)
+@[43, 47](return values of different branches)
+@[53](`?: throw`)
 
 
 ---
@@ -138,7 +138,7 @@ More content in next lectures
 | a - b       | minus        |
 
 
----?code=lecture04/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/conventions.kt&title=Point `+` Point
+---?code=lecture04/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/conventions.kt&title=Point plus Point
 @[7-11]()
 @[8](operator)
 
