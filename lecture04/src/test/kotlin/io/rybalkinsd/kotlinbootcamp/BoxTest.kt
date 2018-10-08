@@ -2,7 +2,6 @@ package io.rybalkinsd.kotlinbootcamp
 
 import org.junit.Test
 
-
 class BoxTest {
     @Test
     fun `box creation`() {

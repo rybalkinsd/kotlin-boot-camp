@@ -15,8 +15,8 @@ class BinaryUtilTest {
     @Test
     fun `big number convert`() {
         assertEquals(
-            "1111011010110111011000000100001000000110100100011001100111111",
-            "2222222986345329471".toBinary()
+                "1111011010110111011000000100001000000110100100011001100111111",
+                "2222222986345329471".toBinary()
         )
     }
 
@@ -29,5 +29,4 @@ class BinaryUtilTest {
     fun `broken string convert`() {
         "404e1".toBinary()
     }
-
 }
