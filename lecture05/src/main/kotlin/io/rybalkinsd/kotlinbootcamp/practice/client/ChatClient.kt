@@ -1,4 +1,4 @@
-package io.rybalkinsd.kotlinbootcamp.practice
+package io.rybalkinsd.kotlinbootcamp.practice.client
 
 import com.kohttp.dsl.httpPost
 import okhttp3.Response

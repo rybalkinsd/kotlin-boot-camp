@@ -1,5 +1,5 @@
 
-import io.rybalkinsd.kotlinbootcamp.practice.ChatClient
+import io.rybalkinsd.kotlinbootcamp.practice.client.ChatClient
 import io.rybalkinsd.kotlinbootcamp.util.logger
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
@@ -18,11 +18,8 @@ class ChatClientTest {
         private val log = logger()
     }
 
-    private val log1 = logger()
     @Test
     fun login() {
-        log.info("ololo")
-        log1.info("lol")
         val response = Client.login(MY_NAME_IN_CHAT).also { println(it) }
         assertTrue(response.code() == 200 || response.code() == 400)
     }

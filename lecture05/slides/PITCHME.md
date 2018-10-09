@@ -3,7 +3,7 @@
 @title[Kotlin]
 
 ### Lecture 4
-#### Advanced Kotlin #1
+#### Kotlin web
 
 
 ---
@@ -20,8 +20,8 @@ Please [**sign in**](https://sphere.mail.ru/)
 <!-- .slide: class="center" -->
 ```bash
 git fetch upstream
-git checkout -b lecture04 upstream/lecture04
-cd lecture04
+git checkout -b lecture05 upstream/lecture05
+cd lecture05
 ```
 
 open as new project
@@ -29,10 +29,12 @@ open as new project
 
 ---
 @title[Agenda]
-1. @css[highlight](Exceptions)
-1. Generics
-1. Conventions
-1. Introduction to web 
+1. @css[highlight](Http Clien Practice)
+
+
+---
+@title[Agenda]
+1. @css[highlight](Http Clien Practice)
 
 
 ---
