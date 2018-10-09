@@ -188,6 +188,67 @@ See `io.rybalkinsd.kotlinbootcamp.apply.kt` and
 ---?code=lecture05/test/kotlin/io/rybalkinsd/kotlinbootcamp/practice/HttpClient.kt&title=Logger
 @[13,14,19,20](Declaration in companion object)
 
+---
+
+@title[Chat REST API]
+We got a chat REST service open for you on my machine (will be sent to the chat) 
+  
+Further you have description of it's REST API
+
+---
+
+@title[Chat REST API. View Online]
+online:
+```
+    URL: chat/online
+    Method: GET
+    Response:
+      Success code: 200
+```
+
+---
+
+@title[Chat REST API. Login]
+login:
+```
+    URL: chat/login
+    Method: POST
+    Body params:
+        name
+    Response:
+      Success code: 200
+      Fail code:
+        400 - Name is too short (less than 2 symbols)
+        400 - Name is too long (more than 30 symbols)
+```
+---
+
+@title[Chat REST API. View history]
+chat:
+```
+    URL: chat/history
+    Method: GET
+    Response:
+      Success code: 200
+```
+
+---
+
+@title[Chat REST API. Say]
+say:
+```
+    URL: chat/say
+    Method: POST
+    QueryParam: name
+    Body params:
+      name
+      msg
+    Response:
+      Success code: 200
+      Fail code:
+        403 - User not online
+        400 - Message is too long (longer than 140 symbols)
+```
 
 ---
 @title[That's all for today]
