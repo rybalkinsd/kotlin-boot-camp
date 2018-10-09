@@ -182,10 +182,10 @@ See `io.rybalkinsd.kotlinbootcamp.apply.kt` and
 @[28,32,41](kohttp:0.3.1)
 
 
----?code=lecture05/main/kotlin/io/rybalkinsd/kotlinbootcamp/util/util.kt&title=Logger
+---?code=lecture05/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/util/util.kt&title=Logger
 
 
----?code=lecture05/test/kotlin/io/rybalkinsd/kotlinbootcamp/practice/ChatClientTest.kt&title=Logger
+---?code=lecture05/src/test/kotlin/io/rybalkinsd/kotlinbootcamp/practice/ChatClientTest.kt&title=Logger
 @[13,14,19,20](Declaration in companion object)
 
 ---
