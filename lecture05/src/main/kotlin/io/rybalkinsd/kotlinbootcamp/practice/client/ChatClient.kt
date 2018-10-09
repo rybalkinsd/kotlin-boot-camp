@@ -8,7 +8,7 @@ object ChatClient {
     private const val HOST = "localhost"
     private const val PORT = 8080
 
-    /** 
+    /**
      * POST /chat/login?name=my_name
      */
     fun login(name: String) = httpPost {
@@ -29,12 +29,12 @@ object ChatClient {
 
     /**
      * POST /chat/say
-     * 
+     *
      * Body: "name=my_name&msg='my_message'"
      */
     fun say(name: String, msg: String): Response = TODO()
 
-    /** 
+    /**
      * GET /chat/online
      */
     fun viewOnline(): Response = TODO()
