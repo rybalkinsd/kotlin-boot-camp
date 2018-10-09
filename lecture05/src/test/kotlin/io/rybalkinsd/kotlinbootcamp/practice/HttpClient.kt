@@ -1,3 +1,4 @@
+package io.rybalkinsd.kotlinbootcamp.practice
 
 import io.rybalkinsd.kotlinbootcamp.practice.client.ChatClient
 import io.rybalkinsd.kotlinbootcamp.util.logger

@@ -29,172 +29,164 @@ open as new project
 
 ---
 @title[Agenda]
-1. @css[highlight](Http Clien Practice)
+1. @css[highlight](From functions to DSL)
+1. Http Client Practice
+1. Http Server Practice
 
 
 ---
-@title[Agenda]
-1. @css[highlight](Http Clien Practice)
-
-
----
-@title[Problem]
-### Anything that can go wrong will go wrong
-- lost connection
-- inconsistent object state
-- out of memory
-- file not found
-
-
----
-@title[Recovery]
-#### Recovery
-- reconnect
-- fix/rebuild object
-- free some memory
-- create new file
-
-or
-- cancel operations
-
-
----
-@title[Exception]
+@title[Ultimate goal]
 <!-- .slide: class="center" -->
 
+Best possible code readability and maintainability
+
+
+---
+@title[Tool. Extension function]
+
+Now:
 ```kotlin
-throw Exception("Hello, World!")
+s.capitalize()
+```
+
+Before:
+```java
+StringUtil.capitalize(s);
 ```
 
 
 ---
-@title[Exceptions. Unchecked]
-<!-- .slide: class="center" -->
-All Exceptions in Kotlin are @css[highlight](unchecked)
+@title[Tool. Infix function]
 
-
----
-@title[Exceptions. Unchecked. Why?]
-<!-- .slide: class="center" -->
-[Java's checked exceptions were a mistake](http://radio-weblogs.com/0122027/stories/2003/04/01/JavasCheckedExceptionsWereAMistake.html) *Rod Waldhoff*
-
-[The Trouble with Checked Exceptions](https://www.artima.com/intv/handcuffs.html) *Anders Hejlsberg*
-
-
-
----?code=lecture04/src/test/kotlin/io/rybalkinsd/kotlinbootcamp/ExceptionHandlingTest.kt&title=Exceptions. Handling
-@[11-21](try - catch - finally)
-@[26-37](try - catch - catch)
-@[42-48](try expression)
-@[43, 47](return values of different branches)
-@[53](`?: throw`)
-
-
----
-@title[Exceptions. Practice]
-<!-- .slide: class="center" -->
-Implement functions in `io.rybalkinsd.kotlinbootcamp.practice.binaryUtil.kt`
-
-Fix all tests in `io.rybalkinsd.kotlinbootcamp.practice.BinaryUtilTest.kt`
-
-
----?code=lecture04/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/practice/binaryUtil.kt&title=Exception. Practice
-@[3-9]()
-
-
----
-@title[Agenda]
-1. Exceptions
-1. @css[highlight](Generics #1)
-1. Conventions
-1. Introduction to web 
-
-
----?code=lecture04/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/generics.kt&title=Generics. #1
-@[3-12]()
-@[14-26]()
-@[29-40]()
-
----
-@title[Generics. *variance]
-<!-- .slide: class="center" -->
-[Official docs](https://kotlinlang.org/docs/reference/generics.html)
-
-More content in next lectures
-
-
----
-@title[Agenda]
-1. Exceptions
-1. Generics #1
-1. @css[highlight](Conventions)
-1. Introduction to web 
-
-
----
-@title[Conventions. Operators]
-
-| Expression          | Function name             |
-| ------------- | -----------------:|
-| a * b       | times        |
-| a / b       | div        |
-| a % b       | mod        |
-| a + b       | plus        |
-| a - b       | minus        |
-
-
----?code=lecture04/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/conventions.kt&title=Point plus Point
-@[7-11]()
-@[8](operator)
-
----
-@title[Conventions. `+=`]
-<!-- .slide: class="center" -->
-`*Assign`
-
+Now:
 ```kotlin
-operator fun Point.plusAssign(element: Point): Unit {
-    ...
+ "kotlin" to "the rescue"
+```
+
+Before:
+```kotlin
+"kotlin".to("the rescue")
+```
+
+
+---
+@title[Tool. Operator overloading]
+
+Now:
+```kotlin
+list += 42
+```
+
+Before:
+```kotlin
+list.add(42)
+```
+
+
+---
+@title[Tool. Convention `get`]
+
+Now:
+```kotlin
+map["key"]
+```
+
+Before:
+```kotlin
+map.get("key")
+```
+
+
+---
+@title[Tool. Lambda outside of parenthesis]
+
+Now:
+```kotlin
+list.filter { it > 0 }
+    .map { it * it }
+
+```
+
+Before:
+```kotlin
+list.filter({ e -> e > 0 })
+    .map({ e -> e * e })
+```
+
+In the parallel universe:
+```java
+list.stream()
+    .filter(e -> e > 0)
+    .map(e -> e * e)
+    .collect(Collectors.toList());
+```
+
+
+---
+@title[Tool. `with` receiver]
+
+Now:
+```kotlin
+with(sb) {
+    append("first line")
+    append("second line")
+    append("third line")
 }
 ```
 
-
----
-@title[Conventions. Operators. Unary]
-<!-- .slide: class="center" -->
+Before:
 ```kotlin
-operator fun Point.unaryMinus() = Point(-x, -y)
+sb.append("first line")
+sb.append("second line")
+sb.append("third line")
 ```
 
 
 ---
-@title[Conventions. Operators. Unary]
+@title[Apply]
 
-| Expression          | Function name             |
-| ------------- | -----------------:|
-| +a       | unaryPlus        |
-| -a       | unaryMinus        |
-| !a       | not        |
-| ++a, a++       | inc        |
-| --a, b--       | dec        |
+```kotlin
+public inline fun <T> T.apply(block: T.() -> Unit): T {
+    contract {
+        callsInPlace(block, InvocationKind.EXACTLY_ONCE)
+    }
+    block()
+    return this
+}
+```
+
+See `io.rybalkinsd.kotlinbootcamp.apply.kt` and 
+
+`io.rybalkinsd.kotlinbootcamp.ApplyTest.kt`
 
 
 ---
-@title[Conventions. Operators. Comparison]
-<!-- .slide: class="center" -->
+@title[Kohttp]
+[Kohttp](https://github.com/rybalkinsd/kohttp) - DSL-based http client
 
-`a == b  --->  a?.equals(b) ?: b == null`
+<img src="lecture05/slides/assets/images/kohttp.png" alt="kohttp" align="center"/>  
+
+
+---?code=lecture05/build.gradle.kts&title=kohttp dependency
+@[28,31,41](kohttp:0.3.1)
 
 
 ---
-@title[Conventions. Operators. Ordering]
-<!-- .slide: class="center" -->
+@title[Agenda]
+1. From functions to DSL
+1. @css[highlight](Http Client Practice)
+1. Http Server Practice
 
-`a >= b  --->  a.compareTo(b) >= 0
+
+---?code=lecture05/build.gradle.kts&title=Logger
+@[28,32,41](kohttp:0.3.1)
 
 
----?code=lecture04/src/main/kotlin/io/rybalkinsd/kotlinbootcamp/conventions.kt&title=Comparable
-@[13-18]()
+---?code=lecture05/main/kotlin/io/rybalkinsd/kotlinbootcamp/util/util.kt&title=Logger
+
+
+---?code=lecture05/test/kotlin/io/rybalkinsd/kotlinbootcamp/practice/HttpClient.kt&title=Logger
+@[13,14,19,20](Declaration in companion object)
 
 
 ---
