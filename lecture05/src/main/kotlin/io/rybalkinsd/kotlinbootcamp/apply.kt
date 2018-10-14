@@ -1,3 +1,4 @@
+// ktlint-disable filename
 package io.rybalkinsd.kotlinbootcamp
 
 class User(val id: Long) {
