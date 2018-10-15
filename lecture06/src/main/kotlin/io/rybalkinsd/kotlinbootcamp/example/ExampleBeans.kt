@@ -4,7 +4,7 @@ import io.rybalkinsd.kotlinbootcamp.util.logger
 import org.springframework.beans.factory.annotation.Autowired
 import javax.annotation.PostConstruct
 
-    class SingletonBean(var data: String?) {
+class SingletonBean(var data: String?) {
     @Autowired
     private lateinit var counterService: CounterService
 
@@ -13,9 +13,11 @@ import javax.annotation.PostConstruct
         logger().info("{} created", this::class.simpleName)
         counterService.register(this)
     }
+
+    override fun toString() = data.toString()
 }
 
-class PrototypeBean(var data: String?) {
+open class PrototypeBean(var data: String?) {
     @Autowired
     private lateinit var counterService: CounterService
 
@@ -24,9 +26,11 @@ class PrototypeBean(var data: String?) {
         logger().info("{} created", this::class.simpleName)
         counterService.register(this)
     }
+
+    override fun toString() = data.toString()
 }
 
-class RequestBean(var data: String?) {
+open class RequestBean(var data: String?) {
     @Autowired
     private lateinit var counterService: CounterService
 
@@ -35,4 +39,6 @@ class RequestBean(var data: String?) {
         logger().info("{} created", this::class.simpleName)
         counterService.register(this)
     }
+
+    override fun toString() = data.toString()
 }

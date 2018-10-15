@@ -6,11 +6,13 @@ import java.util.concurrent.atomic.AtomicLong
 
 interface BeanRegistryService {
     fun register(bean: Any)
+    fun size(): Long
 }
 
 @Service
 class CounterService : BeanRegistryService {
     val counter: AtomicLong = AtomicLong(0)
+    override fun size() = counter.get()
 
     override fun register(bean: Any) {
         counter.incrementAndGet()

@@ -6,16 +6,33 @@ import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.ResponseBody
 
 @Controller
-@RequestMapping("example")
+@RequestMapping("/example")
 class ExampleController {
     @Autowired
     lateinit var beanRegistry: BeanRegistryService
 
-    @RequestMapping("bean")
-    @ResponseBody
-    fun exampleBean(@Autowired exampleBean: PrototypeBean) = exampleBean
+    @Autowired
+    lateinit var prototypeBean: PrototypeBean
 
-    @RequestMapping("registry")
+    @Autowired
+    lateinit var requestBean: RequestBean
+
+    @Autowired
+    lateinit var singletonBean: SingletonBean
+
+    @RequestMapping("/prototypeBean")
     @ResponseBody
-    fun beanRegistry() = beanRegistry
+    fun prototypeBean() = prototypeBean.toString()
+
+    @RequestMapping("/requestBean")
+    @ResponseBody
+    fun requestBean() = requestBean.toString()
+
+    @RequestMapping("/singletonBean")
+    @ResponseBody
+    fun singletonBean() = singletonBean.toString()
+
+    @RequestMapping("/registry")
+    @ResponseBody
+    fun beanRegistry() = beanRegistry.size()
 }
