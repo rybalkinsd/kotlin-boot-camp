@@ -243,10 +243,11 @@ https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#
 ---
 
 @title[Bean scopes]
-https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-factory-scopes
 Beans can have different life span depending on requirements.  
-  
-**[Common scopes:]**  
+
+[Bean scopes in docs](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-factory-scopes)
+    
+## Common scopes  
 - singleton (default)
 - prototype: single bean definition to any number of object instances
 - request: single bean definition to the lifecycle of a single HTTP request
