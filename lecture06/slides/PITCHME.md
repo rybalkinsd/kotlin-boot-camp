@@ -20,8 +20,8 @@ Please [**sign in**](https://sphere.mail.ru/)
 <!-- .slide: class="center" -->
 ```bash
 git fetch upstream
-git checkout -b lecture05 upstream/lecture05
-cd lecture05
+git checkout -b lecture06 upstream/lecture06
+cd lecture06
 ```
 
 open as new project
@@ -53,7 +53,7 @@ that runs **spring**
 
 ---
 @title[Spring]
-<img src="lecture05/presentation/assets/img/spring-by-pivotal.png" alt="exception" style="width: 300px;"/>  
+<img src="lecture06/presentation/assets/img/spring-by-pivotal.png" alt="exception" style="width: 300px;"/>  
 is a universal open-source framework, used to develop web applications  
 https://spring.io/  
   
