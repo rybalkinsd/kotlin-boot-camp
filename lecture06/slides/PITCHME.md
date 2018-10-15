@@ -260,6 +260,10 @@ Both basic concepts and details are fully covered in spring [documentation](http
 
 
 ---
+@title[Match-maker practice]
+<img src="lecture06/slides/assets/images/mm.png" alt="spring" align="center"/>  
+
+---
 
 @title[Match-maker practice]
 https://github.com/rybalkinsd/kotlin-boot-camp/tree/lecture06/assignments/05
