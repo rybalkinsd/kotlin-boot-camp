@@ -116,8 +116,8 @@ compile("org.springframework.boot:spring-boot-starter-actuator")
 @title[Spring boot actuator]
 Spring boot actuator - useful dependency, providing web interface to meta data of application and even interact with it  
   
-**Actuator endpoints:**
-https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html  
+[Actuator endpoints](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html)
+
 By default most endpoints are disabled. To enable them we need to enable them in **application.properties**
 
 ---
@@ -256,8 +256,8 @@ Beans can have different life span depending on requirements.
 ---
 
 @title[Spring: see documentation]
-Both basic concepts and details are fully covered in spring documentation.
-https://docs.spring.io/spring/docs/current/spring-framework-reference/index.html
+Both basic concepts and details are fully covered in spring [documentation](https://docs.spring.io/spring/docs/current/spring-framework-reference/index.html).
+
 
 ---
 
