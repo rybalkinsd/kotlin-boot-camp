@@ -53,7 +53,7 @@ that runs **spring**
 
 ---
 @title[Spring]
-<img src="lecture06/slides/assets/images/spring-by-pivotal.png" alt="exception" style="width: 300px;"/>  
+<img src="lecture06/slides/assets/images/spring-by-pivotal.png" alt="spring" align="center"/>  
 is a universal open-source framework, used to develop web applications  
 https://spring.io/  
   
