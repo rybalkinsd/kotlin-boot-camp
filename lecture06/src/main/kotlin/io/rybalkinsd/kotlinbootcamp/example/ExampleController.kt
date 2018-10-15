@@ -19,4 +19,3 @@ class ExampleController {
     @ResponseBody
     fun beanRegistry() = beanRegistry
 }
-

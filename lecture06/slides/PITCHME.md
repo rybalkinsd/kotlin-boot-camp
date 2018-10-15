@@ -2,8 +2,8 @@
 <!-- .slide: class="center" -->
 @title[Kotlin]
 
-### Lecture 4
-#### Kotlin web
+### Lecture 6
+#### Spring
 
 
 ---
@@ -30,7 +30,7 @@ open as new project
 ---
 @title[Agenda]
 1. @css[highlight](Annotations)
-1. Spring Boot
+1. Spring, Spring Boot
 1. Inversion of Control, Dependency Injection
 1. Beans, ApplicationContext
 
@@ -41,18 +41,18 @@ TODO
 
 @title[Agenda]
 1. Annotations
-1. @css[highlight](Spring Boot)
+1. @css[highlight](Spring, Spring Boot)
 1. Inversion of Control, Dependency Injection
 1. Beans, ApplicationContext
 
 ---
-### Web server
+@title[Web server]
 **Spring boot** starts application  
 that starts embedded **tomcat**  
 that runs **spring**
 
 ---
-### Spring
+@title[Spring]
 <img src="lecture05/presentation/assets/img/spring-by-pivotal.png" alt="exception" style="width: 300px;"/>  
 is a universal open-source framework, used to develop web applications  
 https://spring.io/  
@@ -60,7 +60,7 @@ https://spring.io/
 First version - **2002**
 
 ---
-### Spring modules
+@title[Spring modules]
 It includes a number of modules for different functionality:
 - Spring MVC for building Web Applications
 - Working with Databases
@@ -72,7 +72,7 @@ It includes a number of modules for different functionality:
 Today we will build web application with **Spring MVC** module
 
 ---
-### Spring Boot
+@title[Spring Boot]
 Spring is a powerful tool and has a lot of configuration options.  
 **Spring Boot** is a project, that makes working with Spring easier:
 - embedded tomcat included with servlet container
@@ -86,18 +86,29 @@ First version: **2014**
 
 
 ---
-### Spring boot distribution
-TODO
-```groovy
-    // dependencies, necessary for building generic web applicaitons
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.0.0.RELEASE'
-    // actuator
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '2.0.0.RELEASE'
+@title[Spring boot distribution]
+Plugins necessary to build spring-boot application in kotlin:
+```kotlin
+plugins {
+    // ...
+    // all kotlin object members open by default
+    id("org.jetbrains.kotlin.plugin.spring") version ktVersion
+    // cat build spring boot application with gradle
+    id("org.springframework.boot") version "2.0.5.RELEASE"
+    id("io.spring.dependency-management") version "1.0.5.RELEASE"
+}
 ```
 
+Spring boot dependencies:
+```kotlin
+// main web module
+compile("org.springframework.boot:spring-boot-starter-web")
+// monitoring endpoint
+compile("org.springframework.boot:spring-boot-starter-actuator")
+```
 ---
 
-### Spring boot actuator
+@title[Spring boot actuator]
 Spring boot actuator - useful dependency, providing web interface to meta data of application and even interact with it  
   
 **Actuator endpoints:**
@@ -106,7 +117,7 @@ By default most endpoints are disabled. To enable them we need to enable them in
 
 ---
 
-### application.properties
+@title[application.properties]
 The standard way to configure java application - **application.properties** should appear in classpath  
 To enable actuator endpoints:
 ```properties
@@ -121,7 +132,7 @@ management.server.port = 7001
 ```
 
 ---
-### Useful actuator endpoints
+@title[Useful actuator endpoints]
 **/actuator/health**  
 overall application status  
   
@@ -134,27 +145,27 @@ all beans in context
 
 @title[Agenda]
 1. Annotations)
-1. Spring Boot
+1. Spring, Spring Boot
 1. @css[highlight](Inversion of Control, Dependency Injection)
 1. Beans, ApplicationContext
 
 ---
 
-### Inversion of Control
+@title[Inversion of Control (IoC)]
 **Principle:** control flow is transferred to external framework  
 **Why:** loose coupling, easier to develop, easier to test
 
 ---
 
-### Dependency Injection
+@title[Dependency Injection]
+**DI** is an implementation of **IoC** principle
 Objects lifecycle is managed by external framework (**IoC container**)
 - instantiation
 - wiring
-- removal
 
 ---
 
-### Spring provides IoC container
+@title[Spring provides IoC container
 https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans  
 Interface of **IoC Container** in Spring:  
 **org.springframework.context.ApplicationContext**  
@@ -167,13 +178,13 @@ Interface of **IoC Container** in Spring:
 
 @title[Agenda]
 1. Annotations)
-1. Spring Boot
+1. Spring, Spring Boot
 1. Inversion of Control, Dependency Injection)
 1. @css[highlight](Beans, ApplicationContext)
 
 ---
 
-### Beans
+@title[Beans]
 https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-definition  
 Beans are java objects, that are managed by **IoC Container**  
   
@@ -181,7 +192,7 @@ How to make **bean** out of **POJO** (Plain Old Java Object)?
 With bean definition configuration
 
 ---
-### Spring configuration
+@title[Spring configuration]
 There are several options for beans configuration:
 - XML Description
 - Groovy Description
@@ -191,7 +202,7 @@ We will use annotations as this is the cleanest one
 
 ---
 
-### Beans Detection
+@title[Beans Detection]
 For spring to create and manage beans, we must provide bean definitions  
 **How to create bean definition with annotations:**
 - mark class with **@Configuration**/**@Component**/**@Controller**/**@Service**/**@Repository** or annotations, inheriting their semantics
@@ -199,7 +210,7 @@ For spring to create and manage beans, we must provide bean definitions
 
 ---
 
-### Beans autowiring
+@title[Beans autowiring]
 https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-autowired-annotation  
 Once we have beans definitions, we can inject those beans with **@Autowired**  
 Possible targets:
@@ -210,7 +221,7 @@ Possible targets:
 
 ---
 
-## ByType and ByName autowiring
+@title[ByType and ByName autowiring]
 ```java
 @Service
 public class MatchMaker implements Runnable {
@@ -223,7 +234,7 @@ public class MatchMaker implements Runnable {
 https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-autowired-annotation-qualifiers
 ---
 
-### Bean scopes
+@title[Bean scopes]
 https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-factory-scopes
 Beans can have different life span depending on requirements.  
   
@@ -236,7 +247,7 @@ Beans can have different life span depending on requirements.
 
 ---
 
-### Spring: see documentation
+@title[Spring: see documentation]
 Both basic concepts and details are fully covered in spring documentation.
 https://docs.spring.io/spring/docs/current/spring-framework-reference/index.html
 
