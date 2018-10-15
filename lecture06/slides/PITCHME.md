@@ -33,6 +33,7 @@ open as new project
 1. Spring, Spring Boot
 1. Inversion of Control, Dependency Injection
 1. Beans, ApplicationContext
+1. Practice
 
 ---
 TODO
@@ -44,12 +45,16 @@ TODO
 1. @css[highlight](Spring, Spring Boot)
 1. Inversion of Control, Dependency Injection
 1. Beans, ApplicationContext
+1. Practice
 
 ---
-@title[Web server]
+@title[Overall picture of our chat]
 **Spring boot** starts application  
 that starts embedded **tomcat**  
-that runs **spring**
+that runs **spring**  
+that runs our logic  
+  
+Let's discuss how @css[highlight](spring) runs our logic
 
 ---
 @title[Spring]
@@ -69,7 +74,7 @@ It includes a number of modules for different functionality:
 - Security
 - Testing
   
-Today we will build web application with **Spring MVC** module
+Today we will build web application with @css[highlight](spring boot web)
 
 ---
 @title[Spring Boot]
@@ -82,7 +87,7 @@ https://projects.spring.io/spring-boot/
   
 First version: **2014**
   
-**With Spring Boot our life is much easier :)**
+**With Spring Boot our life is much easier**
 
 
 ---
@@ -91,9 +96,9 @@ Plugins necessary to build spring-boot application in kotlin:
 ```kotlin
 plugins {
     // ...
-    // all kotlin object members open by default
+    // all kotlin object members open by default for beans
     id("org.jetbrains.kotlin.plugin.spring") version ktVersion
-    // cat build spring boot application with gradle
+    // can build spring boot application with gradle
     id("org.springframework.boot") version "2.0.5.RELEASE"
     id("io.spring.dependency-management") version "1.0.5.RELEASE"
 }
@@ -118,7 +123,7 @@ By default most endpoints are disabled. To enable them we need to enable them in
 ---
 
 @title[application.properties]
-The standard way to configure java application - **application.properties** should appear in classpath  
+The standard way to configure kotlin application - **application.properties** should appear in classpath  
 To enable actuator endpoints:
 ```properties
 management.endpoints.web.exposure.include=*
@@ -133,13 +138,13 @@ management.server.port = 7001
 
 ---
 @title[Useful actuator endpoints]
-**/actuator/health**  
+@css[highlight](/actuator/health)  
 overall application status  
   
-**/actuator/mappings**  
+@css[highlight](/actuator/mappings**)  
 available mappings  
   
-**/actuator/beans**  
+@css[highlight](/actuator/beans)  
 all beans in context
 ---
 
@@ -148,6 +153,7 @@ all beans in context
 1. Spring, Spring Boot
 1. @css[highlight](Inversion of Control, Dependency Injection)
 1. Beans, ApplicationContext
+1. Practice
 
 ---
 
@@ -165,7 +171,7 @@ Objects lifecycle is managed by external framework (**IoC container**)
 
 ---
 
-@title[Spring provides IoC container
+@title[Spring provides IoC container]
 https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans  
 Interface of **IoC Container** in Spring:  
 **org.springframework.context.ApplicationContext**  
@@ -177,16 +183,17 @@ Interface of **IoC Container** in Spring:
 ---
 
 @title[Agenda]
-1. Annotations)
+1. Annotations
 1. Spring, Spring Boot
 1. Inversion of Control, Dependency Injection)
 1. @css[highlight](Beans, ApplicationContext)
+1. Practice
 
 ---
 
 @title[Beans]
 https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-definition  
-Beans are java objects, that are managed by **IoC Container**  
+@css[highlight](Beans) are kotlin/java objects, that are managed by **IoC Container**  
   
 How to make **bean** out of **POJO** (Plain Old Java Object)?  
 With bean definition configuration
@@ -222,11 +229,12 @@ Possible targets:
 ---
 
 @title[ByType and ByName autowiring]
-```java
-@Service
-public class MatchMaker implements Runnable {
-    @Autowired //How do spring know which bean to inject?
-    private ConnectionQueue connectionQueue;
+```kotlin
+@Controller
+@RequestMapping("/example")
+class ExampleController {
+    @Autowired // How to know which bean to autowire
+    lateinit var beanRegistry: BeanRegistryService
 }
 ```
 - ByType: it will search the bean with type **ConnectionQueue** or implementation in ApplicationContext
