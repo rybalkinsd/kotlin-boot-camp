@@ -192,7 +192,7 @@ Interface of **IoC Container** in Spring:
 ---
 
 @title[Beans]
-https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-definition  
+[What is bean?](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-definition)  
 @css[highlight](Beans) are kotlin/java objects, that are managed by **IoC Container**  
   
 How to make **bean** out of **POJO** (Plain Old Java Object)?  
