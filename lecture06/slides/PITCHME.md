@@ -251,6 +251,68 @@ Beans can have different life span depending on requirements.
 Both basic concepts and details are fully covered in spring documentation.
 https://docs.spring.io/spring/docs/current/spring-framework-reference/index.html
 
+---
+
+@title[Match-maker practice]
+@See ru.atom.mm and tests 
+
+---
+@title[Match-maker]
+Our Bomberman is a client-server game.
+
+As a client server game we have Clients or **Connections**
+
+Clients want to play. So, we have Games or **GameSessions** 
+ 
+
+---
+@title[Match-maker]
+<img src="lecture05/presentation/assets/img/mm.png" alt="mm" style="width: 750px;"/>
+
+
+---
+@title[Match-making algorithm]
+<img src="lecture05/presentation/assets/img/mmalgo.png" alt="mmalgo" style="width: 750px;"/>
+
+
+---
+@title[Match-making algorithm]
+**Assume we have a queue storing connections**
+
+Match-maker is an infinity-loop algorithm with steps
+1. **Poll connection** from queue
+1. **Collect** polled connection to game GameSession candidates
+1. **Check** if candidates count equals to PLAYERS_IN_GAME constant 
+    - If **no** continue to step #1
+    - If **yes**
+        - Create and save GameSession
+        - Clean GameSession candidates
+        - Continue to step #1
+
+
+---
+@title[Connection producer]
+We do not have server to get connections for now. 
+We need an instance to emulate client.  
+  
+**Connection producer** will put new requests to our **queue** time-to-time.
+It is possible to have many producers.
+
+
+---
+@title[Practice 2]
+#### We have
+Math-maker service implementation
+@see ru.atom.boot.mm  
+  
+#### Implement:
+- ConnectionController::list()
+  
+#### Un-ignore and fix:
+- ConnectionControllerIntegrationTest::list()
+- GameControllerTest::list() 
+- GameControllerTest::connect()
+- GameControllerIntegrationTest::list()
 
 ---
 @title[That's all for today]
