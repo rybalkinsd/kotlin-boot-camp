@@ -172,7 +172,7 @@ Objects lifecycle is managed by external framework (**IoC container**)
 ---
 
 @title[Spring provides IoC container]
-https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans  
+[Beans are managed with container](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans)  
 Interface of **IoC Container** in Spring:  
 **org.springframework.context.ApplicationContext**  
 - methods for accessing application components. **ListableBeanFactory**
