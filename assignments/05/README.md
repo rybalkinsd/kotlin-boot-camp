@@ -8,15 +8,12 @@ Now it's a part to create big part of our infrastructure, including matchmaker a
 
 API that our user see:
     `join(name: String)`
-	User opens game web page (localhost:8080) and see the landing page (index page)
-	with the only button [Play] and a text form to enter his nickname.
 
 
 
 Under the hood (**Implement this service**):
 1. Matchmaker service.
 	Matchmaker should handle `play` button request from user and provide a valid game session id to the user
-	User is waiting until Matchmaker will respond with the `game id`.  
 
 	Specification  
 	  ```
