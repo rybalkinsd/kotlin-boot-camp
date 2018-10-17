@@ -22,6 +22,7 @@ git fetch upstream
 git checkout -b web_hackaton upstream/web_hackaton
 cd web_hackaton
 ```
+open as new project
 
 ---
 
@@ -38,7 +39,7 @@ cd web_hackaton
 ---
 
 **Features:**
-1. chat/say, chat/chat, chat/logout - 4p
+1. chat/say, chat/online, chat/logout - 4p
 1. save history to file on server - 2p
 1. message timestamp - 2p
 1. different colors for name and timestamp - 2p
@@ -54,77 +55,71 @@ cd web_hackaton
 
 ---
 
-## Chat REST API. Login
+@title[Chat REST API. View Online]
+online:
+```
+    URL: chat/online
+    Method: GET
+    Response:
+      Success code: 200
+```
+
+---
+
+@title[Chat REST API. Login]
 login:
 ```
-    Protocol: HTTP
-    Path: chat/login
+    URL: chat/login
     Method: POST
-    PathParam: name
-    Host: {IP}:8080
+    Body params:
+        name
     Response:
       Success code: 200
       Fail code:
-        400 - Already logged in
-        400 - Too long name (longer than 30 symbols)
+        400 - Name is too short (less than 2 symbols)
+        400 - Name is too long (more than 30 symbols)
 ```
-
 ---
 
-## Chat REST API. View chat
-online:
+@title[Chat REST API. View history]
+chat:
 ```
-    Protocol: HTTP
-    Path: chat/chat
+    URL: chat/history
     Method: GET
-    Host: {IP}:8080
     Response:
       Success code: 200
 ```
 
 ---
 
-## Chat REST API. View online users
-online:
-```
-    Protocol: HTTP
-    Path: chat/online
-    Method: GET
-    Host: {IP}:8080
-    Response:
-      Success code: 200
-```
-
----
-
-## Chat REST API. Say
+@title[Chat REST API. Say]
 say:
 ```
-    Protocol: HTTP
-    Path: chat/say
+    URL: chat/say
     Method: POST
-    Body:
-      name=my_name&msg=my message
-    Host: {IP}:8080
+    Body params:
+      name
+      msg
     Response:
       Success code: 200
       Fail code:
-        401 - Not logged in
+        403 - User not online
+        400 - Message is too long (longer than 140 symbols)
 ```
 
 ---
 
-## Chat REST API. Logout
-logout:
+
+@title[Chat REST API. Say]
+say:
 ```
-    Protocol: HTTP
-    Path: chat/logout
+    URL: chat/logout
     Method: POST
-    Body:
-      name=my_name
-    Host: {IP}:8080
+    QueryParam: name
     Response:
       Success code: 200
+      Fail code:
+        403 - User not online
 ```
 
 ---
