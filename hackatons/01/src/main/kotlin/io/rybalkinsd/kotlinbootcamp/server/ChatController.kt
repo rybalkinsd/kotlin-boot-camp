@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
 import org.springframework.web.bind.annotation.RequestParam
+import org.springframework.web.bind.annotation.ResponseBody
 import java.util.Queue
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.ConcurrentLinkedQueue
@@ -19,9 +20,9 @@ class ChatController {
     val usersOnline: MutableMap<String, String> = ConcurrentHashMap()
 
     @RequestMapping(
-        path = ["/login"],
-        method = [RequestMethod.POST],
-        consumes = [MediaType.APPLICATION_FORM_URLENCODED_VALUE]
+            path = ["/login"],
+            method = [RequestMethod.POST],
+            consumes = [MediaType.APPLICATION_FORM_URLENCODED_VALUE]
     )
     fun login(@RequestParam("name") name: String): ResponseEntity<String> = when {
         name.isEmpty() -> ResponseEntity.badRequest().body("Name is too short")
@@ -41,24 +42,30 @@ class ChatController {
      * curl -i localhost:8080/chat/online
      */
     @RequestMapping(
-        path = ["online"],
-        method = [RequestMethod.GET],
-        produces = [MediaType.TEXT_PLAIN_VALUE]
+            path = ["online"],
+            method = [RequestMethod.GET],
+            produces = [MediaType.TEXT_PLAIN_VALUE]
     )
     fun online(): ResponseEntity<String> = TODO()
 
     /**
-     * curl -X POST -i localhost:8080/chat/logout -d "name=I_AM_STUPID"
+     * curl -X POST -i localhost:8080/chat/logout -d "name=MY_NAME"
      */
     // TODO
 
     /**
-     * curl -X POST -i localhost:8080/chat/say -d "name=I_AM_STUPID&msg=Hello everyone in this chat"
+     * curl -X POST -i localhost:8080/chat/say -d "name=MY_NAME&msg=Hello everyone in this chat"
      */
     // TODO
 
     /**
-     * curl -i localhost:8080/chat/chat
+     * curl -i localhost:8080/chat/history
      */
-    // TODO
+    @RequestMapping(
+            path = ["history"],
+            method = [RequestMethod.GET],
+            produces = [MediaType.TEXT_PLAIN_VALUE]
+    )
+    @ResponseBody
+    fun history(): String = messages.joinToString(separator = "\n")
 }
