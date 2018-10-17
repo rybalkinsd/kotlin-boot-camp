@@ -111,17 +111,18 @@ say:
 
 @title[Chat REST API. Logout]
 logout:
+
 ```
     URL: chat/logout
-    Method: POST
-    QueryParam: name
+    Method: DELETE
+    Body params:
+      name
+      msg
     Response:
       Success code: 200
       Fail code:
         403 - User not online
 ```
-
-
 ---
 @title[That's all for today]
 
