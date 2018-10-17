@@ -2,7 +2,6 @@
 <!-- .slide: class="center" -->
 @title[Kotlin]
 
-### Lecture 4
 #### Web hackaton
 
 
@@ -110,8 +109,8 @@ say:
 ---
 
 
-@title[Chat REST API. Say]
-say:
+@title[Chat REST API. Logout]
+logout:
 ```
     URL: chat/logout
     Method: POST
@@ -121,13 +120,6 @@ say:
       Fail code:
         403 - User not online
 ```
-
----
-
-**Оставьте обратную связь**
-(вам на почту придет анкета)  
-
-**Это важно!**
 
 ---
 @title[That's all for today]
