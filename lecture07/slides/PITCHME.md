@@ -90,7 +90,7 @@ mac
 
 ---
 @title[DB Server]
-We setup DB server in cloud for you  
+We did setup DB server in cloud for you:  
 Machine address: @css[highlight](54.224.37.210)  
 Port: @css[highlight](5432)  
 You have individual database, use your assigned number:  
@@ -185,8 +185,8 @@ Transaction is a unit of work
 @title[Agenda]
 1. Google cloud shell
 1. DB Setup
-1. @css[highlight](Database basics)
-1. SQL basics
+1. Database basics
+1. @css[highlight](SQL basics)
 1. Kotlin + DB
 
 ---
@@ -201,6 +201,12 @@ create table "user" (
   id    serial             not null,
   login varchar(20) unique not null
 );
+```
+```postgresql
+\d+ user;
+```
+```postgresql
+drop table "user";
 ```
 **Note - you can not name table or column with reserved name css[highlight](user)**
 
@@ -316,7 +322,7 @@ What if chat.user has a complex pk?
 ```postgresql
 create table "user"();
 
-create table bullshit.message(); 
+create table NoSuChScHeMa.message(); 
 
 insert into message ("user", time, value) 
 values ('admin', now(), 'super message') 
@@ -338,7 +344,15 @@ commit;
 
 
 ---
+@title[Agenda]
+1. Google cloud shell
+1. DB Setup
+1. Database basics
+1. SQL basics
+1. @css[highlight](Kotlin + DB)
 
+---
+@title[Practice]
 
 ---
 @title[That's all for today]
