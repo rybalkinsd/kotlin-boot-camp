@@ -208,7 +208,7 @@ create table "user" (
 ```postgresql
 drop table "user";
 ```
-**Note - you can not name table or column with reserved name css[highlight](user)**
+**Note - you can not name table or column with reserved name @css[highlight](user)**
 
 [[Read more about `serial`]](https://www.tutorialspoint.com/postgresql/postgresql_using_autoincrement.htm)
 
