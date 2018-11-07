@@ -2,8 +2,8 @@
 <!-- .slide: class="center" -->
 @title[Kotlin]
 
-### Lecture 6
-#### Spring
+### Lecture 7
+#### Working with Databases
 
 
 ---
@@ -20,254 +20,324 @@ Please [**sign in**](https://sphere.mail.ru/)
 <!-- .slide: class="center" -->
 ```bash
 git fetch upstream
-git checkout -b lecture06 upstream/lecture06
-cd lecture06
+git checkout -b lecture07 upstream/lecture07
+cd lecture07
 ```
 
 open as new project
 
+---
+@title[Agenda]
+1. @css[highlight](Google cloud shell)
+1. Local setup (Not needed if using google cloud shell)
+1. Database basics
+1. SQL basics
+1. Kotlin + DB
+
+---
+@title[Google Cloud Platform]
+https://cloud.google.com/  
+This is one of the leading cloud services platforms  
+Please register here
+
+---
+@title[Google cloud shell]
+https://cloud.google.com/shell/  
+This is a linux machine that is given for every user of Google Cloud Platform for free  
+It has everything we need on board:
+- A temporary virtual machine instance
+- Command-line access to the instance from a web browser
+- 5 GB of persistent disk storage
+- Pre-installed Google Cloud SDK and other tools
+- Language support for Java, Go, Python, Node.js, PHP, Ruby and .NET
+- Public DNS (Web preview)
+  
+https://cloud.google.com/shell/docs/features
+
+---
+@title[Check your google cloud shell]
+```bash
+git --version
+java -version
+javac -version
+psql --version
+```
 
 ---
 @title[Agenda]
-1. @css[highlight](Annotations)
-1. Spring, Spring Boot
-1. Inversion of Control, Dependency Injection
-1. Beans, ApplicationContext
-1. Practice
+1. Google cloud shell
+1. @css[highlight](DB Setup)
+1. Database basics
+1. SQL basics
+1. Kotlin + DB
 
 ---
-@title[Annotations demo]
+@title[Install postgreSQL client. (Not needed if using google shell)]
+Install the PostgreSQL client
 
+linux
+```bash
+apt-get install postgresql-9.5
+```
+
+windows [[Download page]](https://www.postgresql.org/download/windows/)
+
+
+mac
+```bash
+> brew install postgres
+``` 
+
+---
+@title[DB Server]
+We setup DB server in cloud for you  
+Machine address: @css[highlight](54.224.37.210)  
+Port: @css[highlight](5432)  
+You have individual database, use your assigned number:  
+database name is @css[highlight](chatdb_atomN)  
+user name is @css[highlight](atomN)  
+
+---
+@title[Check db connection]
+
+```bash
+> psql -h 54.224.37.210 -U atomN -d chatdb_atomN
+> enter your password
+>> psql (9.6.2, server 9.2.18)
+>> Type "help" for help.
+```
+```postgresql
+select * from pg_catalog.pg_tables;
+```
+
+---
+@title[psql commands]
+```bash
+#exit
+\q 
+#list all schemas
+\dn
+#list all tables in all schemas
+\dt *.
+#describe table
+\d+ tablename
+```
 ---
 
 @title[Agenda]
-1. Annotations
-1. @css[highlight](Spring, Spring Boot)
-1. Inversion of Control, Dependency Injection
-1. Beans, ApplicationContext
-1. Practice
-
----
-@title[Overall picture of our chat]
-**Spring boot** starts application  
-that starts embedded **tomcat**  
-that runs **spring**  
-that runs our logic  
-  
-Let's discuss how @css[highlight](spring) runs our logic
-
----
-@title[Spring]
-<img src="lecture06/slides/assets/images/spring-by-pivotal.png" alt="spring" align="center"/>  
-is a universal open-source framework, used to develop web applications  
-https://spring.io/  
-  
-First version - **2002**
-
----
-@title[Spring modules]
-It includes a number of modules for different functionality:
-- Spring MVC for building Web Applications
-- Working with Databases
-- Messaging
-- RPC
-- Security
-- Testing
-  
-Today we will build web application with @css[highlight](spring boot web)
-
----
-@title[Spring Boot]
-Spring is a powerful tool and has a lot of configuration options.  
-**Spring Boot** is a project, that makes working with Spring easier:
-- embedded tomcat included with servlet container
-- minimum configuration, sane defaults
-- metrics, health checks and externalized configuration
-https://projects.spring.io/spring-boot/  
-  
-First version: **2014**
-  
-**With Spring Boot our life is much easier**
+1. Google cloud shell
+1. DB Setup
+1. @css[highlight](Database basics)
+1. SQL basics
+1. Kotlin + DB
 
 
 ---
-@title[Spring boot distribution]
-Plugins necessary to build spring-boot application in kotlin:
-```kotlin
-plugins {
-    // ...
-    // all kotlin object members open by default for beans
-    id("org.jetbrains.kotlin.plugin.spring") version ktVersion
-    // can build spring boot application with gradle
-    id("org.springframework.boot") version "2.0.5.RELEASE"
-    id("io.spring.dependency-management") version "1.0.5.RELEASE"
-}
-```
+@title[Storage comparison]
+**RAM** vs **File**  
+- Capacity
+- Speed
+- Durability
 
-Spring boot dependencies:
-```kotlin
-// main web module
-compile("org.springframework.boot:spring-boot-starter-web")
-// monitoring endpoint
-compile("org.springframework.boot:spring-boot-starter-actuator")
-```
----
-
-@title[Spring boot actuator]
-Spring boot actuator - useful dependency, providing web interface to meta data of application and even interact with it  
-  
-[Actuator endpoints](https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-endpoints.html)
-
-By default most endpoints are disabled. To enable them we need to enable them in **application.properties**
 
 ---
-
-@title[application.properties]
-The standard way to configure kotlin application - **application.properties** should appear in classpath  
-To enable actuator endpoints:
-```properties
-management.endpoints.web.exposure.include=*
-```
-We also can configure actuator and server ports there:
-```properties
-#server port:
-server.port = 8080
-#actuator port:
-management.server.port = 7001
-```
+@title[Storage comparison]
+**File** vs **Database**
+- Store overhead
+- Consistency
+- Guarantees
+- Speed
 
 ---
-@title[Useful actuator endpoints]
-@css[highlight](/actuator/health)  
-overall application status  
-  
-@css[highlight](/actuator/mappings**)  
-available mappings  
-  
-@css[highlight](/actuator/beans)  
-all beans in context
----
-
-@title[Agenda]
-1. Annotations)
-1. Spring, Spring Boot
-1. @css[highlight](Inversion of Control, Dependency Injection)
-1. Beans, ApplicationContext
-1. Practice
-
----
-
-@title[Inversion of Control (IoC)]
-**Principle:** control flow is transferred to external framework  
-**Why:** loose coupling, easier to develop, easier to test
-
----
-
-@title[Dependency Injection]
-**DI** is an implementation of **IoC** principle
-Objects lifecycle is managed by external framework (**IoC container**)
-- instantiation
-- wiring
-
----
-
-@title[Spring provides IoC container]
-[Beans are managed with container](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans)  
-Interface of **IoC Container** in Spring:  
-**org.springframework.context.ApplicationContext**  
-- methods for accessing application components. **ListableBeanFactory**
-- methods to load file resources in a generic fashion. **ResourceLoader**
-- methods to publish events to registered listeners. **ApplicationEventPublisher**
-- methods to resolve messages, supporting internationalization. **MessageSource**
-
----
-
-@title[Agenda]
-1. Annotations
-1. Spring, Spring Boot
-1. Inversion of Control, Dependency Injection)
-1. @css[highlight](Beans, ApplicationContext)
-1. Practice
-
----
-
-@title[Beans]
-[What is bean?](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-definition)  
-@css[highlight](Beans) are kotlin/java objects, that are managed by **IoC Container**  
-  
-How to make **bean** out of **POJO** (Plain Old Java Object)?  
-With bean definition configuration
-
----
-@title[Spring configuration]
-There are several options for beans configuration:
-- XML Description
-- Groovy Description
-- Annotations
-  
-We will use annotations as this is the cleanest one
-
----
-
-@title[Beans Detection]
-For spring to create and manage beans, we must provide bean definitions  
-**How to create bean definition with annotations:**
-- mark class with **@Configuration**/**@Component**/**@Controller**/**@Service**/**@Repository** or annotations, inheriting their semantics
-- mark any method inside such class with **@Bean** (config method)
-
----
-
-@title[Beans autowiring]
-https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-autowired-annotation  
-Once we have beans definitions, we can inject those beans with **@Autowired**  
-Possible targets:
-- constructor
-- field
-- setter method
-- config method
-
----
-
-@title[ByType and ByName autowiring]
-```kotlin
-@Controller
-@RequestMapping("/example")
-class ExampleController {
-    @Autowired // How to know which bean to autowire
-    lateinit var beanRegistry: BeanRegistryService
-}
-```
-- ByType: it will search the bean with type **ConnectionQueue** or implementation in ApplicationContext
-- ByName: with **@Qualifier** annotation we can autowire bean by name  
-https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-autowired-annotation-qualifiers
----
-
-@title[Bean scopes]
-Beans can have different life span depending on requirements.  
-
-[Bean scopes in docs](https://docs.spring.io/spring/docs/current/spring-framework-reference/core.html#beans-factory-scopes)
+@title[Database (RDBMS)]
+Is a
     
-## Common scopes  
-- singleton (default)
-- prototype: single bean definition to any number of object instances
-- request: single bean definition to the lifecycle of a single HTTP request
-- websocket: single bean definition to the lifecycle of a WebSocket
-...
+    Collection of related data
+    
+Where
 
----
+    Data can be easily accessed
 
-@title[Spring: see documentation]
-Both basic concepts and details are fully covered in spring [documentation](https://docs.spring.io/spring/docs/current/spring-framework-reference/index.html).
+Within
+
+    Management system
 
 
 ---
-@title[Match-maker practice]
-<img src="lecture06/slides/assets/images/mm.png" alt="spring" align="center"/>  
+@title[Many different types of DBs]
+- SQL/[NoSQL](https://en.wikipedia.org/wiki/NoSQL)
+- In-memory/disk storage
+- stand-alone/embedded
+- ...
 
 ---
+@title[Transaction]
+Transaction is a unit of work
 
-@title[Match-maker practice]
-https://github.com/rybalkinsd/kotlin-boot-camp/tree/lecture06/assignments/05
+- Recovery
+- ACID
+    - Atomicity
+    - Consistency
+    - Isolation
+    - Durability
+
+---
+@title[Agenda]
+1. Google cloud shell
+1. DB Setup
+1. @css[highlight](Database basics)
+1. SQL basics
+1. Kotlin + DB
+
+---
+@title[PostgreSQL]
+Popular DBMS (heavily used in production for years)
+[[Official doc]](https://www.postgresql.org/docs/9.2/static/index.html)  
+All examples below are in PostgreSQL
+---
+@title[Table]
+```postgresql
+create table "user" (
+  id    serial             not null,
+  login varchar(20) unique not null
+);
+```
+**Note - you can not name table or column with reserved name css[highlight](user)**
+
+[[Read more about `serial`]](https://www.tutorialspoint.com/postgresql/postgresql_using_autoincrement.htm)
+
+
+---
+@title[Primary key]
+Indicates that a column or group of columns can be used as a unique identifier for rows in the table
+
+```postgresql
+create table chat.user (
+  id    serial             not null,
+  login varchar(20) unique not null,
+
+  primary key (id)
+);
+```
+
+
+---
+@title[Schema]
+A schema is essentially a namespace.
+
+```postgresql
+create schema chat;
+```
+
+```postgresql
+create table chat.user (
+
+)
+```
+
+[[Read more]](https://www.postgresql.org/docs/9.3/static/sql-createschema.html)
+
+
+---
+@title[First schema]
+@See resources/sql/schema/schema-1-simple.sql
+
+
+---
+@title[CRUD]
+1. **insert** for create
+1. **select** for read
+1. **update** for update
+1. **delete** for delete 
+
+
+---
+@title[select]
+```postgresql
+select *
+from chat.message
+where time > '2017-03-25';
+```
+
+[[Read more]](https://www.postgresql.org/docs/9.2/static/sql-select.html)
+
+---
+@title[insert]
+```postgresql
+insert into chat.user (login)
+values ('admin');
+```
+
+[[Read more]](https://www.postgresql.org/docs/9.2/static/sql-insert.html)
+
+---
+@title[delete]
+```postgresql
+delete from chat.user 
+where login = 'admin';
+```
+
+[[Read more]](https://www.postgresql.org/docs/9.2/static/sql-delete.html)
+
+
+---
+@title[Constraints]
+Imagine a user with lots of messages in history.
+
+What happens when we delete this user?
+
+
+---
+@title[Constraints]
+```postgresql
+drop table if exists chat.message;
+create table chat.message (
+  id     serial       not null,
+  "user" integer      not null references chat.user on delete cascade,
+  time   timestamp    not null,
+  value  varchar(140) not null,
+
+  primary key (id)
+);
+```
+
+What if chat.user has a complex pk?
+
+[[Read more]](https://www.postgresql.org/docs/9.2/static/ddl-constraints.html)
+
+
+---
+@title[Second schema]
+@See resources/sql/schema/schema-2-constraints.sql
+
+
+---
+@title[What if one of queries is broken?]
+```postgresql
+create table "user"();
+
+create table bullshit.message(); 
+
+insert into message ("user", time, value) 
+values ('admin', now(), 'super message') 
+```
+
+
+---
+@title[Transaction]
+```postgresql
+begin;
+{statements}
+commit;
+```
+
+
+---
+@title[Third schema]
+@See resources/sql/schema/schema-3-transaction.sql
+
+
+---
 
 
 ---
