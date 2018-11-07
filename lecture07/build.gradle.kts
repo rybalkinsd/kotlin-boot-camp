@@ -5,7 +5,7 @@ group = "io.rybalkinsd"
 version = "1.0-SNAPSHOT"
 
 plugins {
-    val ktVersion = "1.2.71"
+    val ktVersion = "1.3.0"
     kotlin("jvm") version ktVersion
 
     // spring-related
@@ -28,7 +28,7 @@ val ktlint by configurations.creating
 dependencies {
     compile(kotlin("stdlib-jdk8"))
     compile(kotlin("reflect"))
-    compile("io.github.rybalkinsd", "kohttp", "0.3.1")
+    compile("io.github.rybalkinsd", "kohttp", "0.4.0")
     compile("org.slf4j", "slf4j-api", "1.7.25")
 
     compile(spring("web"))
