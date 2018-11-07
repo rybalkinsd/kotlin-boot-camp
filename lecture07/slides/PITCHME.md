@@ -351,8 +351,30 @@ commit;
 1. SQL basics
 1. @css[highlight](Kotlin + DB)
 
+
 ---
-@title[Practice]
+@title[Kotlin Expose]
+
+Framework [https://github.com/JetBrains/Exposed](https://github.com/JetBrains/Exposed)
+
+Now we will use [DSL features](https://github.com/JetBrains/Exposed/wiki/DSL) of Exposed
+
+Pivotal [demo project](https://github.com/sdeleuze/geospatial-messenger)
+
+
+---
+@title[Properties Delegation]
+@See [Docs](https://kotlinlang.org/docs/reference/delegated-properties.html)
+
+
+---
+@title[Practice - Persistent chat]
+
+Implement Dao using Kotlin Exposed library
+
+@See ChatUserDaoTest
+@See ChatMessageDaoTest
+
 
 ---
 @title[That's all for today]

@@ -1,7 +1,7 @@
 theme-override : lecture01/slides/assets/css/PITCHME.css
 
 logo : lecture01/slides/assets/images/sphere.png
-footnote : "Kotlin boot camp - Lecture 6 - @al-p-i"
+footnote : "Kotlin boot camp - Lecture 7 - @al-p-i @rybalkinsd"
 
 slide-number: true
 code-line-numbers : true
