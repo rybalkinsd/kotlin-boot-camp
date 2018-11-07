@@ -1,0 +1,28 @@
+#appender:
+#  console:
+#    type: Console
+#    name: STDOUT
+#    layout:
+#      type: PatternLayout
+#      pattern: %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %m%n
+#
+#rootLogger:
+#  level: info
+#  appenderRef.stdout.ref: STDOUT
+#
+
+Configutation:
+  name: Default
+
+  Appenders:
+    Console:
+      name: Console_Appender
+      target: SYSTEM_OUT
+      PatternLayout:
+        pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"
+
+  Loggers:
+      Root:
+        level: info
+        AppenderRef:
+          - ref: Console_Appender
