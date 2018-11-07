@@ -30,6 +30,8 @@ dependencies {
     compile(kotlin("reflect"))
     compile("io.github.rybalkinsd", "kohttp", "0.4.0")
     compile("org.slf4j", "slf4j-api", "1.7.25")
+    compile("org.jetbrains.exposed", "exposed", "0.11.2")
+    runtimeOnly("org.postgresql", "postgresql", "42.2.2")
 
     compile(spring("web"))
     compile(spring("actuator"))
