@@ -29,7 +29,7 @@ open as new project
 ---
 @title[Agenda]
 1. @css[highlight](Google cloud shell)
-1. Local setup (Not needed if using google cloud shell)
+1. Local setup 
 1. Database basics
 1. SQL basics
 1. Kotlin + DB
