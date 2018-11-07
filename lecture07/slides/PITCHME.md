@@ -353,6 +353,11 @@ commit;
 
 
 ---
+@title[Properties Delegation]
+@See [Docs](https://kotlinlang.org/docs/reference/delegated-properties.html)
+
+
+---
 @title[Kotlin Expose]
 
 Framework [https://github.com/JetBrains/Exposed](https://github.com/JetBrains/Exposed)
@@ -361,10 +366,7 @@ Now we will use [DSL features](https://github.com/JetBrains/Exposed/wiki/DSL) of
 
 Pivotal [demo project](https://github.com/sdeleuze/geospatial-messenger)
 
-
----
-@title[Properties Delegation]
-@See [Docs](https://kotlinlang.org/docs/reference/delegated-properties.html)
+Related [blogpost](https://spring.io/blog/2016/03/20/a-geospatial-messenger-with-kotlin-spring-boot-and-postgresql)
 
 
 ---
@@ -373,6 +375,7 @@ Pivotal [demo project](https://github.com/sdeleuze/geospatial-messenger)
 Implement Dao using Kotlin Exposed library
 
 @See ChatUserDaoTest
+
 @See ChatMessageDaoTest
 
 
