@@ -13,12 +13,13 @@ import org.springframework.web.socket.config.annotation.WebSocketConfigurer
 import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry
 import org.springframework.web.socket.handler.TextWebSocketHandler
 import java.util.concurrent.atomic.AtomicLong
+import java.util.concurrent.ConcurrentHashMap
 
 data class User(val id: Long, val name: String)
 data class Message(val msgType: String, val data: Any)
 
 class ChatHandler : TextWebSocketHandler() {
-    private val connections = HashMap<WebSocketSession, User>()
+    private val connections = ConcurrentHashMap<WebSocketSession, User>()
     var uids = AtomicLong(0)
 
     override fun afterConnectionClosed(session: WebSocketSession, status: CloseStatus) {
@@ -35,7 +36,7 @@ class ChatHandler : TextWebSocketHandler() {
                 // tell this user about all other users
                 emit(session, Message("online", connections.values))
                 // tell all other users, about this user
-                broadcastToOthers(session, Message("join", user))
+                broadcastToOthers(session, Message("login", user))
             }
             "say" -> {
                 broadcast(Message("say", json["data"].asText()))
