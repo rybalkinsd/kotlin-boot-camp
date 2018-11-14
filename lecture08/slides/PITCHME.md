@@ -3,7 +3,7 @@
 @title[Kotlin]
 
 ### Lecture 8
-#### Websockets and Final Project 
+#### WebSocket and Final Project 
 
 
 ---
@@ -29,13 +29,125 @@ open as new project
 
 ---
 @title[Agenda]
-0. @css[highlight](Websocket)
+0. @css[highlight](WebSocket)
 0. Game architecture
 0. Game client
 0. Time model
 0. Client-server protocol
 0. Project task
 
+@title[Game architecture overview]
+![Game arch](lecture08/assets/images/Game-architecture.png) 
+
+
+---
+@title[lient-server communication]
+- Why is HTTP @css[highlight](bad) for client-server communication in real-time games?  
+- What alternatives do we have?  
+
+---
+@title[WebSocket]
+- client-server
+- full-duplex
+- application-layer
+- over single TCP connection
+- protocol (@css[highlight](ws://) @css[highlight](wss://))
+
+Standartized in 2011 [https://tools.ietf.org/html/rfc6455](https://tools.ietf.org/html/rfc6455)  
+Can be used for any extensive client-server communication  
+Supported by most modern browsers
+
+---
+@title[WebSocket]
+### Client-server
+client is the one who initializes session
+
+### Full-duplex
+exchange data in both directions
+
+---
+@title[OSI]
+![OSI](lecture08/assets/images/osi2.png) 
+
+---
+@title[WebSocket is application layer]
+<img src="lecture08/assets/images/osi.png" alt="exception" style="width: 750px;"/>  
+
+---
+@title[WebSocket]
+### Application layer
+WebSocket works over TCP/IP (typically).  
+WebSocket is initialized via @css[highlight](HTTP UPGRADE) to websocket
+
+### Over single TCP connection
+Single TCP connection is used for communication.
+Then no handshakes or headers required. @css[highlight](Only raw data)
+
+---
+@title[WebSocket]
+![OSI](lecture08/assets/images/websocket.png) 
+
+---
+@title[WebSocket library]
+There are a number of @css[highlight](websocket) implementations. We will use spring boot @css[highlight](websocket implementation)  
+> @see build.gradle
+
+---
+@title[Websocket library interface]
+All communication happen via @css[highlight](WebSocketSession) interface
+
+---
+@title[Notes]
+- @css[highlight](websocket) allow string data as well as binary data interchange
+- @css[highlight](websocket) declares max message length (configurable)
+- @css[highlight](websocket) session auto-closes when inactive (configurable)
+
+---
+@title[sniff websocket traffic with tcpdump]
+[http://www.tcpdump.org/](http://www.tcpdump.org/)  
+tcpdump - standard unix tool to fo traffic analysis. It can inspect @css[highlight](websocket) too
+```bash
+tcpdump -Aq -s0 -i lo0 'tcp port 8090'
+```
+
+---
+@title[Another nice tools]
+**tcpflow**  
+[tcpflow on github](https://github.com/simsong/tcpflow)  
+**wireshark**  
+[home page](https://www.wireshark.org/)
+
+---
+@title[WebSocket example]
+> @see lecture08/ru.atom.lecture08.websocket/
+
+Of course, we can also send structured data (like **JSON**)
+
+---
+@title[Agenda]
+1. WebSocket
+1. @css[highlight](Practice)
+
+---
+@title[Send simple message to wtfis.ru:8090]
+- Our EventClient already can say 'Hello'  
+- In real world (and in game) want to send structured data (like JSON)
+- our game will send all data as JSON. Lets emulate this feature
+
+---
+@title[Task 1]
+Look as Message class. It represents structured data and it can be converted to JSON
+> Implement sending **Message** with topic **Hello** and your name as **data**
+> Server adress: wtfis.ru:8090/events
+
+---
+@title[What we can do now]
+Ok, now we can send structured messages via **websocket** with arbitrary **data** and defined **type**
+
+
+---
+@title[Task 2]
+Implement chat with WebSocket
 
 ---
 @title[Agenda]
