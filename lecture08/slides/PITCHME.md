@@ -121,7 +121,7 @@ tcpdump -Aq -s0 -i lo0 'tcp port 8090'
 
 ---
 @title[WebSocket example]
-> @see lecture08/ru.atom.lecture08.websocket/
+> @see lecture08/io.rybalkinsd.kotlinbootcamp.websocket
 
 Of course, we can also send structured data (like **JSON**)
 
