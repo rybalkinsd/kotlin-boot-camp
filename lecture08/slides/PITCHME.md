@@ -125,6 +125,7 @@ It can be encrypted
 > @see lecture08/io.rybalkinsd.kotlinbootcamp.websocket
 1. Launch ChatApplication
 2. Go to localhost:8080 in browser
+3. You can open multiple tabs to check interaction
 @css[highlight](say) and basic @css[highlight](login) are implemented
 
 ---
@@ -132,31 +133,21 @@ It can be encrypted
 ### Server
 > @see io.rybalkinsd.kotlinbootcamp.websocket.ChatApplication.kt
 
-It serves WebSocket requests on @css[highlight](/chat) url  
-It handles 2 types of messages:
-- login
-- say
+It serves @css[highlight](login) and @css[highlight](say)  WebSocket requests on @css[highlight](/chat) url  
 
 ### Client
 > @see resources/static/index.html
 
-Client sends login and say messages
+Client sends @css[highlight](login) and @css[highlight](say) messages
 
 
 ---
 @title[Practice]
-- Implement login with form, not prompt
+- Add user name before message
 - Implement sending message after login: "user-x logged in"
+- Implement login with form, not prompt
 - Implement logout button
 - Save message history on server
-
----
-@title[What we can do now]
-Ok, now we can send structured messages via **websocket** with arbitrary **data** and defined **type**
-
-
----
-@title[Task 2]
 
 
 ---
