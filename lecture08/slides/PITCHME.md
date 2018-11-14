@@ -256,7 +256,7 @@ Check it out
 
 ---
 @title[Time model with variable tick time]
-> @see ru.atom.lecture09.tick.Ticker
+> @see io.rybalkinsd.kotlinbootcamp.tick.Ticker
 
 In our model tick lasts until all messages from InputQueue are handled  
 So every time tick time is different  
@@ -345,7 +345,7 @@ server -> client
 
 ---
 @title[Network implementation ideas]
-> @see ru.atom.lecture09.network
+> @see io.rybalkinsd.kotlinbootcamp.network
 
 
 
