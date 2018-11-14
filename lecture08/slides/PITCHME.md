@@ -72,7 +72,7 @@ exchange data in both directions
 ![OSI](lecture08/slides/assets/images/osi2.png) 
 
 ---
-@title[WebSocket is application layer]
+@title[WebSocket is application on layer]
 ![WebSocket in OSI](lecture08/slides/assets/images/osi.png) 
 
 ---
