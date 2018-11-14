@@ -111,6 +111,7 @@ tcpdump - standard unix tool to fo traffic analysis. It can inspect @css[highlig
 ```bash
 tcpdump -Aq -s0 -i lo0 'tcp port 8090'
 ```
+It can be encrypted
 
 ---
 @title[Another nice tools]
@@ -120,27 +121,34 @@ tcpdump -Aq -s0 -i lo0 'tcp port 8090'
 [home page](https://www.wireshark.org/)
 
 ---
-@title[WebSocket example]
+@title[Example WebSocket chat]
 > @see lecture08/io.rybalkinsd.kotlinbootcamp.websocket
-
-Of course, we can also send structured data (like **JSON**)
-
----
-@title[Agenda]
-1. WebSocket
-1. @css[highlight](Practice)
+1. Launch ChatApplication
+2. Go to localhost:8080 in browser
+@css[highlight](say) and basic @css[highlight](login) are implemented
 
 ---
-@title[Send simple message to wtfis.ru:8090]
-- Our EventClient already can say 'Hello'  
-- In real world (and in game) want to send structured data (like JSON)
-- our game will send all data as JSON. Lets emulate this feature
+@title[WebSocket chat code]
+### Server
+> @see io.rybalkinsd.kotlinbootcamp.websocket.ChatApplication.kt
+
+It serves WebSocket requests on @css[highlight](/chat) url  
+It handles 2 types of messages:
+- login
+- say
+
+### Client
+> @see resources/static/index.html
+
+Client sends login and say messages
+
 
 ---
-@title[Task 1]
-Look as Message class. It represents structured data and it can be converted to JSON
-> Implement sending **Message** with topic **Hello** and your name as **data**
-> Server adress: wtfis.ru:8090/events
+@title[Practice]
+- Implement login with form, not prompt
+- Implement sending message after login: "user-x logged in"
+- Implement logout button
+- Save message history on server
 
 ---
 @title[What we can do now]
@@ -149,7 +157,7 @@ Ok, now we can send structured messages via **websocket** with arbitrary **data*
 
 ---
 @title[Task 2]
-Implement chat with WebSocket
+
 
 ---
 @title[Agenda]

@@ -8,7 +8,7 @@ import java.util.concurrent.ConcurrentHashMap
 
 
 class ConnectionPool {
-    private val pool = ConcurrentHashMap<WebSocketSession, String>()
+    private val connections = ConcurrentHashMap<WebSocketSession, String>()
 
     fun send(session: WebSocketSession,msg: String) {
         if (session.isOpen) {
@@ -17,26 +17,26 @@ class ConnectionPool {
     }
 
     fun broadcast(msg: String) {
-        pool.forEach { session, _ -> send(session, msg) }
+        connections.forEach { session, _ -> send(session, msg) }
     }
 
     fun shutdown() {
-        pool.forEach { session , _ ->
+        connections.forEach { session, _ ->
             if (session.isOpen) {
                 session.close()
             }
         }
     }
 
-    fun getPlayer(session: WebSocketSession): String? = pool[session]
+    fun getPlayer(session: WebSocketSession): String? = connections[session]
 
-    fun getSession(player: String): WebSocketSession? = pool.entries.asSequence()
+    fun getSession(player: String): WebSocketSession? = connections.entries.asSequence()
         .filter { it.value == player }
         .map { it.key }
         .firstOrNull()
 
     fun add(session: WebSocketSession, player: String) {
-        pool.putIfAbsent(session, player).also {
+        connections.putIfAbsent(session, player).also {
             if (it == null) log.info("$player joined")
         }
     }
