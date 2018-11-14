@@ -38,9 +38,9 @@ open as new project
 
 ---
 
-@title[Game architecture overview]
-![Game arch](lecture08/slides/assets/images/Bomberman-architecture.png) 
-
+@title[Architecture overview]
+<!-- .slide: class="center" -->
+<img src="lecture08/slides/assets/images/Bomberman-architecture.png" alt="exception" style="width: 900px;"/>
 
 ---
 @title[Client-server communication]
