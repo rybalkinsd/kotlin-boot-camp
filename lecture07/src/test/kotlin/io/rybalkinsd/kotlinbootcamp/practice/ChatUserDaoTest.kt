@@ -32,7 +32,7 @@ class ChatUserDaoTest {
         val before = userNumber()
         userDao.insert(dummyUser())
         val after = userNumber()
-        TestCase.assertTrue(before + 1 >= after)
+        TestCase.assertTrue(before + 1 <= after )
     }
 
     @Test
