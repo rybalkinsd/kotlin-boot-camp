@@ -5,10 +5,8 @@ import org.springframework.web.socket.TextMessage
 import org.springframework.web.socket.WebSocketSession
 import java.util.concurrent.ConcurrentHashMap
 
-
-
 class ConnectionPool {
-    private val connections = ConcurrentHashMap<WebSocketSession, String>()
+    private val connections = ConcurrentHashMap<WebSocketSession, User>()
 
     fun send(session: WebSocketSession,msg: String) {
         if (session.isOpen) {
@@ -28,14 +26,14 @@ class ConnectionPool {
         }
     }
 
-    fun getPlayer(session: WebSocketSession): String? = connections[session]
+    fun getPlayer(session: WebSocketSession): User? = connections[session]
 
-    fun getSession(player: String): WebSocketSession? = connections.entries.asSequence()
+    fun getSession(player: User): WebSocketSession? = connections.entries.asSequence()
         .filter { it.value == player }
         .map { it.key }
         .firstOrNull()
 
-    fun add(session: WebSocketSession, player: String) {
+    fun add(session: WebSocketSession, player: User) {
         connections.putIfAbsent(session, player).also {
             if (it == null) log.info("$player joined")
         }

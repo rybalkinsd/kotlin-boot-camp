@@ -14,7 +14,7 @@ class Broker(private val connectionPool: ConnectionPool) {
         //TODO TASK2 implement message processing
     }
 
-    fun send(player: String, topic: Topic, data: Any) {
+    fun send(player: User, topic: Topic, data: Any) {
         val message = Message(topic, data.toJson()).toJson()
         val session = connectionPool.getSession(player)
         connectionPool.send(session!!, message)
