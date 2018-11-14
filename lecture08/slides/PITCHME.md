@@ -36,8 +36,10 @@ open as new project
 0. Client-server protocol
 0. Project task
 
+---
+
 @title[Game architecture overview]
-![Game arch](lecture08/assets/images/Game-architecture.png) 
+![Game arch](lecture08/slides/assets/images/Bomberman-architecture.png) 
 
 
 ---
@@ -67,11 +69,11 @@ exchange data in both directions
 
 ---
 @title[OSI]
-![OSI](lecture08/assets/images/osi2.png) 
+![OSI](lecture08/slides/assets/images/osi2.png) 
 
 ---
 @title[WebSocket is application layer]
-<img src="lecture08/assets/images/osi.png" alt="exception" style="width: 750px;"/>  
+![WebSocket in OSI](lecture08/slides/assets/images/osi.png) 
 
 ---
 @title[WebSocket]
@@ -85,7 +87,7 @@ Then no handshakes or headers required. @css[highlight](Only raw data)
 
 ---
 @title[WebSocket]
-![OSI](lecture08/assets/images/websocket.png) 
+![WebSocket](lecture08/slides/assets/images/websocket.png) 
 
 ---
 @title[WebSocket library]
