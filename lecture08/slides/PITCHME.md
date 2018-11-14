@@ -43,7 +43,7 @@ open as new project
 
 
 ---
-@title[lient-server communication]
+@title[Client-server communication]
 - Why is HTTP @css[highlight](bad) for client-server communication in real-time games?  
 - What alternatives do we have?  
 
@@ -92,7 +92,7 @@ Then no handshakes or headers required. @css[highlight](Only raw data)
 ---
 @title[WebSocket library]
 There are a number of @css[highlight](websocket) implementations. We will use spring boot @css[highlight](websocket implementation)  
-> @see build.gradle
+> @see build.gradle.kts
 
 ---
 @title[Websocket library interface]
