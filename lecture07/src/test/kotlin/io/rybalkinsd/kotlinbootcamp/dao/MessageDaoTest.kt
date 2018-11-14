@@ -6,8 +6,10 @@ import org.jetbrains.exposed.sql.addLogger
 import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.transactions.transaction
 import org.joda.time.DateTime
+import org.junit.Ignore
 import org.junit.Test
 
+@Ignore
 class MessageDaoTest {
 
     @Test

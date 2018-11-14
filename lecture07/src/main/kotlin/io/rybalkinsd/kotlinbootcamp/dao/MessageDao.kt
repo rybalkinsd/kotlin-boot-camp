@@ -13,5 +13,4 @@ class MessageDao : Dao<Message> {
     override fun insert(t: Message) {
         TODO("not implemented")
     }
-
 }
