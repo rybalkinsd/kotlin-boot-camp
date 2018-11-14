@@ -7,6 +7,6 @@ import org.slf4j.LoggerFactory
  * logger
  */
 inline fun <reified T : Any> T.logger(): Logger = LoggerFactory.getLogger(
-        if (T::class.isCompanion) T::class.java.enclosingClass
-        else T::class.java
+    if (T::class.isCompanion) T::class.java.enclosingClass
+    else T::class.java
 )

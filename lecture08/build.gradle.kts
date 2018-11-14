@@ -9,9 +9,9 @@ plugins {
     kotlin("jvm") version ktVersion
 
     // spring-related
-//    id("org.jetbrains.kotlin.plugin.spring") version ktVersion
-//    id("org.springframework.boot") version "2.0.5.RELEASE"
-//    id("io.spring.dependency-management") version "1.0.5.RELEASE"
+    id("org.jetbrains.kotlin.plugin.spring") version ktVersion
+    id("org.springframework.boot") version "2.0.5.RELEASE"
+    id("io.spring.dependency-management") version "1.0.5.RELEASE"
 }
 
 tasks.withType<KotlinCompile> {
@@ -30,14 +30,13 @@ dependencies {
     compile(kotlin("reflect"))
     compile("io.github.rybalkinsd", "kohttp", "0.4.0")
     compile("org.slf4j", "slf4j-api", "1.7.25")
-    compile("org.jetbrains.exposed", "exposed", "0.11.2")
-    runtimeOnly("org.postgresql", "postgresql", "42.2.2")
 
-//    compile(spring("web"))
-//    compile(spring("actuator"))
+    compile(spring("web"))
+    compile(spring("actuator"))
+    compile(spring("websocket"))
 
     testCompile("junit", "junit", "4.12")
-//    testCompile(spring("test"))
+    testCompile(spring("test"))
 
     ktlint("com.github.shyiko", "ktlint", "0.28.0")
 }
