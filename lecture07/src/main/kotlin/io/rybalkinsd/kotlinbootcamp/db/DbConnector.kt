@@ -3,7 +3,6 @@ package io.rybalkinsd.kotlinbootcamp.db
 import io.rybalkinsd.kotlinbootcamp.util.logger
 import org.jetbrains.exposed.sql.Database
 
-
 object DbConnector {
     private val log = logger()
 

@@ -1,6 +1,5 @@
 package io.rybalkinsd.kotlinbootcamp.dao
 
-
 interface Dao<T> {
     /**
      * SELECT * from ...

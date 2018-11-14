@@ -8,8 +8,10 @@ import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.selectAll
 import org.jetbrains.exposed.sql.transactions.transaction
 import org.junit.Before
+import org.junit.Ignore
 import org.junit.Test
 
+@Ignore
 class UserDaoTest {
 
     @Before
@@ -43,6 +45,4 @@ class UserDaoTest {
             println(users)
         }
     }
-
-
 }
