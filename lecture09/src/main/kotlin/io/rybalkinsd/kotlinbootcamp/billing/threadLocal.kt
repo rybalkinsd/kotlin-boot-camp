@@ -3,7 +3,7 @@ package io.rybalkinsd.kotlinbootcamp.billing
 import kotlin.random.Random
 
 val sharedRunnableInstance = object : Runnable {
-    //This container contains different references for different threads
+    // This container contains different references for different threads
     private val threadLocal = ThreadLocal<Int>()
 
     override fun run() {

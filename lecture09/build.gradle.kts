@@ -55,5 +55,9 @@ tasks {
     }
 }
 
+springBoot {
+    mainClassName = "io.rybalkinsd.kotlinbootcamp.billing.BillingResource"
+}
+
 fun DependencyHandler.spring(module: String, version: String? = null) =
     "org.springframework.boot:spring-boot-starter-$module${version?.let { ":$version" } ?: ""}"
