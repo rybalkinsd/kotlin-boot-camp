@@ -71,6 +71,7 @@ In @css[highlight](Kotlin) we have @css[highlight](Thread) class and @css[highli
 
 ---
 @title[interface Runnable]
+Java Runnable:
 ```java
 @FunctionalInterface
 interface Runnable {
@@ -81,6 +82,7 @@ interface Runnable {
 
 ---
 @title[class Thread]
+Java Thread:
 ```java
 class Thread implements Runnable {  
     void start() {}
@@ -95,8 +97,11 @@ class Thread implements Runnable {
 
 ---
 @title[Start and Run]
-```java
-new Thread( runnable ).start();
+This code will run doTheLogic() in separate thread:
+```kotlin
+Thread {
+            doTheLogic()
+        }.start()
 ```
 
 ---
