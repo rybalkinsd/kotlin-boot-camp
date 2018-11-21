@@ -232,8 +232,8 @@ If we target kotlin to JVM only, we can reason in terms of JMM
 ---
 @title[Java concurrency]
 Lecture from Java course 2018:  
-(slides)[https://gitpitch.com/rybalkinsd/atom/lecture11?grs=github&t=white&p=lecture11%2Fpresentation#/]  
-(video)[https://www.youtube.com/watch?v=lVtMjcZyAgI]
+[slides](https://gitpitch.com/rybalkinsd/atom/lecture11?grs=github&t=white&p=lecture11%2Fpresentation#/)  
+[video](https://www.youtube.com/watch?v=lVtMjcZyAgI)
 
 ---
 @title[Can we make it easier?]
@@ -269,16 +269,6 @@ Nothing new - they can communicate via public variables, via mutable objects.
 **InputQueue** - input data from users  
 **ConnectionPool** - connected players  
 
----
-
-## References
-[Java concurrency in practice (signature book for Java Developer)](https://www.amazon.com/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601)   
-[Alexey Shipilev blog (JMM, concurrency, performance, benchmarks for people, JDK contributor)](https://shipilev.net/)  
-[Doug Lea-s home page (java.util.concurrent father and famous spec in concurrency and allocators)](http://g.oswego.edu/)  
-[Java Memory Model Pragmatics (best explanation of JMM - available in russian)](https://shipilev.net/#jmm)  
-[JMM Under the hood (deep explanation of JMM)](http://gvsmirnov.ru/blog/tech/2014/02/10/jmm-under-the-hood.html)  
-[What Every Dev Must Know About Multithreaded Apps (Common knowledge)](https://lyle.smu.edu/~coyle/cse8313/handouts.fall06/s04.msdn.multithreading.pdf)  
-  
 
 ---
 ## Practice
@@ -323,8 +313,8 @@ http://jmeter.apache.org/
 [JMM Under the hood (deep explanation of JMM)](http://gvsmirnov.ru/blog/tech/2014/02/10/jmm-under-the-hood.html)  
 [What Every Dev Must Know About Multithreaded Apps (Common knowledge)](https://lyle.smu.edu/~coyle/cse8313/handouts.fall06/s04.msdn.multithreading.pdf)  
 Lecture from Java course 2018: 
-(slides)[https://gitpitch.com/rybalkinsd/atom/lecture11?grs=github&t=white&p=lecture11%2Fpresentation#/] 
-(video)[https://www.youtube.com/watch?v=lVtMjcZyAgI]
+[slides](https://gitpitch.com/rybalkinsd/atom/lecture11?grs=github&t=white&p=lecture11%2Fpresentation#/])
+[video](https://www.youtube.com/watch?v=lVtMjcZyAgI)
   
 
 ---
