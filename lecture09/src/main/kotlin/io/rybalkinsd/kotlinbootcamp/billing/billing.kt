@@ -34,14 +34,15 @@ class BillingResource {
      * curl -XPOST localhost:8080/billing/addUser -d "user=sergey&money=100000"
      */
     @RequestMapping(
-        path = ["addUser"],
-        method = [POST],
-        consumes = [APPLICATION_FORM_URLENCODED_VALUE]
+            path = ["addUser"],
+            method = [POST],
+            consumes = [APPLICATION_FORM_URLENCODED_VALUE]
     )
     @ResponseStatus(HttpStatus.OK)
-    fun addUser(@RequestParam("user") user: String?,
-                @RequestParam("money") money: Int?): ResponseEntity<String> {
-
+    fun addUser(
+        @RequestParam("user") user: String?,
+        @RequestParam("money") money: Int?
+    ): ResponseEntity<String> {
         if (user == null || money == null) {
             return ResponseEntity.badRequest().body("")
         }
@@ -51,14 +52,16 @@ class BillingResource {
     }
 
     @RequestMapping(
-        path = ["sendMoney"],
-        method = [POST],
-        consumes = [APPLICATION_FORM_URLENCODED_VALUE]
+            path = ["sendMoney"],
+            method = [POST],
+            consumes = [APPLICATION_FORM_URLENCODED_VALUE]
     )
     @ResponseStatus(HttpStatus.OK)
-    fun sendMoney(@RequestParam("from") fromUser: String?,
-                  @RequestParam("to") toUser: String?,
-                  @RequestParam("money") money: Int?): ResponseEntity<String> {
+    fun sendMoney(
+        @RequestParam("from") fromUser: String?,
+        @RequestParam("to") toUser: String?,
+        @RequestParam("money") money: Int?
+    ): ResponseEntity<String> {
         if (fromUser == null || toUser == null || money == null) {
             return ResponseEntity.badRequest().body("")
         }

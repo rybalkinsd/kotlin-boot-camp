@@ -1,7 +1,6 @@
 package io.rybalkinsd.kotlinbootcamp.billing
 
 class VolatileExample {
-
     // in jvm
     // public volatile Boolean running;
     @Volatile
@@ -23,7 +22,6 @@ class VolatileExample {
             running = false
         }.start()
     }
-
 }
 
 fun main(args: Array<String>) {
