@@ -51,7 +51,7 @@ Why we need parallelism?
 
 ---
 @title[Process vs Thread]
-<img src="lecture09/presentation/slides/assets/images/process.png" alt="process" style="width: 450px;"/>
+<img src="lecture09/slides/assets/images/process.png" alt="process" style="width: 450px;"/>
 
 ---
 @title[Threads and processes. OS Role]
@@ -122,7 +122,7 @@ jstack <pid>
 
 ---
 @title[Game Server threads in Bomberman]
-<img src="lecture09/presentation/slides/assets/images/GameThreads.png" alt="exception" style="width: 850px;"/>
+<img src="lecture09/slides/assets/images/GameThreads.png" alt="exception" style="width: 850px;"/>
 
 ---
 @title[How different threads can communicate?]
@@ -282,7 +282,7 @@ In our game we will use simple scheme that allow to @css[highlight](almost) forg
 
 ---
 ## Threading scheme in game server
-<img src="lecture09/presentation/slides/assets/images/GameThreads.png" alt="exception" style="width: 850px;"/>
+<img src="lecture09/slides/assets/images/GameThreads.png" alt="exception" style="width: 850px;"/>
 
 ---
 ## References
