@@ -29,7 +29,6 @@ open as new project
 ---
 @title[Agenda]
 1. @css[highlight](Threads and processes)
-1. Multiple threads in game
 1. Parallelism and Concurrency
 1. Challenges of concurrent programs
 1. Game threading scheme
@@ -68,7 +67,7 @@ Famous Threads and Processes API from UNIX world:
 @title[Kotlin Threads]
 Kotlin provide it's own API for managing threads and processes, it uses system calls under the hood
 
-In **Java** we get **Thread** class and **Runnable** interface
+In @css[highlight](Kotlin) we have @css[highlight](Thread) class and @css[highlight](Runnable) interface
 
 ---
 @title[interface Runnable]
@@ -115,32 +114,6 @@ jstack <pid>
 ---
 @title[Agenda]
 1. Threads and processes
-1. @css[highlight](Multiple threads in game)
-1. Parallelism and Concurrency
-1. Challenges of concurrent programs
-1. Game threading scheme
-
----
-@title[Game Server threads in Bomberman]
-<img src="lecture09/slides/assets/images/GameThreads.png" alt="exception" style="width: 850px;"/>
-
----
-@title[How different threads can communicate?]
-Nothing new - they can communicate via public variables, via mutable objects.  
-### How threads communicate in our game  
-0. **Only game-mechanics thread** communicate with **GameSession** (so game mechanics is single-threaded)
-0. WS threads communicate with game mechanics via **thread-safe queue**
-
----
-@title[Game state]
-**GameSession** - mechanics state (players, position)  
-**InputQueue** - input data from users  
-**ConnectionPool** - connected players  
-
----
-@title[Agenda]
-1. Threads and processes
-1. Multiple threads in game
 1. @css[highlight](Parallelism and Concurrency)
 1. Challenges of concurrent programs
 1. Game threading scheme
@@ -168,7 +141,6 @@ Is it **shared mutable state**?
 ---
 @title[Agenda]
 1. Threads and processes
-1. Multiple threads in game
 1. Parallelism and Concurrency
 1. @css[highlight](Challenges of concurrent programs)
 1. Game threading scheme
@@ -221,7 +193,7 @@ Behaviour of multithreaded program is (inter alia) dependent on **OS scheduling*
  (Not the same as race conditions)
 
 Is **Bomberman** prone to data races?  
-> @see rvolatileexample
+> @see volatileexample
 
 ---
 @title[3. Locking problems]
@@ -233,7 +205,7 @@ Locking misuse can lead to common problems:
 ---
 @title[4. Performance]
 Reasoning about performance of concurrent programs is tricky
-> @see https://shipilev.net/
+> @see https://shipilev.net/ about java
 
 ---
 @title[How different languages support concurrency]
@@ -265,7 +237,8 @@ Lecture from Java course 2018:
 
 ---
 @title[Can we make it easier?]
-@css[highlight](Avoid concurrency!)
+@css[highlight](Avoid concurrency!)  
+@css[highlight](Avoid shared mutable state!)
 - be stateless
 - use val
 - use ThreadLocal
@@ -275,7 +248,6 @@ In our game we will use simple scheme that allow to @css[highlight](almost) forg
 ---
 @title[Agenda]
 1. Threads and processes
-1. Multiple threads in game
 1. Parallelism and Concurrency
 1. Challenges of concurrent programs
 1. @css[highlight](Game threading scheme)
@@ -285,6 +257,20 @@ In our game we will use simple scheme that allow to @css[highlight](almost) forg
 <img src="lecture09/slides/assets/images/GameThreads.png" alt="exception" style="width: 850px;"/>
 
 ---
+
+@title[How different threads can communicate?]
+Nothing new - they can communicate via public variables, via mutable objects.  
+### How threads communicate in our game  
+0. **Only game-mechanics thread** communicate with **GameSession** (so game mechanics is single-threaded)
+0. WS threads communicate with game mechanics via **thread-safe queue**
+---
+@title[Game state]
+**GameSession** - mechanics state (players, position)  
+**InputQueue** - input data from users  
+**ConnectionPool** - connected players  
+
+---
+
 ## References
 [Java concurrency in practice (signature book for Java Developer)](https://www.amazon.com/Java-Concurrency-Practice-Brian-Goetz/dp/0321349601)   
 [Alexey Shipilev blog (JMM, concurrency, performance, benchmarks for people, JDK contributor)](https://shipilev.net/)  
