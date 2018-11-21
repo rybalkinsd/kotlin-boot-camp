@@ -193,7 +193,7 @@ Behaviour of multithreaded program is (inter alia) dependent on **OS scheduling*
  (Not the same as race conditions)
 
 Is **Bomberman** prone to data races?  
-> @see volatileexample
+> @see volatile
 
 ---
 @title[3. Locking problems]
