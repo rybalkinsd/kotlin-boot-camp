@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Websocket Chat</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+
+    <style>
+        .full-height {
+            height: 100%;
+        }
+
+        .input-text {
+            height: 10%;
+        }
+
+        .chat-text {
+            height: 90%;
+        }
+
+        .border {
+            border: 1px black;
+        }
+    </style>
+</head>
+<body class="full-height">
+<div class="container-fluid full-height">
+    <div class="row chat-text">
+        <div class="col-md-10 border chat-text" id="chatbox">
+        </div>
+        <div class="col-md-2 border chat-text">
+            <ul id="userlist"></ul>
+        </div>
+    </div>
+    <div class="row input-text border">
+        <div class="col-md-10">
+            <input type="text" class="btn-block" id="msg"/>
+        </div>
+        <div class="col-md-2">
+            <button type="button" class="btn btn-primary btn-block btn-lg" id="send">
+                Send
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    //var webSocket = new WebSocket("ws://" + location.hostname + ":" + location.port + "/chat");
+    var webSocket = new SockJS('/chat');
+    webSocket.onmessage = function (msg) {
+        receiveMsg(JSON.parse(msg.data))
+    };
+    webSocket.onclose = function () {
+        alert("Disconnected from server");
+    };
+    webSocket.onopen = function () {
+        var name = "";
+        while (name === "") name = prompt("Enter your name");
+        sendMessage("login", name);
+    };
+    $("#send").click(function () {
+        sendMessage("say", $("#msg").val());
+    });
+    $("#msg").keypress(function (e) {
+        if (e.which === 13) sendMessage("say", e.target.value);
+    });
+
+    function sendMessage(type, data) {
+        if (data !== "") {
+            webSocket.send(JSON.stringify({type: type, data: data}));
+            $("#msg").val("");
+            $("#msg").focus();
+        }
+    }
+
+    function receiveMsg(msg) {
+        if (msg.msgType === "say") {
+            $("#chatbox").append("<p>" + msg.data + "</p>");
+        }
+        else if (msg.msgType === "login") {
+            addUser(msg.data);
+        }
+        else if (msg.msgType === "online") {
+            msg.data.forEach(function (el) {
+                addUser(el);
+            });
+        }
+        else if (msg.msgType === "logout") {
+            $("#user-" + msg.data.id).remove();
+        }
+    }
+
+    function addUser(user) {
+        $("#userlist").append("<li id='user-" + user.id + "'>" + user.name + "</li>");
+    }
+</script>
+</body>
+</html>
