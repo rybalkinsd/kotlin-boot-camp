@@ -4,7 +4,7 @@ jdk:
 - openjdk8
 
 env:
-- $PROJECT_DIR=lecture09
+- $PROJECT_DIR=lecture10
 
 script: cd $PROJECT_DIR && ./gradlew assemble && ./gradlew check
 
