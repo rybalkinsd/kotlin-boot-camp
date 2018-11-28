@@ -28,12 +28,10 @@ val ktlint by configurations.creating
 dependencies {
     compile(kotlin("stdlib-jdk8"))
     compile(kotlin("reflect"))
-    compile("io.github.rybalkinsd", "kohttp", "0.4.0")
     compile("org.slf4j", "slf4j-api", "1.7.25")
 
     compile(spring("web"))
     compile(spring("actuator"))
-    compile(spring("websocket"))
 
     testCompile("junit", "junit", "4.12")
     testCompile(spring("test"))
@@ -56,7 +54,7 @@ tasks {
 }
 
 springBoot {
-    mainClassName = "io.rybalkinsd.kotlinbootcamp.billing.BillingResource"
+    mainClassName = "io.rybalkinsd.kotlinbootcamp.echo.EchoKt"
 }
 
 fun DependencyHandler.spring(module: String, version: String? = null) =
